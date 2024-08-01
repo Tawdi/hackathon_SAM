@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Événements</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Liste des Événements</h1>
+    <a href="/events/new">Créer un Nouvel Événement</a>
+    <ul>
+        <% events.forEach(event => { %>
+            <li>
+                <h2><%= event.name %></h2>
+                <p><%= event.description %></p>
+                <p>Lieu: <%= event.location %></p>
+                <p>Début: <%= event.start_date %></p>
+                <p>Fin: <%= event.end_date %></p>
+                <a href="/events/edit/<%= event.id %>">Éditer</a>
+                <form action="/events/delete/<%= event.id %>" method="POST">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
