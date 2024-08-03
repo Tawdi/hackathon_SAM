@@ -10,7 +10,9 @@
     --color-hack-3: #506e7a;    /*Slate Blue */
     --color-hack-4: #bfd5de;    /*Light Blue */
     --color-hack-5: #E8E8E8;    /*Orange */
-    --font-sam: 'Segoe UI', arial , sans-serif
+    --font-sam: 'Segoe UI', arial , sans-serif;
+    --bg-img-header: linear-gradient(rgba(50, 88, 145, 0.671), rgba(6, 41, 94, 0.532)), url(../img/Image3.jpg) center center no-repeat;
+
 
 }
 body{
@@ -513,7 +515,7 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(61, 106, 173, 0), rgba(6, 41, 94, 0.532)), url(../img/6476738f42360401f32f7742.jpg) center center no-repeat;
+    background: var(--bg-img-header);
     background-size: cover;
 }
 

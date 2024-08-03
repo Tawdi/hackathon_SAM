@@ -1,11 +1,98 @@
 <!-- Include  navigation bar -->
-<%- include('partials/navbar') %>
-
-
+<%- include('../partials/topbar') %>
+<%- include('../partials/navbar') %>
+<%- include('../partials/accueil_crsl') %>
  
-   <h1>Acceuil</h1>
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts py-5 pt-lg-0">
+      <div class="container py-5 pt-lg-0">
+          <div class="row gx-0">
+              <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                  <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                      <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                          <i class="fa fa-users text-primary"></i>
+                      </div>
+                      <div class="ps-4">
+                          <h5 class="text-white mb-0">Participants</h5>
+                          <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                  <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                      <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                          <i class="fa fa-check text-white"></i>
+                      </div>
+                      <div class="ps-4">
+                          <h5 class="text-primary mb-0">Evénements</h5>
+                          <h1 class="mb-0" data-toggle="counter-up">12345</h1>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                  <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                      <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                          <i class="fa fa-award text-primary"></i>
+                      </div>
+                      <div class="ps-4">
+                          <h5 class="text-white mb-0">Badges</h5>
+                          <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Facts Start -->
+
+
+  <!-- About Start -->
+  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container py-5">
+          <div class="row g-5">
+              <div class="col-lg-7">
+                  <div class="section-title position-relative pb-3 mb-5">
+                      <h5 class="fw-bold text-primary text-uppercase">À Propos</h5>
+                      <h1 class="mb-0">SAM-Almoutmir</h1>
+                  </div>
+                  <p class="mb-4">Le SAM « Sustainable Agriculture Mecanization » est un projet lancé par l’initiative Al Moutmir pour 
+                      promouvoir la mécanisation agricole durable au niveau national. Il a pour base de collaborer étroitement 
+                      avec les agriculteurs pour développer une mécanisation agricole adapté et customisé pour le travail du jour 
+                      au jour. En plus, il veille à l’organisation d’un multiple évènement et compétition visant au même objectif</p>
+                  <div class="row g-0 mb-3">
+                      <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                          <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Organisation d'Événements </h5>
+                          <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Développement de Solutions Personnalisées</h5>
+                      </div>
+                      <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                          <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Collaboration avec les Agriculteurs</h5>
+                          <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Organisation des Compétitions</h5>
+                      </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                      <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                          <i class="fa fa-phone-alt text-white"></i>
+                      </div>
+                      <div class="ps-4">
+                          <h5 class="mb-2"></h5>
+                          <h4 class="text-primary mb-0">+012 345 6789</h4>
+                      </div>
+                  </div>
+                  <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Voir plus</a>
+              </div>
+              <div class="col-lg-5" style="min-height: 500px;">
+                  <div class="position-relative h-100">
+                      <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/R.jpg" style="object-fit: cover;">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- About End -->
+
 
 
 
 <!-- Include  footer -->
-<%- include('partials/footer') %>
+<%- include('../partials/footer') %>

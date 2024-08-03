@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const expressLayouts = require('express-ejs-layouts');
 const flash = require('connect-flash');
 const passport = require('passport');
 const app = express();
@@ -11,8 +12,13 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// view engine  EJS
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
 // Middlewares
-app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(session({
     secret: 'votre_secret',
