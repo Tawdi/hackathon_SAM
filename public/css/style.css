@@ -112,7 +112,13 @@ h6,
     font-family: var(--font-sam);
     font-weight: 600;
     transition: .5s;
+    border-color: var(--light);
 }
+.btn:hover{
+    border-color: var(--primary);
+    color: var(--primary) ;
+} 
+
 .bg-primary{
     background-color: var(--color-hack-1) !important;
 }

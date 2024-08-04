@@ -1,6 +1,4 @@
 const express = require('express');
-const expressLayouts = require('express-ejs-layouts');
-
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -17,5 +15,8 @@ router.get('/actualites', (req, res) => {
 });
 router.get('/evenements', (req, res) => {
     res.render('pages/evenements');
+});
+router.get('/connecter', (req, res) => {
+    res.render('auth/login');
 });
 module.exports = router;
