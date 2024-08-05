@@ -75,7 +75,8 @@ form.sign-in-form {
   width: 100%;
   background-color: #f0f0f0;
   margin: 10px 0;
-  height: 55px;
+  /* height: 55px; */
+  height: 40px;
   border-radius: 55px;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -263,6 +264,17 @@ form.sign-in-form {
   pointer-events: all;
 }
 
+.name-container {
+  display: flex; 
+  /* width: 100%; */
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.name-container .input-field {
+  width: 48%;
+}
+
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
@@ -408,3 +420,5 @@ form.sign-in-form {
     left: 50%;
   }
 }
+
+
