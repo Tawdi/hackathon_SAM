@@ -8,21 +8,15 @@
 // });
 
 // module.exports = pool.promise();
-const mysql = require('mysql2');
+// c
+// db.js
+const mysql = require('mysql2/promise');
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'ichrak',
-    database: 'sam_db'
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root', // Remplacez par votre utilisateur
+  password: '', // Remplacez par votre mot de passe
+  database: 'db_sam'
 });
 
-connection.connect(err => {
-  if (err) {
-    console.error('Database connection error:', err.stack);
-    return;
-  }
-  console.log('Connected to database.');
-});
-
-module.exports = connection;
+module.exports = pool;
