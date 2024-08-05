@@ -1,22 +1,47 @@
+
+const mysql = require('mysql2');
+
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: 'admin',
+    database: 'sam_db'
+});
+
+module.exports = pool.promise();
 // const mysql = require('mysql2');
 
-// const pool = mysql.createPool({
+// const connection = mysql.createConnection({
 //     host: 'localhost',
 //     user: 'root',
 //     password: 'admin',
 //     database: 'sam_db'
 // });
 
-// module.exports = pool.promise();
-// c
-// db.js
-const mysql = require('mysql2/promise');
+// connection.connect(err => {
+//   if (err) {
+//     console.error('Database connection error:', err.stack);
+//     return;
+//   }
+//   console.log('Connected to database.');
+// });
 
-const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root', // Remplacez par votre utilisateur
-  password: '', // Remplacez par votre mot de passe
-  database: 'db_sam'
-});
+// module.exports = connection;
+// const mysql = require('mysql2');
 
-module.exports = pool;
+// // Create a connection pool
+// const pool = mysql.createPool({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'admin',
+//   database: 'sam_db',
+//   waitForConnections: true,
+//   connectionLimit: 10, // Adjust as needed
+//   queueLimit: 0
+// });
+
+// // Promisify pool query methods for ease of use with async/await
+// const promisePool = pool.promise();
+
+// module.exports = promisePool;
+
