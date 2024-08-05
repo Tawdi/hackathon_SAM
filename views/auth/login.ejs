@@ -1,5 +1,9 @@
     <link href="css/login.css" rel="stylesheet">
-
+    <% if (error_msg.length > 0) { %>
+      <div class="alert alert-danger"><%= error_msg %></div>
+      <% } %> <% if (success_msg.length > 0) { %>
+      <div class="alert alert-success"><%= success_msg %></div>
+      <% } %>
 <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
@@ -35,6 +39,10 @@
 
         <form action="/register" method="POST" class="sign-up-form">
           <h2 class="title">S’enregistrer</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="username" placeholder="Username"  required />
+          </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input type="text" name="nom" placeholder="Nom" required />

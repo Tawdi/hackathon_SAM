@@ -3,7 +3,7 @@ const userModel = require('../models/userModel');
 
 module.exports = {
   registerUser: (req, res) => {
-    const { nom,prenom ,telephone,adresse, email, password } = req.body;
+    const { nom,prenom ,telephone,adresse,organisation ,profession, email, password } = req.body;
 
     userModel.checkUserByEmail(email, (err, result) => {
       if (err) {
@@ -22,7 +22,7 @@ module.exports = {
             console.error('Error hashing password:', err);
             return res.status(500).send('Internal server error');
           }
-          userModel.insertUser(nom,prenom , email,telephone,adresse, hashedPassword, (err, result) => {
+          userModel.insertUser(nom,prenom , email,telephone,adresse,organisation ,profession, hashedPassword, (err, result) => {
             if (err) {
               console.error('Error inserting user:', err);
               return res.status(500).send('Internal server error');

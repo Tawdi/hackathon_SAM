@@ -139,7 +139,7 @@
 
 // module.exports = createDatabase;
 
-
+//config/creation-db.js
 const bcrypt = require("bcrypt");
 const mysql = require('mysql2');
 
@@ -167,12 +167,15 @@ async function createDatabase() {
     await promisePool.query(`
       CREATE TABLE IF NOT EXISTS users (
         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+        username varchar(100) not null,
         email VARCHAR(50) NOT NULL,
         telephone varchar(20) not null,
         adresse text not null,
         password TEXT NOT NULL,
         nom VARCHAR(50) NOT NULL,
         prenom VARCHAR(50) NOT NULL,
+        profession VARCHAR(200) NOT NULL,
+        organisation VARCHAR(200) NOT NULL,
         role VARCHAR(255) DEFAULT 'user',
         verificationToken VARCHAR(255) ,
         isVerified BOOLEAN DEFAULT FALSE,
@@ -180,7 +183,7 @@ async function createDatabase() {
         UNIQUE INDEX email_UNIQUE (email ASC)
       )
     `);
-
+    
     await promisePool.query(`
       CREATE TABLE IF NOT EXISTS Evenements (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -252,11 +255,16 @@ async function createDatabase() {
       const adminEmail = "admin@sam.com";
       const adminNom = "admin";
       const adminPrenom = "admin";
+      const adminAdresse = "safi";
+      const adminProfession = "admin";
+      const adminOrganisation= "admin";
+      const adminTelephone = "06000000000";
+
 
       await promisePool.query(`
-        INSERT INTO users (email, password, nom, prenom,telephone,adresse, role, isVerified) 
-        VALUES (?, ?, ?, ?, ?, ?, 'admin', TRUE)
-      `, [adminEmail, hashedPassword, adminNom, adminPrenom,"00000000","safi"]);
+        INSERT INTO users (email, password, nom, prenom,telephone,adresse,organisation ,profession, role, isVerified) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'admin', TRUE)
+      `, [adminEmail, hashedPassword, adminNom, adminPrenom,adminTelephone,adminAdresse,adminOrganisation,adminProfession]);
 
       console.log("Admin user created.");
     } else {
