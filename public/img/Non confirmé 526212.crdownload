@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/almoutmir_theme/assets/icons/favicon.png" type="image/png" />
+<link rel="alternate" hreflang="en" href="https://www.almoutmir.ma/index.php/en" />
+<link rel="alternate" hreflang="fr" href="https://www.almoutmir.ma/index.php/fr" />
+<link rel="alternate" hreflang="ar" href="https://www.almoutmir.ma/index.php/ar" />
+<link rel="canonical" href="https://www.almoutmir.ma/index.php/fr/page-daccueil" />
+<link rel="shortlink" href="https://www.almoutmir.ma/index.php/fr/node/1" />
+
+      <title>Page d&#039;accueil | Al Moutmir</title>
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_ZL4BYizoJWX22j9n-ivQ389RIiZHlfVbqfYUYwxyk6Q.css?delta=0&amp;language=fr&amp;theme=almoutmir_theme&amp;include=eJx9jMENAjEMBBsCpRU6iJy7VbDk2Cg2gXQP4nVIge_OzPr0QEuFHCeSZvdo3HNc0ZCqWCE5e0xhrT_x1vkWfsBCur-DdAjwjL_C4B12EZroC-9DcyHVL6w0uFKwaVqNiyMbeHQO5M39BSObZME" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_wVj0x2iyqHq5ZJDGyo8s5PsFQ_WrdvORFiZgT_xkSyc.css?delta=1&amp;language=fr&amp;theme=almoutmir_theme&amp;include=eJx9jMENAjEMBBsCpRU6iJy7VbDk2Cg2gXQP4nVIge_OzPr0QEuFHCeSZvdo3HNc0ZCqWCE5e0xhrT_x1vkWfsBCur-DdAjwjL_C4B12EZroC-9DcyHVL6w0uFKwaVqNiyMbeHQO5M39BSObZME" />
+
+      
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D92516KZS7"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-D92516KZS7');
+        </script>
+  </head>
+      <body class="is-mobile bodyClasses nimbus-is-editor opacity-1 ">
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container">
+  <header role="banner" class="header">
+    <div class="container position-relative">
+      <div class="row">
+            <nav class="mobile-menu-top col-md-6  col-lg-9 ">
+    <ul class=" mb-0 ">
+                      <li class=" p-0    ">
+          <a class="size-menu " href="/index.php/fr/form/contact-v2">Contact</a>
+        </li>
+          </ul>
+  </nav>
+
+
+
+          <div class="col-md-1 logo-mob" data-logo-img="/themes/custom/almoutmir_theme/assets/icons/logo-fr.png" data-logo-img-scroll="/themes/custom/almoutmir_theme/assets/icons/logo-fr-scroll.png">
+  <h1>
+    <a href="/index.php/fr">
+      <img class="almoutmir-logo" src="/themes/custom/almoutmir_theme/assets/icons/logo-fr.png" alt="Accueil" typeof="foaf:Image" />
+
+    </a>
+  </h1>
+</div>
+  <nav class="col-md-6 offset-md-2 col-lg-9 offset-lg-1">
+    <ul class="list mb-0 adapt-space">
+
+                              <li class="list-item ">
+          <a class="" href="/index.php/fr">Accueil</a>
+                  </li>
+                                                <li class="list-item has-children">
+          <a class="" href="/index.php/fr/al-moutmir">Al Moutmir</a>
+                      <ul class="submenu wow fadeInDown animated">
+                              <li><a href="/index.php/fr/lagriculture-au-maroc">L’agriculture au Maroc</a></li>
+                              <li><a href="/index.php/fr/al-moutmir"> L’initiative  Al Moutmir </a></li>
+                          </ul>
+                  </li>
+                                                <li class="list-item has-children">
+          <a class="" href="/index.php/fr/offres-et-services">Offres et Services</a>
+                      <ul class="submenu wow fadeInDown animated">
+                              <li><a href="/index.php/fr/pour-les-agriculteurs">Pour les agriculteurs</a></li>
+                              <li><a href="/index.php/fr/pour-les-autres-acteurs">Pour les autres acteurs</a></li>
+                          </ul>
+                  </li>
+                              <li class="list-item ">
+          <a class="" href="/index.php/fr/nouvelles-technologies">Solutions digitales</a>
+                  </li>
+                              <li class="list-item ">
+          <a class="" href="/index.php/fr/actualites">Actualités</a>
+                  </li>
+                              <li class="list-item ">
+          <a class="" href="/index.php/fr/documentheque">Documenthèque</a>
+                  </li>
+          </ul>
+
+  </nav>
+
+
+
+          <div class="col-md-2 col-lg-1 mob-lang-searh">
+    <ul class="list mb-0 ">
+      <li class="list-item des-mini-m">
+  <div>
+    <div class="placehoder-search">Recherche</div>
+    <a href="#search" class="search-icon">
+      <span><i class="icon icon-search"></i></span>
+    </a>
+  </div>
+  <div id="search">
+    <button type="button" class="close">×</button>
+    <form action="/index.php/fr/search">
+      <input type="text" name="keys" placeholder="Search ...">
+      <button type="submit">
+        <img class="submit-button" src="/themes/custom/almoutmir_theme/assets/icons/search.png" alt="search">
+      </button>
+    </form>
+  </div>
+</li>
+  <li class="list-item selectlang">
+  <div class="translate_wrapper active">
+    <div class="more_lang active d-flex">
+                        <div class="lang " data-value="en">
+            <a href="/en/">
+              <span class="lang-txt">En</span>
+            </a>
+          </div>
+                                <div class="lang selected" data-value="fr">
+            <a href="/fr/">
+              <span class="lang-txt">Fr</span>
+            </a>
+          </div>
+                                <div class="lang " data-value="ar">
+            <a href="/ar/">
+              <span class="lang-txt">Ar</span>
+            </a>
+          </div>
+                  </div>
+  </div>
+</li>
+
+
+    </ul>
+  </div>
+  <div class="humburger z-index-3">
+    <button id="hamburger-menu" data-toggle="list" class="hamburger-menu-button"><span
+        class="hamburger-menu-button-open"></span></button>
+  </div>
+
+      </div>
+    </div>
+  </header>
+  
+  
+  <main role="main">
+    <div class="social-network p-1">
+              <div class="side-rs text-align-center m-1">
+          <a href="https://facebook.com/almoutmir" target="_blank"><span class="icon icon-facebook social"></span></a>
+        </div>
+                    <div class="side-rs text-align-center m-1">
+          <a href="https://www.instagram.com/al_moutmir/" target="_blank"><span class="icon icon-instagram social"></span></a>
+        </div>
+                    <div class="side-rs text-align-center m-1">
+          <a href="https://twitter.com/al_moutmir" target="_blank"><span class="icon icon-twitter social"></span></a>
+        </div>
+                    <div class="side-rs text-align-center m-1">
+          <a href="https://www.youtube.com/channel/UC8CDLnvG5rIHVDqeoVQ0KFg" target="_blank"><span class="icon icon-youtube social"></span></a>
+        </div>
+          </div>
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+        <div>
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-mainpagecontent">
+  
+    
+      <div  data-history-node-id="1" about="/index.php/fr/page-daccueil">
+      <section  class="hp-slider">
+          <div id="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://player.vimeo.com/video/428444888?autoplay=1&amp;muted=1&amp;loop=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="scroll_down">
+          <span></span>
+        </div>
+      </div>
+      </section>
+
+      <div  class="mt-n5 offset"></div>
+
+  <section class="lame lame-content " >
+  <div class="container">
+          <h2 class="font-weight-bold color-green title wow fadeInDown animated mb5" data-wow-delay="1s"
+          data-wow-duration="1s">
+        
+            <div>A propos de l’initiative Al Moutmir</div>
+      
+      </h2>
+                  <div class="text wow fadeInUp animated " data-wow-delay="1s" data-wow-duration="1s">
+          <p>Partenaire historique de l’agriculture, OCP a lancé en septembre 2018, l’initiative Al Moutmir. Il s'agit d'une&nbsp;offre multiservices comprenant des solutions innovantes et personnalisées pour mieux accompagner les agriculteurs et surtout les petits.</p>
+<style type="text/css">.lame-actualites__inner__items .item {
+    min-height: 419px;
+  }
+@media (max-width: 1300px) {
+  .block-nosEquipesItem__name {
+    height: 70px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lame-tmar .block-tmar .tmar-content {
+    margin-left: 50% !important;
+  }
+  .lame-tmar .block-tmar .image-phone {
+    right: 53%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .lame-tmar .block-tmar .image-phone {
+    right: 53%;
+  }
+}
+</style>
+
+
+      </div>
+              <div class="wow fadeInUp animated" data-wow-delay="1500ms" data-wow-duration="500ms">
+        <a href="/fr/al-moutmir"
+           class="btn btn-services w-218" >En savoir plus </a>
+      </div>
+      </div>
+</section>
+
+      <div  class="mt-5 offset"></div>
+
+    <div class="videoWrapper videoWrapper169 js-videoWrapper">
+    <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen
+            data-src="https://www.youtube.com/embed/fIum-QebdiQ?&amp;modestbranding=1&amp;rel=0&amp;hl=sv"></iframe>
+    <button class="videoPoster js-videoPoster"
+            style="background-image:url('/sites/default/files/1840x755_2.jpg');">
+      Play video
+    </button>
+  </div>
+
+  <section class="lame lame-content " >
+  <div class="container">
+          <h2 class="font-weight-bold color-green title wow fadeInDown animated mb5" data-wow-delay="1s"
+          data-wow-duration="1s">
+        
+            <div>Notre conviction</div>
+      
+      </h2>
+                  <div class="text wow fadeInUp animated " data-wow-delay="1s" data-wow-duration="1s">
+          <p>Encourager la mise en place d'une agriculture économiquement viable et durable.</p>
+
+<p><img alt="FR" data-entity-type="file" data-entity-uuid="7c461e66-af14-4f8c-9229-3321caa13493" src="/sites/default/files/inline-images/Agriculteur-%3D-Business%20FR.jpg" width="334" height="228" loading="lazy"></p>
+
+
+      </div>
+              <div class="wow fadeInUp animated" data-wow-delay="1500ms" data-wow-duration="500ms">
+        <a href="/fr/offres-et-services"
+           class="btn btn-services w-218" >En savoir plus</a>
+      </div>
+      </div>
+</section>
+
+      <div  class="mt-5 offset"></div>
+
+  <section id="parallax-approche"  class="lame lame-notre-approche" data-parallax="scroll" data-speed="0.5" data-image-src="/sites/default/files/Photo_Adp_1600x709_0.jpg">
+  <div class="container block-approche">
+        <h3 class="font-weight-bold title wow fadeInDown" data-wow-delay="500ms" data-wow-duration="1s">
+            <div>Notre approche</div>
+      </h3>
+        <div class="approche-row">
+                  <div class="text-align-center approche-item wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="approche-row_cercle">
+    <img class="circle-image m-0 align-text-bottom" data-src="/sites/default/files/2020-05/deal%20%281%29.png" width="70" height="70">
+  </div>
+      <div class="approche-item__titre">
+            <div>Atteindre</div>
+      </div>
+  </div>
+
+  <div class="text-align-center approche-item wow fadeInDown animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="approche-row_cercle">
+    <img class="circle-image m-0 align-text-bottom" data-src="/sites/default/files/2020-06/Picto_comprendre-removebg-preview.png" width="70" height="70">
+  </div>
+      <div class="approche-item__titre">
+            <div>Comprendre</div>
+      </div>
+  </div>
+
+  <div class="text-align-center approche-item wow fadeInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="approche-row_cercle">
+    <img class="circle-image m-0 align-text-bottom" data-src="/sites/default/files/2020-06/picto_cro%C3%83%C2%AEtre-removebg-preview_0.png" width="70" height="70">
+  </div>
+      <div class="approche-item__titre">
+            <div>Croître ensemble</div>
+      </div>
+  </div>
+
+
+          </div>
+    <div>
+              
+            <div><p>Al Moutmir repose sur une démarche participative et inclusive. Les équipes sont installées d’une manière permanente au plus près des agriculteurs. Elles travaillent main dans la main avec les différentes parties prenantes et co-construisent des solutions adaptées.</p>
+
+<p>&nbsp;</p>
+<style type="text/css">.lame-notre-approche .approche-row > .approche-item > .approche-item__titre {
+    max-width: 300px !important;
+}
+.lame-notre-approche .approche-row {
+    margin: 0 0 -13px;
+}
+</style>
+</div>
+      
+                    <a href="/fr/pour-les-autres-acteurs" class="btn btn-services w-218 wow fadeInUp animated" data-wow-delay="1500ms" data-wow-duration="500ms" target=_self>
+          En savoir plus
+        </a>
+          </div>
+  </div>
+</section>
+
+  <section  class="lame lame-actualites bg-lightgray2">
+  <div class="container">
+    <div class="lame-actualites__inner">
+              <div class="title wow fadeInUp animated" data-wow-delay="500ms">
+            <div>Actualités </div>
+      </div>
+            <div class="lame-actualites__inner__items owl-carousel wow fadeIn animated" data-wow-delay="1s">
+                  <div class="item">
+  <a href="/fr/participation-au-bridge-africa-summit-vers-une-agriculture-durable-en-afrique">
+          <div class="shine">
+        <img class="image" src="/sites/default/files/Design%20sans%20titre%20%2816%29.gif" alt="image" title="image">
+      </div>
+      </a>
+  <div class="content">
+    <a href="/fr/participation-au-bridge-africa-summit-vers-une-agriculture-durable-en-afrique">
+              <div class="text">
+          <p>  Participation au Bridge Africa Summit : Vers une agriculture durable en Afrique
+</p>
+        </div>
+          </a>
+    <a class="link" href="/fr/participation-au-bridge-africa-summit-vers-une-agriculture-durable-en-afrique">
+      <span>En savoir plus</span>
+      <span><i class="icon icon-point-to fleche"></i></span>
+    </a>
+  </div>
+  <div class="border-animate"></div>
+</div>
+<div class="item">
+  <a href="/fr/le-8-mai-2024-en-partenariat-avec-le-distributeur-fertika-lequipe-almoutmir-organise-une-journee">
+          <div class="shine">
+        <img class="image" src="/sites/default/files/Design%20sans%20titre%20%2811%29.gif" alt="image" title="image">
+      </div>
+      </a>
+  <div class="content">
+    <a href="/fr/le-8-mai-2024-en-partenariat-avec-le-distributeur-fertika-lequipe-almoutmir-organise-une-journee">
+              <div class="text">
+          <p>  Le 8 mai 2024, en partenariat avec le distributeur FERTIKA, l&#039;équipe Almoutmir a organisé une journée d&#039;échange
+</p>
+        </div>
+          </a>
+    <a class="link" href="/fr/le-8-mai-2024-en-partenariat-avec-le-distributeur-fertika-lequipe-almoutmir-organise-une-journee">
+      <span>En savoir plus</span>
+      <span><i class="icon icon-point-to fleche"></i></span>
+    </a>
+  </div>
+  <div class="border-animate"></div>
+</div>
+<div class="item">
+  <a href="/fr/linitiative-al-moutmir-prend-part-la-16eme-edition-du-salon-international-de-lagriculture">
+          <div class="shine">
+        <img class="image" src="/sites/default/files/VISUEL%20CLE%20SIAM%202024%20VA.jpeg" alt="image" title="image">
+      </div>
+      </a>
+  <div class="content">
+    <a href="/fr/linitiative-al-moutmir-prend-part-la-16eme-edition-du-salon-international-de-lagriculture">
+              <div class="text">
+          <p>  L&#039;initiative Al Moutmir prend part à la 16ème édition du Salon International de l&#039;Agriculture​ 
+</p>
+        </div>
+          </a>
+    <a class="link" href="/fr/linitiative-al-moutmir-prend-part-la-16eme-edition-du-salon-international-de-lagriculture">
+      <span>En savoir plus</span>
+      <span><i class="icon icon-point-to fleche"></i></span>
+    </a>
+  </div>
+  <div class="border-animate"></div>
+</div>
+<div class="item">
+  <a href="/fr/lequipe-al-moutmir-en-partenariat-avec-ocp-nutricrops-et-agriedge-deploye-des-drones-pour">
+          <div class="shine">
+        <img class="image" src="/sites/default/files/Design%20sans%20titre%20%287%29.gif" alt="image" title="image">
+      </div>
+      </a>
+  <div class="content">
+    <a href="/fr/lequipe-al-moutmir-en-partenariat-avec-ocp-nutricrops-et-agriedge-deploye-des-drones-pour">
+              <div class="text">
+          <p>  L&#039;équipe Al Moutmir en partenariat avec OCP-Nutricrops et AgriEdge a déployé des drones pour l’application foliaire de Phosphore 
+</p>
+        </div>
+          </a>
+    <a class="link" href="/fr/lequipe-al-moutmir-en-partenariat-avec-ocp-nutricrops-et-agriedge-deploye-des-drones-pour">
+      <span>En savoir plus</span>
+      <span><i class="icon icon-point-to fleche"></i></span>
+    </a>
+  </div>
+  <div class="border-animate"></div>
+</div>
+<div class="item">
+  <a href="/fr/participation-dal-moutmir-au-workshop-dechange-sud-sud-entre-linde-et-le-maroc">
+          <div class="shine">
+        <img class="image" src="/sites/default/files/Design%20sans%20titre%20%281%29.gif" alt="image" title="image">
+      </div>
+      </a>
+  <div class="content">
+    <a href="/fr/participation-dal-moutmir-au-workshop-dechange-sud-sud-entre-linde-et-le-maroc">
+              <div class="text">
+          <p>  Participation d&#039;Al Moutmir au workshop d&#039;échange Sud-Sud entre l&#039;Inde et le Maroc
+</p>
+        </div>
+          </a>
+    <a class="link" href="/fr/participation-dal-moutmir-au-workshop-dechange-sud-sud-entre-linde-et-le-maroc">
+      <span>En savoir plus</span>
+      <span><i class="icon icon-point-to fleche"></i></span>
+    </a>
+  </div>
+  <div class="border-animate"></div>
+</div>
+<div class="item">
+  <a href="/fr/13eme-edition-dal-moutmir-open-innovation-lab-resultat-des-plateformes-de-demonstration-de-lolivier">
+          <div class="shine">
+        <img class="image" src="/sites/default/files/3I4A3170.JPG" alt="image" title="image">
+      </div>
+      </a>
+  <div class="content">
+    <a href="/fr/13eme-edition-dal-moutmir-open-innovation-lab-resultat-des-plateformes-de-demonstration-de-lolivier">
+              <div class="text">
+          <p>  13ème édition d’Al Moutmir Open Innovation Lab: Résultat des plateformes de démonstration de l&#039;olivier - saison agricole 2022/2023
+</p>
+        </div>
+          </a>
+    <a class="link" href="/fr/13eme-edition-dal-moutmir-open-innovation-lab-resultat-des-plateformes-de-demonstration-de-lolivier">
+      <span>En savoir plus</span>
+      <span><i class="icon icon-point-to fleche"></i></span>
+    </a>
+  </div>
+  <div class="border-animate"></div>
+</div>
+
+              </div>
+    </div>
+  </div>
+</section>
+
+  <section  class="lame lame-tmar">
+  <div class="container block-tmar p-0">
+    <div class="py-5 tmar-content wow fadeInUp" data-wow-delay="1000ms" data-wow-duration="1000ms">
+              <img src="https://www.almoutmir.ma/sites/default/files/2020-06/Logo%20Atmar%20FR%20%283%29%20%281%29.png" alt="Bloc des liens">
+                    <div class="tmar-content__paragraphe">
+          <p>L'application mobile</p>
+
+<p>qui offre le&nbsp;conseil agricole</p>
+
+<p>pour tous et GRATUITEMENT</p>
+
+<p>Télécharger ici</p>
+
+        </div>
+        <div class="btns-store mt-3">
+                      <div class="btn-app-store">
+              <a href="https://apps.apple.com/fr/app/tmar-%D8%A3%D8%AB%D9%85%D8%A7%D8%B1/id1486308134">
+                                  <img class="first show" data-src="/themes/custom/almoutmir_theme/assets/icons/app_fr_trans.png">
+                  <img class="hover hide" data-src="/themes/custom/almoutmir_theme/assets/icons/app_fr.png">
+                              </a>
+            </div>
+                                <div class="btn-google-play">
+              <a href="https://play.google.com/store/apps/details?id=ma.ocp.atmar">
+                                  <img class="first show" data-src="/themes/custom/almoutmir_theme/assets/icons/play_fr_trans.png">
+                  <img class="hover hide" data-src="/themes/custom/almoutmir_theme/assets/icons/play_fr.png">
+                              </a>
+            </div>
+                  </div>
+                  <div class="mt-4">
+            <a href="/fr/nouvelles-technologies" class="btn btn-success" target="">En savoir plus</a>
+          </div>
+                  </div>
+          <img class="image-phone wow fadeInUp " data-src="https://www.almoutmir.ma/sites/default/files/styles/phone_image/public/ATMAR%20PNG%20M.png?itok=iWDpFJF9" data-wow-delay="500ms" data-wow-duration="1000ms"
+           alt="Bloc des liens">
+      </div>
+</section>
+
+  <section  class="lame nosEquipes">
+  <div class="nosEquipes__inner">
+    <div class="container">
+      <div class="nosEquipes__heading text-center w-75 m-auto wow fadeInUp">
+                <h2 class="wow fadeIn animated" data-wow-delay="500ms" data-wow-duration="500ms">
+            <div>Nos équipes</div>
+      </h2>
+                        <div class="wow fadeInLeft animated" data-wow-delay="1s" data-wow-duration="1s">
+          
+            <div><p>Al Moutmir est avant tout une aventure humaine portée par des hommes et des femmes passionnés, fortement engagés pour le développement rural et la construction avec l'écosystème agricole d'un lendemain meilleur.</p>
+</div>
+      
+        </div>
+              </div>
+    </div>
+    <div class="container team">
+      <div class="nosEquipes__carousel owl-carousel">
+                    <div class="block block-nosEquipesItem">
+  <div class="block-nosEquipesItem__image shine">
+          <img class="" src="/sites/default/files/team-1_0.png" alt="Image person">
+      </div>
+  <div class="block-nosEquipesItem__name">
+          <a href="#" target="_blank">
+        <p> <span class="font-weight-bold">Sidi Ahmed EL MOUTAKI</span> <br> Coordinateur backbone scientifique</p>
+      </a>
+      </div>
+      <div class="block-nosEquipesItem__tel1">
+      <div class="d-flex ml-md-5">
+        <span class="icon-mobile text-align-left"></span>
+        <p>
+        &nbsp;      
+        </p>
+      </div>
+    </div>
+        <div class="block-nosEquipesItem__social">
+        <ul  class="list-inline m-0">
+  </ul>
+
+
+    </div>
+    <div class="border-animate"></div>
+</div>
+
+  <div class="block block-nosEquipesItem">
+  <div class="block-nosEquipesItem__image shine">
+          <img class="" src="/sites/default/files/Intrinsic-size--309-%2B%C3%B9-307-px-2.jpg" alt="Image person">
+      </div>
+  <div class="block-nosEquipesItem__name">
+          <a href="#" target="_blank">
+        <p> <span class="font-weight-bold">Kamal ALAHIANE </span> <br> Animateur régional - Centre</p>
+      </a>
+      </div>
+      <div class="block-nosEquipesItem__tel1">
+      <div class="d-flex ml-md-5">
+        <span class="icon-mobile text-align-left"></span>
+        <p>
+        &nbsp;+212 666-159754
+        </p>
+      </div>
+    </div>
+      <div class="border-animate"></div>
+</div>
+
+  <div class="block block-nosEquipesItem">
+  <div class="block-nosEquipesItem__image shine">
+          <img class="" src="/sites/default/files/AYOUB-LEMAALEM-309x307_0.jpg" alt="Image person">
+      </div>
+  <div class="block-nosEquipesItem__name">
+          <a href="#" target="_blank">
+        <p> <span class="font-weight-bold">Ayoub MAALEM</span> <br> Animateur régional - Saïss</p>
+      </a>
+      </div>
+      <div class="block-nosEquipesItem__tel1">
+      <div class="d-flex ml-md-5">
+        <span class="icon-mobile text-align-left"></span>
+        <p>
+        &nbsp;+212 662-031059
+        </p>
+      </div>
+    </div>
+      <div class="border-animate"></div>
+</div>
+
+  <div class="block block-nosEquipesItem">
+  <div class="block-nosEquipesItem__image shine">
+          <img class="" src="/sites/default/files/Intrinsic-size--309-%2B%C3%B9-307-px-3.jpg" alt="Image person">
+      </div>
+  <div class="block-nosEquipesItem__name">
+          <a href="#" target="_blank">
+        <p> <span class="font-weight-bold">Abdelouahed DADA</span> <br> Animateur régional - Oriental</p>
+      </a>
+      </div>
+      <div class="block-nosEquipesItem__tel1">
+      <div class="d-flex ml-md-5">
+        <span class="icon-mobile text-align-left"></span>
+        <p>
+        &nbsp;+212 662-132831
+        </p>
+      </div>
+    </div>
+      <div class="border-animate"></div>
+</div>
+
+  <div class="block block-nosEquipesItem">
+  <div class="block-nosEquipesItem__image shine">
+          <img class="" src="/sites/default/files/Intrinsic-size--309-%E2%94%9C%C3%B9-307-px-1.jpg" alt="Image person">
+      </div>
+  <div class="block-nosEquipesItem__name">
+          <a href="#" target="_blank">
+        <p> <span class="font-weight-bold">Omar EL JANYANI </span> <br> Animateur régional - Kelaa/Rehamna/Youssoufia</p>
+      </a>
+      </div>
+      <div class="block-nosEquipesItem__tel1">
+      <div class="d-flex ml-md-5">
+        <span class="icon-mobile text-align-left"></span>
+        <p>
+        &nbsp;+212 662-194412
+        </p>
+      </div>
+    </div>
+      <div class="border-animate"></div>
+</div>
+
+
+              </div>
+    </div>
+  </div>
+</section>
+
+  <section class="lame lame-content bg-white" >
+  <div class="container">
+          <h2 class="font-weight-bold color-green title wow fadeInDown animated mb5" data-wow-delay="1s"
+          data-wow-duration="1s">
+        
+            <div>Nos partenaires</div>
+      
+      </h2>
+                  <div class="text wow fadeInUp animated " data-wow-delay="1s" data-wow-duration="1s">
+          <p class="max-w-100 text-align-center">L’initiative Al Moutmir est rendue possible grâce au support du Groupe OCP&nbsp;et de l'Université Mohammed VI Polytechnique de Benguerir&nbsp;(UM6P) ainsi qu'à la mobilisation des différents partenaires nationaux, notamment le Ministère de l'Agriculture, de la Pêche Maritime, du Développement Rural et des Eaux et Forêts et ses différents départements, les institutions scientifiques: l’Institut National de Recherche Agronomique (INRA), l’Institut Agronomique et Vétérinaire Hassan II (IAV), l’Ecole Nationale d’Agriculture de Meknès (ENA), nos partenaires fabricants-distributeurs et revendeurs d'engrais, les organisations professionnelles et les agriculteurs.&nbsp;</p>
+
+<p class="max-w-100 text-align-center">Nous tenons à remercier vivement tous nos partenaires qui œuvrent au quotidien pour rendre&nbsp;possible la mission d'Al Moutmir.</p>
+<style type="text/css">.nosEquipes + .lame-content .title.mb5 {
+margin-bottom: 1.25rem !important;
+}
+.lame-content + .lame-partenaires {
+padding-top: 10px;
+}
+.lame-partenaires + .lame-partenaires {
+margin-top: -100px;
+}
+</style>
+
+
+      </div>
+          </div>
+</section>
+
+  <section class="lame lame-partenaires bg-lightgray5">
+  <div class="container">
+    <div class="lame-partenaires__inner">
+              <div class="titre wow fadeInDown animated" data-wow-delay="500ms">
+          
+        </div>
+                    <div class="lame-partenaires__inner__items owl-carousel wow fadeIn animated" data-wow-delay="1s" data-wow-duration="500ms">
+              <a href="http://www.agriculture.gov.ma/" target=_blank>
+    <img class="item owl-lazy"
+         data-src="/sites/default/files/Minist%C3%A8re.jpg"
+         alt="" title="">
+  </a>
+
+
+    <a href="https://www.ocpgroup.ma/" target=_blank>
+    <img class="item owl-lazy"
+         data-src="/sites/default/files/New_Logo_OCP_Quadri_final-removebg-preview.png"
+         alt="" title="">
+  </a>
+
+
+
+        </div>
+          </div>
+  </div>
+</section>
+
+
+  <section class="lame lame-partenaires bg-lightgray5">
+  <div class="container">
+    <div class="lame-partenaires__inner">
+              <div class="titre wow fadeInDown animated" data-wow-delay="500ms">
+          
+        </div>
+                    <div class="lame-partenaires__inner__items owl-carousel wow fadeIn animated" data-wow-delay="1s" data-wow-duration="500ms">
+              <a href="https://www.inra.org.ma/" target=_blank>
+    <img class="item owl-lazy"
+         data-src="/sites/default/files/image4-logo-removebg-preview.png"
+         alt="" title="">
+  </a>
+
+
+    <a href="https://iav.ac.ma/" target=_blank>
+    <img class="item owl-lazy"
+         data-src="/sites/default/files/oie_transparent_ava.png"
+         alt="" title="">
+  </a>
+
+
+    <a href="http://www.enameknes.ac.ma/" target=_blank>
+    <img class="item owl-lazy"
+         data-src="/sites/default/files/Logo_ENA-removebg-preview_0.png"
+         alt="" title="">
+  </a>
+
+
+
+        </div>
+          </div>
+  </div>
+</section>
+
+
+  <div class="block block-pub">
+  <button class="close">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+            <a href="https://www.almoutmir.ma/fr/form/contact-v2" class="block-pub-content" target="_blank">
+        <img src="/sites/default/files/300x598%20-%20SAM%20-%20Al%20Moutmir%20V2%20%281%29_0.jpg" alt="" title="">
+      </a>
+      </div>
+
+
+</div>
+
+  </div>
+
+  </div>
+
+    </div>
+  </main>
+  <footer role="contentinfo" class="footer">
+    <div class="container">
+      <div class="footer__inner wow fadeInUp" style="visibility: visible;">
+        <div class="footer__inner__socials mb-15 wow fadeInUp" style="visibility: visible;">
+                      <a class="link wow fadeInLeft animated" href="https://facebook.com/almoutmir" data-wow-delay="500ms"
+               data-wow-duration="500ms" target="_blank"><i
+                class="icon icon-facebook social"></i></a>
+                                <a class="link wow fadeInDown animated" href="https://www.instagram.com/al_moutmir/" data-wow-delay="500ms"
+               data-wow-duration="500ms" target="_blank"><i
+                class="icon icon-instagram social"></i></a>
+                                <a class="link wow fadeInDown animated" href="https://twitter.com/al_moutmir" data-wow-delay="500ms"
+               data-wow-duration="500ms" target="_blank"><i
+                class="icon icon-twitter social"></i></a>
+                                <a class="link wow fadeInRight animated" href="https://www.youtube.com/channel/UC8CDLnvG5rIHVDqeoVQ0KFg" data-wow-delay="500ms"
+               data-wow-duration="500ms" target="_blank"><i
+                class="icon icon-youtube social"></i></a>
+                  </div>
+        <div class="row justify-content-center">
+                      <div class="col-md-3">
+              <p class="footer__inner__corporate">
+                © 2023 L&#039;initiative Al Moutmir du Groupe OCP.
+              </p>
+            </div>
+                                <div class="col-md-3">
+              <a href="javascript:void(0)" class="color-white copyright-link" data-toggle="modal"
+                 data-target=".modal_term_of_use">
+                Tous les droits réservés.
+              </a>
+            </div>
+                                <div class="col-md-3">
+              <a href="javascript:void(0)" class="color-white copyright-link" data-toggle="modal"
+                 data-target=".modal_legal_notice">
+                Mentions légales
+              </a>
+            </div>
+                                <div class="col-md-3">
+              <a href=notre-reponse-au-covid19 class="color-white copyright-link" target="_blank">
+                Notre réponse au COVID-19
+              </a>
+            </div>
+                  </div>
+                  <div class="footer-site-brands mt-4">
+            <a href="https://www.ocpgroup.ma/" target="_blank" class="mx-sm-0 mx-md-3">
+              <img src="/themes/custom/almoutmir_theme/assets/icons/OCPFR.png" height="80">
+            </a>
+            <a href="/index.php/fr" class="mx-sm-0 mx-md-3">
+                              <img src="/themes/custom/almoutmir_theme/assets/icons/AlMoutmirFR.png" height="80">
+                          </a>
+            <a href="https://um6p.ma/" target="_blank" class="mx-sm-0 mx-md-3">
+              <img src="/themes/custom/almoutmir_theme/assets/icons/logo_um6p.png" height="80">
+            </a>
+          </div>
+              </div>
+              <hr>
+        <div>  <div>
+    <nav role="navigation" aria-labelledby="block-footermenu-menu" id="block-footermenu">
+            
+  <h2 class="visually-hidden" id="block-footermenu-menu">Footer menu</h2>
+  
+
+        <div class="menu-footer text-align-center pb-3">
+      <div class="menu-footer-item">
+           <a class="" href="/index.php/fr/al-moutmir">Al Moutmir </a>
+    </div>
+        <div class="menu-footer-item">
+           <a class="" href="/index.php/fr/offres-et-services">Offres et Services</a>
+    </div>
+        <div class="menu-footer-item">
+           <a class="" href="/index.php/fr/actualites">Actualités</a>
+    </div>
+        <div class="menu-footer-item">
+           <a class="" href="/index.php/fr/documentheque">Documenthèque</a>
+    </div>
+    </div>
+
+  </nav>
+
+  </div>
+</div>
+            <a id="return-to-top" style="display: inline;"><i class="icon icon-arrows-1"></i></a>
+    </div>
+          <div class="modal fade modal_legal_notice" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+           aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-content">
+            <h3 class="legal_notice_title">Mentions légales</h3>
+            <hr>
+            <div class="legal_notice_body">
+              <p>Les informations à caractère personnel transmises à OCP par les utilisateurs du site web <a href="www.almoutmir.ma">www.almoutmir.ma</a> &nbsp;(le « Site »), sont recueillies et font l’objet d’un traitement informatique par OCP et sont destinées à être utilisées dans le but d’entrer en contact avec les personnes et entreprises souhaitant soumettre des demandes auprès de l’équipe Al Moutmir.</p>
+
+<p>Les destinataires desdites données à caractère personnel sont notamment les entités en charge de la communication interne, de la communication externe, les filiales et partenaires du Groupe OCP, l’entité Marché local, farming dev, et/ou tout organisme ou autorité habilité à recevoir ces données dans le cadre d’une obligation légale ou règlementaire.&nbsp;</p>
+
+<p>De manière générale, OCP s’engage à assurer la confidentialité et sécurité des données à caractère personnel qu’elle traite au titre des demandes de contact et à ne pas utiliser, céder ou mettre à disposition des tiers, pour quelque cause que ce soit, lesdites données à caractère personnel. OCP s’engage dans la mesure du possible à empêcher que les données à caractère personnel traitées dans le cadre du Site ne soient pas déformées, endommagées, ou que des tiers non autorisés y aient accès.</p>
+
+<p>Dans le respect de la loi N°09-08 promulguée par le Dahir N° 1-09-15 du 22 Safar (18 Février 2009), vous bénéficiez d’un droit d’accès, d’un droit d’opposition et de rectification aux informations qui vous concernent, pour un motif légitime, que vous pouvez exercer en vous adressant à l’adresse e-mail suivante&nbsp;: dataprivacy@ocpgroup.ma.&nbsp;</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+              <div class="modal fade modal_term_of_use" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+           aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-content">
+            <h3 class="legal_notice_title">Tous les droits réservés.</h3>
+            <hr>
+            <div class="legal_notice_body">
+              <p><strong>Préambule</strong><br />
+L’utilisation du site vitrine de l’initiative Al Moutmir d’OCP S.A. (ci-après le « Site ») implique l’acceptation pleine et entière des présentes conditions générales d’accès et d’utilisation du Site (ci-après les « Conditions d’Utilisation ») par l’internaute (ci-après l’« Utilisateur » ou les « Utilisateurs »). Le terme « Utilisation » vise indifféremment toute consultation, recherche ou téléchargement d’élément du Site. Les termes « Groupe OCP », « Editeur », « OCP » ou « Nous », sont utilisés pour désigner OCP S.A., ses filiales et participations.</p>
+
+<p><strong>Mises à jour</strong><br />
+OCP S.A. se réserve le droit de modifier et mettre à jour à tout moment le Site ainsi que les Conditions d’Utilisation. Chaque modification des Conditions d’Utilisation fera l’objet d’une version datée et référencée. La nouvelle version pourra être consultée sur le Site. Dans ce cas, la date de dernière mise à jour indiquée sur le Site sera modifiée. Toute modification prend immédiatement effet au moment de sa publication sur le Site. Si l’Utilisateur continu à utiliser le Site une fois la publication des modifications intervenues, cela entraîne l’acceptation de ces modifications. Ces modifications et mises à jour s’imposent à l’Utilisateur qui doit en conséquence se référer régulièrement à cette rubrique pour vérifier la version en vigueur.</p>
+
+<p><strong>Tarification</strong><br />
+L’accès au Site est gratuit, hors coût des fournisseurs d’accès internet et hors coût de communications téléphoniques qui sont facturées directement par les opérateurs téléphoniques.</p>
+
+<p><strong>Limitations de Responsabilité</strong><br />
+Les renseignements, présentations, documents, informations (ci-après les « Informations ») communiqués sur le Site sont fournis en toute bonne foi, à titre indicatif uniquement et sans garantie d’aucune sorte, des erreurs et des omissions pouvant notamment survenir. Ils ne sauraient de ce fait engager la responsabilité d’OCP. Ils peuvent être modifiées ou mis à jour par OCP sans préavis.<br />
+L’Utilisateur utilise le Site sous sa seule et entière responsabilité. L’utilisateur est réputé avoir accepté les mentions légales du Site ainsi que les présentes Conditions d’Utilisation du simple fait de la consultation du Site. En aucun cas, OCP et ses sous-traitants, ne sauraient être garants du caractère exhaustif, imprécis, inexact de ces Informations ou même d’une omission portant sur les Informations, ni être tenus responsables des dommages directs et/ou indirects, quelles qu'en soient les causes, origines, natures ou conséquences, qu’il soient entre autres fortuits, spéciaux résultant du contenu ou de l’Utilisation du Site et/ou de l’un des liens et adresses qui lui sont liées (y compris l’accès ou l’impossibilité des Utilisateurs d’accéder au Site ou à un quelconque de ces liens, ainsi que pour tout usage qui pourra être fait de ces différentes Informations), et notamment, sans que cela soit limitatif, toute perte d’exploitation, perte financière ou commerciale, perte de programmes et/ou de données en particulier dans le système d’information de l’Utilisateur du Site.<br />
+L’Utilisateur assume pleinement les risques liés notamment à l’importance et au crédit qu’il accorde aux Informations. Ces dernières lui sont fournies à la condition que l’Utilisateur ou toute autre personne qui reçoit les Informations puisse déterminer son intérêt pour un objectif précis avant de les utiliser. En aucun cas, OCP ne sera responsable des dommages susceptibles de résulter notamment de l’importance accordée à ces Informations, de leur Utilisation notamment à des fins privées ou professionnelles. Ces Informations ne doivent pas être considérées comme des recommandations pour l'Utilisation d'informations, de produits, de procédures, d'équipements ou de formulations qui seraient en contradiction avec un brevet, un copyright ou une marque déposée. OCP décline toute responsabilité, expresse ou implicite, si l'Utilisation de ces Informations venait à contrevenir à un brevet, un copyright ou une marque déposée. OCP rejette catégoriquement toute interprétation qui viserait à assimiler le contenu du Site à des offres d'achat ou des incitations à acquérir des actions ou autres valeurs mobilières cotées ou non cotées d’OCP, ses filiales et participations directes ou indirectes.<br />
+Aucune garantie, expresse ou implicite, n'est donnée quant à la nature marchande des Informations fournies, ni quant à leur adéquation à une finalité déterminée, ainsi qu'en ce qui concerne les produits ou services auxquels il est fait référence dans ces Informations. En aucun cas, OCP ne s'engage à mettre à jour ou à corriger les Informations qui seront diffusées sur le Site.<br />
+Concernant les simulations pouvant, ou qui pourraient, être effectuées sur le Site, OCP rappelle aux Utilisateurs qu’elles n’ont pas de valeur légale. Ces simulations sont réalisées à partir des informations que les Utilisateurs ont renseignées dans les modules concernés, et sont fournies à titre purement indicatif.<br />
+OCP ne garantit pas que le Site fonctionne sans interruption et que les serveurs qui y donnent accès et/ou les sites tiers pour lesquels apparaissent des liens hypertextes ne contiennent pas de virus. En outre, OCP ne saurait en aucun cas être tenu pour responsable d'une perte de données ou d'une détérioration des données de l’Utilisateur.</p>
+
+<p><strong>Cookies</strong><br />
+Les Utilisateurs sont informés que lors de leurs visites sur le Site, un mécanisme de suivi de navigation peut être mis en œuvre. Ils disposent d'un droit d'accès, de retrait et de modification des données personnelles communiquées par le biais de techniques de traçage. Leur passage sur le Site&nbsp;«&nbsp;Al Moutmir&nbsp;» d’OCP donne lieu à la création d'un cookie de session (ci-après le/les « Cookie(s) » et qui enregistre des informations relatives à la navigation de leurs ordinateurs sur le Site (les pages consultées, la date et l'heure de la consultation, etc.), qu’ OCP pourra lire lors des visites ultérieures des utilisateurs.<br />
+Pendant toute la durée de visite sur le Site, les pages vues par l’Utilisateur donnent lieu à la création d’un Cookie de session qui est téléchargé par l’ordinateur de l’Utilisateur. Les Cookies sont de petits dossiers contenant du texte, qui permettent à un serveur de reconnaître un ordinateur et donc de savoir si l’ordinateur (et probablement l’Utilisateur) a déjà visité le Site précédemment. Si l’ordinateur se reconnecte au Site, ce dernier cherchera et se servira de ces Cookies, ou « témoins » laissés sur le disque dur pendant la précédente visite.<br />
+Les Cookies eux-mêmes ne permettent pas d’identifier un Utilisateur, mais uniquement l’ordinateur qu’il utilise. Les Cookies se bornent à prendre note des parties du Site que l’ordinateur en question a visité, et du temps qu’il y a passé. L’Utilisateur est libre d’opposer à l’enregistrement de Cookies en configurant son navigateur de la manière décrite ci-dessous. Cependant en refusant les Cookies, il sera impossible de lui fournir certains services personnalisés et cette manipulation risque de ralentir ou d’empêcher l’accès à certaines parties du Site.<br />
+L'Utilisateur est informé que, lors de ses visites sur le Site, un Cookie peut s'installer automatiquement sur son logiciel de navigation et être temporairement conservé en mémoire sur son disque dur. Ces informations sont utilisées pour fournir un service optimal. Ainsi, les Cookies sont utilisées pour :<br />
+&nbsp; &nbsp; • enregistrer des informations sur la navigation de l’utilisateur sur le Site pour orienter sa navigation vers les contenus les mieux adaptés;<br />
+&nbsp; &nbsp; • mesurer le nombre de visites sur le Site.<br />
+En aucun cas, les Cookies n'ont pour objet d'exploiter des informations personnelles nominatives concernant les personnes connectées au Site.<br />
+L'Utilisateur reconnaît avoir été informé de cette pratique et autorise OCP à l'employer. L'Utilisateur pourra désactiver le Cookie par l'intermédiaire des paramètres figurant au sein de son logiciel de navigation et notamment en modifiant les options des logiciels de navigation figurant sur leur ordinateur (Rubrique « Edition/Préférences » sous Netscape Navigator 6.2, Rubrique « Outils/Internet Options » sous Internet Explorer, Rubrique « Outils/Options » sous Mozilla Firefox et Rubrique « Safari/Sécurité » sous Apple Safari).</p>
+
+<p><strong>Propriété intellectuelle</strong><br />
+OCP est titulaire de l’ensemble des noms de domaine relatifs à «Al Moutmir». Le Site dans son ensemble, ainsi que les éléments qui le composent constituent des œuvres de l'esprit protégées par les lois en vigueur notamment en matière de propriété intellectuelle. L'ensemble des données notamment, textes, arborescence, logiciels, animations, photographies, illustrations, schémas, représentations graphiques, logos, sons, images, informations et bases de données le cas échéant, figurant sur les pages du Site sont la propriété exclusive d’OCP. Toute reproduction, représentation ou diffusion, en tout ou partie, du contenu ainsi que toute extraction, même partielle, des bases de données du Site sur quelque support ou par tout procédé que ce soit est interdite. Le non-respect de cette interdiction constitue une contrefaçon susceptible d'engager la responsabilité civile et pénale du contrefacteur ou de l’Utilisateur.<br />
+Sauf mention contraire, les dénominations sociales, les logos, les produits et marques citées dans le Site (produits ® et TM) sont des marques déposées par OCP. Toute reproduction totale ou partielle de ces marques et logos à quelque titre que ce soit, et notamment à des fins publicitaires ou commerciales, effectuée à partir des éléments du Site sans l'accord préalable et écrit du titulaire de la marque est interdite, conformément aux dispositions des articles 154 et 155 de la loi n°17-97 du 15 février 2000 relative à la Protection de la Propriété Industrielle (telle que modifiée et complétée par la loi n°31-05).<br />
+La structure générale du Site, les gabarits et squelettes utilisés sur le Site ainsi que les informations, pictogrammes, photographies, images, textes, séquences vidéo, animées sonores ou non, et autres documents composant le Site ou accessibles sur ce Site sont soumis aux lois protégeant la propriété intellectuelle et sont la propriété d’OCP ou de tiers ayant autorisé OCP à les utiliser, ainsi que ses éventuels fournisseurs, sous-traitants, partenaires et/ou sociétés affiliées impliquées dans le fonctionnement du Site.<br />
+A ce titre, toute reproduction, représentation, adaptation, traduction et/ou transformation, partielle ou intégrale, du Site ou d’un ou de plusieurs de ses composants, par quelque procédé que ce soit (y compris par transfert sur un autre site), sans autorisation préalable et écrite d’OCP, est interdite, et constituerait une contrefaçon sanctionnée notamment par la loi n° 17-97 relative à la protection de la propriété industrielle (telle que modifiée et complétée par la loi n° 31-05), susceptible d’engager la responsabilité civile et/ou pénale de son auteur. Aucune licence, ni aucun droit que celui de consulter le Site, n'est conféré à quiconque au regard des droits de propriété intellectuelle.<br />
+&nbsp;&nbsp; &nbsp;<br />
+<strong>Protection des données à caractère personnel</strong><br />
+Par données personnelles, OCP entend toutes les informations divulguées par les Utilisateurs en tant que personnes physiques, quelle que soit leur nature, tels que leurs noms, prénoms, e-mails, numéro de téléphone, région, province et commune, numéro de CIN, photos et images, permettant de les identifier directement ou non quelles soient fournies volontairement par ces derniers ou collectées dans le cadre de leur navigation sur le Site.<br />
+Les données personnelles qu’Al Moutmir est amenée à recueillir sont exclusivement destinées à la Direction Marché Local d’OCP, aux entités en charge de la communication interne, de la communication externe, les filiales et partenaires du Groupe OCP et/ou tout organisme ou autorité habilités à recevoir ces données dans le cadre d’une obligation légale ou règlementaire pour permettre à l’Utilisateur de profiter des services offerts par le Site.<br />
+Toute donnée à caractère personnel que l’Utilisateur est amené à transmettre à OCP est soumise aux dispositions de la loi n° 09-08 du 18 février 2009 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.<br />
+Aucune information personnelle concernant l’Utilisateur n’est cédée à des tiers ou utilisée à des fins non prévues.<br />
+Les Utilisateurs du Site sont tenus de respecter les dispositions de la loi n° 09-08. Pour ce faire, Ils doivent notamment s’abstenir de toute collecte, captation, déformation ou utilisation des informations auxquelles ils accèdent et, d’une manière générale, de tout acte susceptible de porter atteinte à la vie privée des personnes.<br />
+Conformément à la loi n° 09-08, l’Utilisateur dispose d'un droit d'accès, de modification, de rectification et de suppression des données personnelles le concernant et qu’OCP pourra être amenée à recueillir, en nous contactant Al Moutmir à tout moment en ligne à la rubrique « Contact » du Site, ou en adressant un courrier à l’attention de la Direction Marché Local d’OCP aux adresses suivantes :<br />
+Par courrier postal adressé à : OCP S.A.&nbsp;&nbsp;2-4, rue Al Abtal, Hay Erraha, 20200, Casablanca, Maroc,&nbsp;<a href="almoutmir@ocpgroup.ma">almoutmir@ocpgroup.ma</a></p>
+
+<p><strong>Liens hypertextes</strong><br />
+OCP décline formellement toute responsabilité quant aux contenus de l’ensemble des sites vers lesquels elles offrent des liens. Ces liens sont proposés aux Utilisateurs du Site ou des sites web de ses filiales et entités affiliées en tant que service complémentaire. La décision d'activer ces liens appartient exclusivement aux Utilisateurs du Site.<br />
+OCP n'étant pas l'éditeur de ces sites, il ne peut en contrôler de manière parfaite le contenu. En conséquence, OCP ne pourra en aucun cas être tenu pour responsable du contenu des sites ainsi accessibles et notamment de leur véracité, actualité, qualité, exhaustivité, pertinence, illégalité, publicités, informations, produits, services ou tout autre matériel disponibles sur ou à partir de ces sites ou sources externes.</p>
+
+<p>OCP ne pourra de même être tenu pour responsable des éventuelles collectes et transmission de données personnelles, installation de cookies ou tout autre procédé tendant aux mêmes fins, effectués sur et par ces sites.</p>
+
+<p>La confidentialité et l’intégrité des Informations ne sont pas garantis sur le réseau internet. Par conséquent, les messages que l’Utilisateur envoie par voie électronique peuvent être interceptés et/ou modifiés. OCP en décline toute responsabilité.</p>
+
+<p>Les Utilisateurs du Site au demeurant ne peuvent en aucun cas mettre en place un lien hypertexte ou un framing (exemple de programmation en code HTML) en direction du Site sans l'autorisation préalable et écrite d’OCP S.A.&nbsp;et en conséquence, aucun élément figurant sur une page du Site ne peut être partiellement ou totalement diffusé, transféré ou inséré sur un autre site internet, ni servir à créer des produits dérivés, sauf autorisation préalable et expresse d’OCP. A cet effet, les Utilisateurs peuvent adresser leur demande à l’Administrateur du Site à l’adresse suivante:&nbsp;<a href="almoutmir@ocpgroup.ma">almoutmir@ocpgroup.ma</a></p>
+
+<p><strong>Informations financières</strong><br />
+Les renseignements, présentations, documents, analyses, informations, données, etc., mis à disposition sur le Site peuvent contenir des prévisions concernant la situation financière, industrielle, les résultats d'opérations, les activités et la stratégie industrielle et/ou commerciale d’OCP. Plus particulièrement, l'utilisation d'expressions telles que « anticiper », « estimer », « s'attendre à », « projeter », « prévoir » ,« planifier », « croire », « s'attendre à ce que », et tous autres mots et termes de signification similaire en rapport avec une information ou projection future relative notamment à la performance financière, industrielle ou commerciale ainsi que les déclarations concernant les plans, stratégies et objectifs de gestion pour les opérations futures, y compris l'exécution de l'intégration et les plans de restructuration, les déclarations concernant les nouveaux produits proposés, la production, les tendances, les services, les évolutions, la performance attendue des produits ou des services ou des classements de l'industrie, des déclarations concernant les futurs conditions économiques ou du marché, les déclarations d’intention, et toutes autres informations ou déclarations d’estimations sous-jacentes de ce qui précède sont de nature prévisionnelle. OCP estime que ces prévisions ou objectifs reposent sur des hypothèses raisonnables mais qui peuvent s’avérer inexactes et qui sont en tout état de cause soumises à des facteurs de risques et incertitudes. Il n’y a aucune certitude que les évènements prévus auront lieu ou que les résultats attendus seront effectivement obtenus. Les facteurs importants susceptibles d’entraîner des différences entre les résultats envisagés et ceux effectivement obtenus comprennent notamment la réussite des initiatives stratégiques, financières et opérationnelles d’OCP fondées sur le modèle d’opérateur intégré, l’évolution de l’environnement concurrentiel et du cadre réglementaire des marchés de l’énergie, et les risques et incertitudes concernant l’activité d’OCP, l’environnement climatique, les fluctuations des prix des matières premières et des taux de change, les évolutions technologiques, l’évolution de l’activité économique et les opérations internationales.<br />
+Aucune desdites déclarations ou informations ne peut être garantie par OCP. Aussi, OCP n’assume aucune obligation de corriger ou de mettre à jour les énoncés prospectifs, prévisions en raison de nouveaux renseignements ou tout autre événement futur.<br />
+En tout état de cause, OCP n’est nullement tenu pour l'exécution de ses obligations que dans la mesure où aucun événement de force majeure (au sens des articles 269 et suivant du formant Code des Obligations et des Contrats (DOC) ne vient les entraver.</p>
+
+<p><strong>Droit applicable et juridiction compétente</strong><br />
+Le Site «&nbsp;<a href="www.almoutmir.ma">www.almoutmir.ma</a>&nbsp;», les mentions légales ainsi que les présentes Conditions d’Utilisation sont toutes soumises au droit marocain. En cas de litige relatif à l’interprétation ou à l’exécution du Site, des mentions légales, et ou des Conditions d’Utilisation, les tribunaux marocains sont seuls compétents, sauf disposition légale impérative contraire.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </footer>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","pathPrefix":"fr\/","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ffd78a765e0cca17eb786425118e89a62a5b51b98a1b45e5ab84717ef4c543d5"}}</script>
+<script src="/sites/default/files/js/js_iRExYsMXBDyPzINLKLGEApOtW39SmOFr_PEV8Fq1PZo.js?scope=footer&amp;delta=0&amp;language=fr&amp;theme=almoutmir_theme&amp;include=eJx9jMENAjEMBBsCpRU6iJy7VbDk2Cg2gXQP4nVIge_OzPr0QEuFHCeSZvdo3HNc0ZCqWCE5e0xhrT_x1vkWfsBCur-DdAjwjL_C4B12EZroC-9DcyHVL6w0uFKwaVqNiyMbeHQO5M39BSObZME"></script>
+<script src="/themes/custom/almoutmir_theme/assets/js/main.js?sbfzuk"></script>
+<script src="/themes/custom/almoutmir_theme/assets/js/vendor.js?sbfzuk"></script>
+<script src="/sites/default/files/js/js_-uu1YnH-YgXrT7epyT03nht43aJuFxvCSNRHM7lB8ko.js?scope=footer&amp;delta=3&amp;language=fr&amp;theme=almoutmir_theme&amp;include=eJx9jMENAjEMBBsCpRU6iJy7VbDk2Cg2gXQP4nVIge_OzPr0QEuFHCeSZvdo3HNc0ZCqWCE5e0xhrT_x1vkWfsBCur-DdAjwjL_C4B12EZroC-9DcyHVL6w0uFKwaVqNiyMbeHQO5M39BSObZME"></script>
+
+  </body>
+</html>
