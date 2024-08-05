@@ -30,4 +30,10 @@ router.get('/connecter', (req, res) => {
         title: "Connecter"
     });
 });
+
+router.get('/detail', (req, res) => {
+    res.render('event/details',{
+        title: "connecter"
+    });
+});
 module.exports = router;
