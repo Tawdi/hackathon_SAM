@@ -1,4 +1,4 @@
-// const express = require('express');
+
 // const path = require('path');
 // const bodyParser = require('body-parser');
 // const cookieParser = require('cookie-parser');
@@ -7,7 +7,6 @@
 // const flash = require('connect-flash');
 // const passport = require('passport');
 // const app = express();
-
 // // Configurations de base
 // app.set('view engine', 'ejs');
 // app.set('views', path.join(__dirname, 'views'));
@@ -58,6 +57,7 @@ const expressLayouts = require('express-ejs-layouts');
 const flash = require('connect-flash');
 const passport = require('passport');
 const  createDatabase  = require('../config/creation_db');
+const userRoutes = require('../routes/auth');
 
 // const createDatabase  = require('../config/creation_db'); 
 const methodOverride = require('method-override'); // for PUT and DELETE methods
