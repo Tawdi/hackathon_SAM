@@ -148,7 +148,7 @@ const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: 'admin',
-  database: 'sys',
+  // database: 'sys',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
@@ -168,11 +168,13 @@ async function createDatabase() {
       CREATE TABLE IF NOT EXISTS users (
         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
         email VARCHAR(50) NOT NULL,
+        telephone varchar(20) not null,
+        adresse text not null,
         password TEXT NOT NULL,
         nom VARCHAR(50) NOT NULL,
         prenom VARCHAR(50) NOT NULL,
         role VARCHAR(255) DEFAULT 'user',
-        verificationToken VARCHAR(255) NULL,
+        verificationToken VARCHAR(255) ,
         isVerified BOOLEAN DEFAULT FALSE,
         PRIMARY KEY (id),
         UNIQUE INDEX email_UNIQUE (email ASC)
@@ -252,14 +254,14 @@ async function createDatabase() {
       const adminPrenom = "admin";
 
       await promisePool.query(`
-        INSERT INTO users (email, password, nom, prenom, role, isVerified) 
-        VALUES (?, ?, ?, ?, 'admin', TRUE)
-      `, [adminEmail, hashedPassword, adminNom, adminPrenom]);
+        INSERT INTO users (email, password, nom, prenom,telephone,adresse, role, isVerified) 
+        VALUES (?, ?, ?, ?, ?, ?, 'admin', TRUE)
+      `, [adminEmail, hashedPassword, adminNom, adminPrenom,"00000000","safi"]);
 
       console.log("Admin user created.");
     } else {
       console.log("Admin user already exists or other users present.");
-    }
+    } 
   } catch (err) {
     console.error("Error creating database, tables, or admin user:", err);
   } finally {

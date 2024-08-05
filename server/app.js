@@ -133,10 +133,12 @@ createDatabase().then(() => {
     const indexRouter = require('../routes/index');
     const eventRouter = require('../routes/event');
     const adminRouter = require('../routes/admin');
+    const authRouter = require('../routes/auth');
   
     app.use('/', indexRouter);
     app.use('/admin', adminRouter);
     app.use('/event', eventRouter);
+    app.use('/connecter', authRouter);
   
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {

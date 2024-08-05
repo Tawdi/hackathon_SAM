@@ -3,7 +3,7 @@ const userModel = require('../models/userModel');
 
 module.exports = {
   registerUser: (req, res) => {
-    const { nom,prenom,telephone, email, adresse,profession, organisation, password} = req.body;
+    const { nom,prenom ,telephone,adresse, email, password } = req.body;
 
     userModel.checkUserByEmail(email, (err, result) => {
       if (err) {
@@ -22,7 +22,7 @@ module.exports = {
             console.error('Error hashing password:', err);
             return res.status(500).send('Internal server error');
           }
-          userModel.insertUser(nom,prenom, email,telephone, adresse,hashedPassword, (err, result) => {
+          userModel.insertUser(nom,prenom , email,telephone,adresse, hashedPassword, (err, result) => {
             if (err) {
               console.error('Error inserting user:', err);
               return res.status(500).send('Internal server error');
@@ -54,7 +54,7 @@ module.exports = {
             return res.status(500).send('Internal server error');
           }
           if (isMatch) {
-            res.redirect('/index');
+            res.redirect('/');
           } else {
             res.render('login', { 
               message: 'Incorrect email or password', 
@@ -64,7 +64,7 @@ module.exports = {
           }
         });
       } else {
-        res.render('login', { 
+        res.render('pages/accueil', { 
           message: 'Incorrect email or password', 
           messageType: 'error',
           showLoginMessage: true 

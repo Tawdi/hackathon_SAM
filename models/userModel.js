@@ -70,16 +70,16 @@
 //   verifyUser
 // };
 
-const db = require('../sam_db'); // Assurez-vous de configurer votre connexion DB dans ce fichier
+const db = require('../config/database'); // Assurez-vous de configurer votre connexion DB dans ce fichier
 
 module.exports = {
   checkUserByEmail: (email, callback) => {
     const sql = 'SELECT * FROM users WHERE email = ?';
     db.query(sql, [email], callback);
   },
-  insertUser: (username, email, hashedPassword, role, callback) => {
-    const sql = 'INSERT INTO users (email, password, role)(email, password, nom, prenom, verificationToken) VALUES (?, ?, ?, ?)';
-    db.query(sql, [ email, hashedPassword, role], callback);
+  insertUser: (nom,prenom, email,telephone, adresse,hashedPassword, callback) => {
+    const sql = 'INSERT INTO users (nom, prenom, password, email, telephone, adresse)VALUES (?,?,?, ?, ?, ?)';
+    db.query(sql, [ nom,prenom,email,telephone, adresse, hashedPassword], callback);
   }
 };
 

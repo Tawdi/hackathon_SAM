@@ -9,11 +9,11 @@
 // router.get('/logout', authController.logout);
 
 // module.exports = router;
-// const express = require('express');
-// const router = express.Router();
-// const userController = require('../controllers/authController');
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/authController');
 
-// router.post('/register', userController.registerUser);
-// router.post('/login', userController.loginUser);
+router.post('/register', userController.registerUser);
+router.post('/login', userController.loginUser);
 
-// module.exports = router;
+module.exports = router;
