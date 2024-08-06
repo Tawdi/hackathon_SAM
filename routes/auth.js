@@ -24,13 +24,13 @@ const authController = require("../controllers/AuthController1"); // Import the 
 const router = express.Router();
 
 // Show login form
-router.get("/connecter", authController.showLoginPage);
+router.get("/login", authController.showLoginPage);
 
 // Handle login logic
 router.post("/login", authController.login);
 
 // Show signup form
-// router.get("/signup", authController.showSignupPage);
+router.get("/register", authController.showSignupPage);
 
 // Handle signup logic
 router.post("/register", authController.signup);

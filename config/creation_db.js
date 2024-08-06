@@ -262,9 +262,9 @@ async function createDatabase() {
 
 
       await promisePool.query(`
-        INSERT INTO users (email, password, nom, prenom,telephone,adresse,organisation ,profession, role, isVerified) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'admin', TRUE)
-      `, [adminEmail, hashedPassword, adminNom, adminPrenom,adminTelephone,adminAdresse,adminOrganisation,adminProfession]);
+        INSERT INTO users (username,email, password, nom, prenom,telephone,adresse,organisation ,profession, role, isVerified) 
+        VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, 'admin', TRUE)
+      `, [adminPrenom,adminEmail, hashedPassword, adminNom, adminPrenom,adminTelephone,adminAdresse,adminOrganisation,adminProfession]);
 
       console.log("Admin user created.");
     } else {

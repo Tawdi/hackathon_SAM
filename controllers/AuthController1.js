@@ -37,7 +37,7 @@ module.exports = {
   },
 
   showSignupPage: (req, res) => {
-    res.render("auth/login");
+    res.render("auth/register");
   },
 
   signup: [
@@ -70,7 +70,7 @@ module.exports = {
           "error_msg",
           errors.array().map((err) => err.msg)
         );
-        return res.redirect("/connecter");
+        return res.redirect("/register");
       }
 
       const { username, email, password, nom, prenom, telephone,organisation ,profession, adresse } = req.body;
@@ -78,7 +78,7 @@ module.exports = {
         const existingUser = await User.findByEmail(email);
         if (existingUser) {
           req.flash("error_msg", "Email is already registered");
-          return res.redirect("/connecter");
+          return res.redirect("/register");
         }
 
         const verificationToken = crypto.randomBytes(32).toString("hex");
@@ -99,13 +99,14 @@ module.exports = {
         const transporter = nodemailer.createTransport({
           service: "Gmail",
           auth: {
-            user: "snaiki282@gmail.com",
-            pass: "fvxj mdok ehij gihc",
+            
+            user: "samalmoutmir@gmail.com",
+            pass: "sam00000",
           },
         });
 
         const mailOptions = {
-          from: "snaiki282@gmail.com",
+          from: "samalmoutmir@gmail.com",
           to: email,
           subject: "Account Verification",
           text: `Please verify your account by clicking the following link: ${verificationUrl}`,
@@ -115,19 +116,19 @@ module.exports = {
           if (err) {
             console.error("Error sending email:", err);
             req.flash("error_msg", "Error sending verification email.");
-            return res.redirect("/connecter");
+            return res.redirect("/register");
           }
 
           req.flash(
             "success_msg",
             "You have successfully signed up! Please check your email to verify your account."
           );
-          res.redirect("/login");
+          res.redirect("/");
         });
       } catch (err) {
         console.error("Error during signup:", err);
         req.flash("error_msg", "Server error, please try again later.");
-        res.redirect("/connecter");
+        res.redirect("/register");
       }
     },
   ],
@@ -139,7 +140,7 @@ module.exports = {
       const user = await User.verifyUser(token);
       if (!user) {
         req.flash("error_msg", "Invalid verification token.");
-        return res.redirect("/signup");
+        return res.redirect("/register");
       }
 
       req.flash(
@@ -153,7 +154,7 @@ module.exports = {
         "error_msg",
         "An error occurred during verification. Please try again later."
       );
-      res.redirect("/signup");
+      res.redirect("/register");
     }
   },
 
