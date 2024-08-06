@@ -12,7 +12,7 @@ module.exports = {
       }
       if (result.length > 0) {
         return res.render('login', { 
-          message: 'User already registered', 
+          message: 'Utilisateur déjà enregistré', 
           messageType: 'error',
           showRegisterMessage: true 
         });
@@ -28,7 +28,7 @@ module.exports = {
               return res.status(500).send('Internal server error');
             }
             res.render('login', { 
-              message: 'Registration successful! You can now log in.', 
+              message: 'Inscription réussie ! Vous pouvez désormais vous connecter.', 
               messageType: 'success',
               showRegisterMessage: true 
             });

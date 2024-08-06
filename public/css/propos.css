@@ -25,6 +25,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.counter .counter-item .counter-item-icon i {
+  color: #506e7a; /* La couleur désirée pour les icônes */
+}
 /*** Counter End ***/
 
 .slider{
