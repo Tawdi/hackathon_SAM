@@ -11,7 +11,7 @@
 // module.exports = pool.promise();
 
 const mysql = require('mysql2');
-require('dotenv').config();
+require('dotenv').config(); // hada li nsiiit *******
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
@@ -19,6 +19,5 @@ const pool = mysql.createPool({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
-// const promisePool=pool.promise();
 
 module.exports = pool.promise();
