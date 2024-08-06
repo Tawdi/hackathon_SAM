@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card-header {
+    background-color: #de6f43;
+    color: white;
+    text-align: center;
+}
+
+.card-header .title {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #444;
+}
+
+.btn-primary {
+    background-color: #de6f43;
+    border-color: #de6f43;
+}
+
+.btn-primary:hover {
+    background-color: #bf5a33;
+    border-color: #bf5a33;
+}

@@ -1,6 +1,7 @@
 const passport = require("passport");
 const { body, validationResult } = require("express-validator");
 const nodemailer = require("nodemailer");
+require('dotenv').config();
 const User = require("../models/User");
 const crypto = require("crypto");
 const bcrypt = require("bcrypt");
@@ -94,19 +95,19 @@ module.exports = {
           profession,
           verificationToken
         );
-
+        
         const verificationUrl = `http://localhost:3000/verify/${verificationToken}`;
         const transporter = nodemailer.createTransport({
           service: "Gmail",
           auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
             
-            user: "samalmoutmir@gmail.com",
-            pass: "sam00000",
           },
         });
-
+ 
         const mailOptions = {
-          from: "samalmoutmir@gmail.com",
+          from: process.env.EMAIL_USER, 
           to: email,
           subject: "Account Verification",
           text: `Please verify your account by clicking the following link: ${verificationUrl}`,
