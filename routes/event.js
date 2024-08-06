@@ -81,7 +81,7 @@
 //         res.send('Erreur lors de la suppression de l\'événement.');
 //     }
 // });
-
+ 
 // module.exports = router;
 // routes/event.js
 const express = require('express');
@@ -89,11 +89,11 @@ const router = express.Router();
 const eventController = require('../controllers/eventController');
 
 // GET all events
-router.get('/', eventController.getAllEvents);
+// router.get('/', eventController.getAllEvents);
 
 // GET a single event by ID
 router.get('/:id', eventController.getEventById);
-router.get('/create', eventController.showCreateEvent);
+// router.get('/create', eventController.showCreateEvent);
 // router.get('/create', (req, res) => {
 //     res.render('admin/',{
 

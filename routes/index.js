@@ -42,10 +42,10 @@ router.get('/detail', (req, res) => {
 
     });
 });
-router.get('/list-event', (req, res) => {
-    res.render('admin/list-event',{
+// router.get('/list-event', (req, res) => {
+//     res.render('admin/list-event',{
 
-    });
-});
+//     });
+// });
 
 module.exports = router;

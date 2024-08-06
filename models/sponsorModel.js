@@ -1,4 +1,4 @@
-const promisePool = require('../config/db');
+const promisePool = require('../config/database');
 
 async function addSponsors(sponsors, eventId) {
     const sponsorPromises = sponsors.nom.map((nom, index) => {
