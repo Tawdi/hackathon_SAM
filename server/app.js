@@ -204,8 +204,11 @@ app.use((req, res, next) => {
 // Routes
 const indexRoutes = require("../routes/index");
 const authRoutes = require("../routes/auth");
+const adminRoutes = require("../routes/admin");
+
 
 app.use("/", indexRoutes);
+app.use("/", adminRoutes);
 app.use("/", authRoutes);
 
 // Start the server

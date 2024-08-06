@@ -101,12 +101,12 @@ module.exports = {
           auth: {
             
             user: "samalmoutmir@gmail.com",
-            pass: "sam00000",
+            pass: "kqzi jpmq bhkp pjqh",
           },
         });
-
+ 
         const mailOptions = {
-          from: "samalmoutmir@gmail.com",
+          from: "samalmoutmir@gmail.com", 
           to: email,
           subject: "Account Verification",
           text: `Please verify your account by clicking the following link: ${verificationUrl}`,
