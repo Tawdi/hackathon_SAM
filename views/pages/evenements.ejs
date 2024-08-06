@@ -1,631 +1,239 @@
 <!-- Include  navigation bar -->
 <%- include('../partials/topbar') %>
 <%- include('../partials/navbar') %>
+<link rel="stylesheet" href="css/event.css">
 <%- include('../partials/titre_header') %>
-<link href="css/event.css" rel="stylesheet">
-
-
-    <!-- Navbar Start -->
-    <!-- <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Acceuil</a>
-                    <a href="about.html" class="nav-item nav-link">À propos</a>
-                    <a href="service.html" class="nav-item nav-link">Actualités</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Evénements</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                            <a href="feature.html" class="dropdown-item">Our features</a>
-                            <a href="team.html" class="dropdown-item">Team Members</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
-                    data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="https://htmlcodex.com/startup-company-website-template"
-                    class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
-            </div>
-        </nav>
-
-        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-            <div class="row py-5">
-                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Innovations et Pratiques pour l'Avenir</h1>
-                    <a href="" class="h5 text-white">Acceuil</a>
-                    <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Evénement 1</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <section class="countdown-section py-5">
-        <div class="container text-center">
-            <div class="countdown-container row justify-content-center">
-                <div class="countdown-item col-6 col-md-3 mx-3 mb-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div id="days" class="number display-4 text-primary">00</div>
-                    <div class="label text-uppercase mt-2">Jours</div>
-                </div>
-                <div class="countdown-item col-6 col-md-3 mx-3 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div id="hours" class="number display-4 text-primary">00</div>
-                    <div class="label text-uppercase mt-2">Heures</div>
-                </div>
-                <div class="countdown-item col-6 col-md-3 mx-3 mb-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div id="minutes" class="number display-4 text-primary">00</div>
-                    <div class="label text-uppercase mt-2">Minutes</div>
-                </div>
-                <div class="countdown-item col-6 col-md-3 mx-3 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div id="seconds" class="number display-4 text-primary">00</div>
-                    <div class="label text-uppercase mt-2">Secondes</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3"
-                            placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
-    <!-- Quote Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <!-- <h5 class="fw-bold text-primary text-uppercase">Request A Quote</h5> -->
-                        <h1 class="mb-0">Priorités et Objectifs de la Manifestation</h1>
-                    </div>
-                    <div class="row gx-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Réponse sous 24 heures </h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Assistance téléphonique
-                                24h/24</h5>
-                        </div>
-                    </div>
-                    <p class="mb-4">L'événement présente les innovations en mécanisation durable, explore les pratiques
-                        agricoles écoresponsables, favorise le réseautage entre professionnels, et met en avant les
-                        politiques soutenant la mécanisation verte.</p>
-                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded"
-                            style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Appelez pour poser toute question</h5>
-                            <h4 class="text-primary mb-0">+212 * * *</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn"
-                        data-wow-delay="0.9s">
-                        <!-- <form>
-                            <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Request A Quote</button>
-                                </div>
-                            </div>
-                        </form> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Quote End -->
-
-    <section class="py-5">
-        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <!-- <h5 class="fw-bold text-primary text-uppercase">Intervenants</h5> -->
-            <h1 class="mb-0">Programme Détailé de l'Événement par Jour</h1>
-        </div>
-        <div class="container mt-5">
-            <div class="row">
-                <!-- Onglets pour les jours -->
-                <div class="col-12">
-                    <ul class="nav nav-tabs" id="eventTabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="day1-tab" data-bs-toggle="tab" href="#day1" role="tab">Jour
-                                1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="day2-tab" data-bs-toggle="tab" href="#day2" role="tab">Jour 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="day3-tab" data-bs-toggle="tab" href="#day3" role="tab">Jour 3</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12">
-                    <div class="tab-content" id="eventTabsContent">
-                        <!-- Contenu des jours -->
-                        <div class="tab-pane fade show active" id="day1" role="tabpanel">
-                            <div class="timeline">
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.1s">
-                                    <img src="R.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Conférence d'Ouverture</h2>
-                                        <small>09:00 - 10:30</small>
-                                        <p>Présentation des thèmes de l'événement par les organisateurs et keynote sur
-                                            l'importance de l'innovation dans le monde moderne</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container right-container wow fadeInUp" data-wow-delay="0.2s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Table Ronde : L'Intelligence Artificielle dans les Entreprises</h2>
-                                        <small>10:45 - 12:00</small>
-                                        <p>Experts en IA discuteront de l'impact croissant de l'intelligence
-                                            artificielle dans divers secteurs et partageront des exemples concrets
-                                            d'intégration réussie.</p>
-                                        <span class="right-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.3s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Déjeuner et Réseautage</h2>
-                                        <small>12:00 - 13:30</small>
-                                        <p>Une opportunité de rencontrer les participants et les conférenciers dans un
-                                            cadre informel.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container right-container wow fadeInUp" data-wow-delay="0.4s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Atelier : Développement Durable et Technologies Vertes</h2>
-                                        <small>13:30 - 15:00</small>
-                                        <p>Un atelier interactif sur la manière dont les technologies peuvent être
-                                            utilisées pour améliorer les pratiques durables dans les entreprises</p>
-                                        <span class="right-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.5s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Présentation de Projets Innovants</h2>
-                                        <small>15:15 - 16:30</small>
-                                        <p>Plusieurs startups et entreprises innovantes présenteront leurs projets
-                                            visant à transformer divers secteurs.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="day2" role="tabpanel">
-                            <div class="timeline">
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.1s">
-                                    <img src="R.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Conférence : L'Avenir de l'Énergie Renouvelable</h2>
-                                        <small>09:00 - 10:30</small>
-                                        <p>Une discussion sur les avancées récentes dans les énergies renouvelables et
-                                            leur potentiel pour un avenir plus durable.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container right-container wow fadeInUp" data-wow-delay="0.2s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Panel : Économie Circulaire et Responsabilité Sociale</h2>
-                                        <small>10:45 - 12:00</small>
-                                        <p>Des leaders d'opinion partageront leurs perspectives sur la mise en œuvre de
-                                            l'économie circulaire et l'importance de la responsabilité sociale des
-                                            entreprises.</p>
-                                        <span class="right-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.3s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Déjeuner et Réseautage</h2>
-                                        <small>12:00 - 13:30</small>
-                                        <p>Continuation des échanges entre les participants et les intervenants.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container right-container wow fadeInUp" data-wow-delay="0.4s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Atelier : Gestion des Déchets et Recyclage</h2>
-                                        <small>13:30 - 15:00</small>
-                                        <p>Cet atelier portera sur les meilleures pratiques pour réduire, réutiliser et
-                                            recycler les déchets dans un contexte professionnel.</p>
-                                        <span class="right-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.5s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Session de Q&A et Échanges</h2>
-                                        <small>15:15 - 16:30</small>
-                                        <p>Une session interactive où les participants pourront poser des questions aux
-                                            experts présents et discuter des défis et opportunités dans le domaine des
-                                            pratiques durables.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="day3" role="tabpanel">
-                            <div class="timeline">
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.1s">
-                                    <img src="R.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Conférence : Le Futur du Travail</h2>
-                                        <small>09:00 - 10:30</small>
-                                        <p>Analyse des tendances qui façonnent l'avenir du travail, notamment le
-                                            télétravail, la transformation numérique et l'automatisation.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container right-container wow fadeInUp" data-wow-delay="0.2s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Atelier : Leadership et Innovation</h2>
-                                        <small>10:45 - 12:00</small>
-                                        <p>Un atelier sur le développement des compétences de leadership pour encourager
-                                            l'innovation au sein des organisations.</p>
-                                        <span class="right-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.3s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Déjeuner et Réseautage</h2>
-                                        <small>12:00 - 13:30</small>
-                                        <p>Dernière opportunité de réseauter et de discuter des thèmes abordés lors de
-                                            l'événement.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container right-container wow fadeInUp" data-wow-delay="0.4s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Clôture de l'Événement et Annonce des Prochaines Étapes</h2>
-                                        <small>13:30 - 15:00</small>
-                                        <p>Bilan de l'événement et présentation des actions à suivre pour capitaliser
-                                            sur les connaissances et les contacts acquis.</p>
-                                        <span class="right-container-arrow"></span>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-container left-container wow fadeInUp" data-wow-delay="0.5s">
-                                    <img src="R1.jpg" alt="" class="img-fluid">
-                                    <div class="text-box">
-                                        <h2>Cocktail de Clôture</h2>
-                                        <small>15:15 - 16:30</small>
-                                        <p>Un moment convivial pour conclure l'événement et dire au revoir aux autres
-                                            participants.</p>
-                                        <span class="left-container-arrow"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
+        
+         
+        
+    
+        <div class="container">
+            
+            <!-- Passé -->
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Intervenants</h5>
-                <h1 class="mb-0">Des professionnels prêts à aider votre entreprise</h1>
+                <!-- <h5 class="fw-bold text-primary text-uppercase">Découvrez plus sur</h5> -->
+                <h2 class="mb-0">Événements Anciens</h2>
             </div>
-            <div class="row g-5">
-                <div class="col-lg-3 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/1.png" alt="">
-                            <!-- <div class="team-social"> -->
-                            <!-- <p class="text-uppercase m-0">Experte en intelligence artificielle et éthique numérique.</p> -->
-
-                                <!-- <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a> -->
-                            <!-- </div> -->
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Dr. Amina Diallo</h4>
-                            <p class="text-uppercase m-0">Experte en intelligence artificielle et éthique numérique.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/2.jpg" alt="">
-                            <!-- <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div> -->
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Jean-Pierre Leclerc</h4>
-                            <p class="text-uppercase m-0">Spécialiste en développement durable et innovations
-                                écologiques.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/3.jpg" alt="">
-                            <!-- <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div> -->
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Sarah Benhamadi</h4>
-                            <p class="text-uppercase m-0">Consultante en transformation digitale et nouvelles pratiques
-                                de travail.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/3.jpg" alt="">
-                            <!-- <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div> -->
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">Prof. Marc André</h4>
-                            <p class="text-uppercase m-0">Chercheur en technologies émergentes et leur impact sociétal.
-                            </p>
+            <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.2s" id="past-events">
+                <!-- <h2>Événements Anciens</h2> -->
+                <div class="event-grid">
+                    <!-- Exemple d'événement passé -->
+                    <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                        <img src="https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024" alt="National Farm Machinery Show 2024">
+                        <div class="event-card-content">
+                            <h3>National Farm Machinery Show 2024</h3>
+                            <p><strong>Date:</strong> Février 2024</p>
+                            <p><strong>Lieu:</strong> Louisville, Kentucky, USA</p>
+                            <p>Salon des équipements agricoles aux USA, mettant en avant les innovations en mécanisation durable.</p>
+                            <a href="/detail">Plus d'Informations</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="container py-5">
-        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <!-- <h5 class="fw-bold text-primary text-uppercase">Intervenants</h5> -->
-            <h1 class="mb-0">Présentation de Nos Partenaires Stratégiques</h1>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <!-- Carte 1 -->
-            <div class="col wow fadeInUp" data-wow-delay="0.1s">
-                <div class="card card-custom">
-                    <div class="card-body">
-                        <h5 class="card-title card-title-custom">Tec Future</h5>
-                        <p class="card-text card-text-custom">Entreprise leader en solutions technologiques de pointe.
-                        </p>
+    
+            <!-- Présent -->
+            <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.4s" id="current-events">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <!-- <h5 class="fw-bold text-primary text-uppercase">Découvrez plus sur</h5> -->
+                    <h2 class="mb-0">Événements Actuels</h2>
+                </div>
+                <h2></h2>
+                <div class="event-grid">
+                    <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
+                        <img src="https://via.placeholder.com/800x600?text=ICSAM+2024" alt="ICSAM 2024">
+                        <div class="event-card-content">
+                            <h3>International Conference on Sustainable Agriculture and Mechanization (ICSAM) 2024</h3>
+                            <p><strong>Date:</strong> Juin 2024</p>
+                            <p><strong>Lieu:</strong> Lyon, France</p>
+                            <p>Conférence internationale sur les innovations en agriculture durable et mécanisation. Réunit chercheurs, ingénieurs, et professionnels.</p>
+                            <a href="/detail">Plus d'Informations</a>
+                        </div>
+                    </div>
+                    <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
+                        <img src="https://via.placeholder.com/800x600?text=WCSA+2024" alt="WCSA 2024">
+                        <div class="event-card-content">
+                            <h3>World Congress on Sustainable Agriculture (WCSA) 2024</h3>
+                            <p><strong>Date:</strong> Août 2024</p>
+                            <p><strong>Lieu:</strong> Kyoto, Japon</p>
+                            <p>Congrès sur les pratiques et technologies durables en agriculture, incluant la mécanisation.</p>
+                            <a href="/detail">Plus d'Informations</a>
+                        </div>
+                    </div>
+                    <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1s">
+                        <img src="https://via.placeholder.com/800x600?text=Sustainable+Agriculture+Summit+2024" alt="Sustainable Agriculture Summit 2024">
+                        <div class="event-card-content">
+                            <h3>Sustainable Agriculture Summit 2024</h3>
+                            <p><strong>Date:</strong> Octobre 2024</p>
+                            <p><strong>Lieu:</strong> São Paulo, Brésil</p>
+                            <p>Sommet sur les solutions durables en agriculture, incluant la mécanisation et les technologies écologiques.</p>
+                            <a href="/detail">Plus d'Informations</a>
+                        </div>
+                    </div>
+                    <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1.2s">
+                        <img src="https://via.placeholder.com/800x600?text=ICAE+2024" alt="ICAE 2024">
+                        <div class="event-card-content">
+                            <h3>International Conference on Agricultural Engineering (ICAE) 2024</h3>
+                            <p><strong>Date:</strong> Juillet 2024</p>
+                            <p><strong>Lieu:</strong> Rome, Italie</p>
+                            <p>Conférence sur l’ingénierie agricole, abordant la mécanisation durable et les innovations pour réduire l'empreinte carbone.</p>
+                            <a href="/detail">Plus d'Informations</a>
+                        </div>
+                    </div>
+                    <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1.4s">
+                        <img src="https://via.placeholder.com/800x600?text=Farm+Progress+Show+2024" alt="Farm Progress Show 2024">
+                        <div class="event-card-content">
+                            <h3>Farm Progress Show 2024</h3>
+                            <p><strong>Date:</strong> Août 2024</p>
+                            <p><strong>Lieu:</strong> Decatur, Illinois, USA</p>
+                            <p>Salon majeur pour la technologie agricole aux USA, avec un accent sur les innovations en mécanisation durable.</p>
+                            <a href="/detail">Plus d'Informations</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Carte 2 -->
-            <div class="col wow fadeInUp" data-wow-delay="0.2s">
-                <div class="card card-custom">
-                    <div class="card-body">
-                        <h5 class="card-title card-title-custom">GreenWave</h5>
-                        <p class="card-text card-text-custom">Organisation dédiée à la promotion de pratiques durables
-                            et innovantes.</p>
-                    </div>
+    
+            <!-- Futur -->
+            <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.6s" id="future-events">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <!-- <h5 class="fw-bold text-primary text-uppercase">Découvrez plus sur</h5> -->
+                    <h2 class="mb-0">Événements à Venir</h2>
                 </div>
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="col wow fadeInUp" data-wow-delay="0.3s">
-                <div class="card card-custom">
-                    <div class="card-body">
-                        <h5 class="card-title card-title-custom">Digital Shift</h5>
-                        <p class="card-text card-text-custom">Société de conseil en transformation numérique pour
-                            entreprises.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte 4 -->
-            <div class="col wow fadeInUp" data-wow-delay="0.4s">
-                <div class="card card-custom">
-                    <div class="card-body">
-                        <h5 class="card-title card-title-custom">Eco Vision</h5>
-                        <p class="card-text card-text-custom">Sponsor axé sur l'innovation pour un avenir écologique et
-                            durable.</p>
+                <div class="event-grid">
+                    <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
+                        <img src="https://via.placeholder.com/800x600?text=Agritechnica+2025" alt="Agritechnica 2025">
+                        <div class="event-card-content">
+                            <h3>Agritechnica 2025</h3>
+                            <p><strong>Date:</strong> Novembre 2025</p>
+                            <p><strong>Lieu:</strong> Hanovre, Allemagne</p>
+                            <p>Salon international majeur sur la technologie agricole, avec un focus sur les solutions de mécanisation durable.</p>
+                            <a href="/detail">Plus d'Informations</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+<!-- <<<<<<< HEAD -->
+        <script>
+            new WOW().init();
+    
+            document.querySelectorAll('.event-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'scale(1.05)';
+                    card.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'scale(1)';
+                    card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                });
 
-
-
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel organisess"
-                    style=" display: flex;justify-content: center; align-items: center;">
-                    <img src="img/OIP.jpg" alt="">
-                    <img src="img/34806.jpg" alt="">
-                    <img src="img/logo.png" alt="">
-                    <img src="img/OIP.jpg" alt="">
-                    <img src="img/34806.jpg" alt="">
-                    <img src="img/logo.png" alt="">
-                    <img src="img/OIP.jpg" alt="">
-                    <img src="img/34806.jpg" alt="">
-                    <img src="img/logo.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
-
-
-
-
-
-
-    <!-- JavaScript Libraries -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
-
-    <!-- Template Javascript -->
-    <!-- <script src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-    <!--  -->
-    <script>
-        $(document).ready(function () {
-            $('#eventTabs a').on('click', function (e) {
-                e.preventDefault();
-                $(this).tab('show');
             });
-        });
-    </script>
-
-    <!-- countdown-item  -->
-    <script>
-        // Initial time in seconds
-        let totalSeconds = (3 * 24 * 60 * 60) + (4 * 60 * 60) + (6 * 60) + 59;
-
-        // Function to update the countdown
-        function updateCountdown() {
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(totalSeconds / (24 * 60 * 60));
-            const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
-            const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
-            const seconds = totalSeconds % 60;
-
-            // Update the UI
-            document.getElementById('days').textContent = days < 10 ? '0' + days : days;
-            document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
-            document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
-
-            // Decrement the remaining time
-            totalSeconds--;
-
-            // If countdown is finished
-            if (totalSeconds < 0) {
-                clearInterval(interval);
-                document.querySelector('.countdown-container').innerHTML = "Le compte à rebours est terminé!";
-            }
-        }
-
-        // Update the countdown every second
-        const interval = setInterval(updateCountdown, 1000);
-
-        // Initialize the countdown
-        updateCountdown();
-
-
-    </script>
-
-    <!-- sponsors -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-
-    <!-- Inclure WOW.js -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow.js/1.1.2/wow.min.js"></script> -->
+        </script>
    
-   
-<%# footer %>
+
+
+   =======
+</div>
+
+<div class="container py-5">
+    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <!-- <h5 class="fw-bold text-primary text-uppercase">Intervenants</h5> -->
+        <h1 class="mb-0">Présentation de Nos Partenaires Stratégiques</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Carte 1 -->
+        <div class="col wow fadeInUp" data-wow-delay="0.1s">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title card-title-custom">Tec Future</h5>
+                    <p class="card-text card-text-custom">Entreprise leader en solutions technologiques de pointe.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="col wow fadeInUp" data-wow-delay="0.2s">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title card-title-custom">GreenWave</h5>
+                    <p class="card-text card-text-custom">Organisation dédiée à la promotion de pratiques durables
+                        et innovantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="col wow fadeInUp" data-wow-delay="0.3s">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title card-title-custom">Digital Shift</h5>
+                    <p class="card-text card-text-custom">Société de conseil en transformation numérique pour
+                        entreprises.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="col wow fadeInUp" data-wow-delay="0.4s">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title card-title-custom">Eco Vision</h5>
+                    <p class="card-text card-text-custom">Sponsor axé sur l'innovation pour un avenir écologique et
+                        durable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Vendor Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5 mb-5">
+        <div class="bg-white">
+            <div class="owl-carousel vendor-carousel organisess"
+                style=" display: flex;justify-content: center; align-items: center;">
+                <img src="img/OIP.jpg" alt="">
+                <img src="img/34806.jpg" alt="">
+                <img src="img/logo.png" alt="">
+                <img src="img/OIP.jpg" alt="">
+                <img src="img/34806.jpg" alt="">
+                <img src="img/logo.png" alt="">
+                <img src="img/OIP.jpg" alt="">
+                <img src="img/34806.jpg" alt="">
+                <img src="img/logo.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Vendor End -->
+
+
+
+
+
+
+<!-- JavaScript Libraries -->
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
+
+<!-- Template Javascript -->
+<!-- <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+<!--  -->
+<!-- <script>
+    $(document).ready(function () {
+        $('#eventTabs a').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show'); -->
+
+<!-- Include  footer -->
 <%- include('../partials/footer') %>
