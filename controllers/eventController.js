@@ -44,50 +44,82 @@
 //   deleteEvent
 // };
 // controllers/eventController.js
-const EventModel = require('../models/eventModel');
+// **********************************************
+// const EventModel = require('../models/eventModel');
 
-const getAllEvents = (req, res) => {
-  EventModel.getAllEvents(events => {
-    res.render('event/eventView', { events });
-  });
-};
+// const getAllEvents = (req, res) => {
+//   EventModel.getAllEvents(events => {
+//     res.render('event/eventView', { events });
+//   });
+// };
+// const getEventById = (req, res) => {
+//   const id = parseInt(req.params.id);
+//   EventModel.getEventById(id, event => {
+//     res.render('eventDetail', { event });
+//   });
+// };
 
-const getEventById = (req, res) => {
-  const id = parseInt(req.params.id);
-  EventModel.getEventById(id, event => {
-    res.render('eventDetail', { event });
-  });
-};
+// const createEvent = (req, res) => {
+//   const eventData = req.body;
+//   EventModel.createEvent(eventData, id => {
+//     req.flash('success', 'Event created successfully');
+//     res.redirect('/event');
+//   });
+// };
 
-const createEvent = (req, res) => {
-  const eventData = req.body;
-  EventModel.createEvent(eventData, id => {
-    req.flash('success', 'Event created successfully');
-    res.redirect('/event');
-  });
-};
+// const updateEvent = (req, res) => {
+//   const id = parseInt(req.params.id);
+//   const eventData = req.body;
+//   EventModel.updateEvent(id, eventData, affectedRows => {
+//     req.flash('success', 'Event updated successfully');
+//     res.redirect('/event');
+//   });
+// };
 
-const updateEvent = (req, res) => {
-  const id = parseInt(req.params.id);
-  const eventData = req.body;
-  EventModel.updateEvent(id, eventData, affectedRows => {
-    req.flash('success', 'Event updated successfully');
-    res.redirect('/event');
-  });
-};
+// const deleteEvent = (req, res) => {
+//   const id = parseInt(req.params.id);
+//   EventModel.deleteEvent(id, affectedRows => {
+//     req.flash('success', 'Event deleted successfully');
+//     res.redirect('/event');
+//   });
+// };
 
-const deleteEvent = (req, res) => {
-  const id = parseInt(req.params.id);
-  EventModel.deleteEvent(id, affectedRows => {
-    req.flash('success', 'Event deleted successfully');
-    res.redirect('/event');
-  });
-};
+// module.exports = {
+//   getAllEvents,
+//   getEventById,
+//   createEvent,
+//   updateEvent,
+//   deleteEvent
+// };
 
-module.exports = {
-  getAllEvents,
-  getEventById,
-  createEvent,
-  updateEvent,
-  deleteEvent
+
+
+// *************
+
+
+const eventModel = require('../models/eventModel');
+const speakerModel = require('../models/speakerModel');
+const sponsorModel = require('../models/sponsorModel');
+
+exports.createEvent = async (req, res) => {
+    const eventData = req.body;
+
+    try {
+        // Create the event and get the event ID
+        const eventId = await eventModel.createEvent(eventData);
+
+        // Add sponsors and speakers for the event
+        if (eventData.sponsors) {
+            await sponsorModel.addSponsors(eventData.sponsors, eventId);
+        }
+
+        if (eventData.speakers) {
+            await speakerModel.addSpeakers(eventData.speakers, eventId);
+        }
+
+        res.redirect('/events');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Erreur lors de la création de l\'événement.');
+    }
 };

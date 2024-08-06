@@ -156,6 +156,8 @@ const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
 const session = require("express-session");
 const flash = require("connect-flash");
+
+
 const passport = require("passport");
 require("../config/passport")(passport);
 const app = express();
@@ -204,12 +206,14 @@ app.use((req, res, next) => {
 // Routes
 const indexRoutes = require("../routes/index");
 const authRoutes = require("../routes/auth");
+const eventRoutes = require('../routes/event');
 const adminRoutes = require("../routes/admin");
 
 
 app.use("/", indexRoutes);
 app.use("/", adminRoutes);
 app.use("/", authRoutes);
+app.use("/event",eventRoutes);
 
 // Start the server
 app.listen(3000, () => {
