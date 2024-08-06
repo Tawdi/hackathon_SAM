@@ -42,9 +42,10 @@ router.get('/detail', (req, res) => {
 
     });
 });
-router.get('/card', (req, res) => {
-    res.render('/card',{
+router.get('/list-event', (req, res) => {
+    res.render('admin/list-event',{
 
     });
 });
+
 module.exports = router;

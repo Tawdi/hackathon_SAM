@@ -6,7 +6,65 @@
                 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  
+  <style>
+    .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+.form-control-file {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+  </style>
    <div id="wrapper">
 
        <!-- Sidebar -->
@@ -43,13 +101,13 @@
                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                    aria-expanded="true" aria-controls="collapseTwo">
                    <i class="fas fa-fw fa-cog"></i>
-                   <span>Evenements</span>
+                   <span>Gestions Evènements</span>
                </a>
                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                    <div class="bg-white py-2 collapse-inner rounded">
                        <h6 class="collapse-header">evenements manage</h6>
-                       <a class="collapse-item" href="event/create">creation Evenement</a>
-                       <a class="collapse-item" href="cards.html">Cards</a>
+                       <a class="collapse-item" href="/list-event">liste events</a>
+                      
                    </div>
                </div>
            </li>
@@ -338,7 +396,7 @@
                         <button type="submit" class="btn btn-primary btn-block">Créer l'Événement</button>
                     </form>
                 </div> -->
-                    <div class="form-container">
+                    <!-- <div class="form-container">
                         <form action="/create-event" method="POST">
                             <div class="form-group">
                                 <label for="titre">Titre de l'événement</label>
@@ -386,8 +444,194 @@
                 </div>
             
                
-                   </div>
+                   </div> -->
+                   <!-- <div class="form-container">
+                    <form action="/create-event" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="titre">Titre de l'événement</label>
+                            <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre de l'événement" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apercu">Aperçu</label>
+                            <textarea class="form-control" id="apercu" name="apercu" rows="4" placeholder="Aperçu de l'événement"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" name="description" rows="4" placeholder="Description de l'événement"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="image_url">Image de l'événement</label>
+                            <input type="file" class="form-control-file" id="image_url" name="image_url" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_debut">Date de début</label>
+                            <input type="date" class="form-control" id="date_debut" name="date_debut" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_fin">Date de fin</label>
+                            <input type="date" class="form-control" id="date_fin" name="date_fin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lieu">Lieu</label>
+                            <input type="text" class="form-control" id="lieu" name="lieu" placeholder="Lieu de l'événement">
+                        </div>
+                        <div class="form-group">
+                            <label for="observations">Observations</label>
+                            <textarea class="form-control" id="observations" name="observations" rows="4" placeholder="Observations"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="participation">Participation</label>
+                            <input type="text" class="form-control" id="participation" name="participation" placeholder="Participation">
+                        </div>
+                        <div class="form-group">
+                            <label for="info_add">Informations supplémentaires</label>
+                            <textarea class="form-control" id="info_add" name="info_add" rows="4" placeholder="Informations supplémentaires"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Créer l'Événement</button>
+                    </form>
+                </div> -->
+                <form action="/create-event" method="POST" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="titre">Titre de l'événement</label>
+                            <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre de l'événement" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image_url">Image de l'événement</label>
+                            <input type="file" class="form-control-file" id="image_url" name="image_url" accept="image/*" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="apercu">Aperçu</label>
+                        <textarea class="form-control" id="apercu" name="apercu" rows="4" placeholder="Aperçu de l'événement"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="4" placeholder="Description de l'événement"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date_debut">Date de début</label>
+                            <input type="date" class="form-control" id="date_debut" name="date_debut" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_fin">L'heure</label>
+                            <input type="time" class="form-control" id="time" name="time" required>
 
+                        </div>
+                        <div class="form-group">
+                            <label for="date_fin">Date de fin</label>
+                            <input type="date" class="form-control" id="date_fin" name="date_fin" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lieu">Lieu</label>
+                        <input type="text" class="form-control" id="lieu" name="lieu" placeholder="Lieu de l'événement">
+                    </div>
+                    <div class="form-group">
+                        <label for="observations">Observations</label>
+                        <textarea class="form-control" id="observations" name="observations" rows="4" placeholder="Observations"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="participation">Participation</label>
+                        <input type="text" class="form-control" id="participation" name="participation" placeholder="Participation">
+                    </div>
+                    <div class="form-group">
+                        <label for="info_add">Informations supplémentaires</label>
+                        <textarea class="form-control" id="info_add" name="info_add" rows="4" placeholder="Informations supplémentaires"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Créer l'Événement</button>
+                </form>
+            </div>
+            <form id="eventForm" action="/events" method="POST" enctype="multipart/form-data">
+                <!-- Existing Event Fields Here -->
+            
+                <!-- Sponsors Section -->
+                <div id="sponsorsSection">
+                    <h4>Sponsors</h4>
+                    <div class="sponsor-group">
+                        <div class="form-group">
+                            <label for="sponsor_nom_1">Nom du sponsor</label>
+                            <input type="text" class="form-control" name="sponsors[nom][]" placeholder="Nom du sponsor" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sponsor_description_1">Description</label>
+                            <textarea class="form-control" name="sponsors[description][]" rows="2" placeholder="Description du sponsor" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="addSponsor()">Ajouter un autre sponsor</button>
+            
+                <!-- Speakers Section -->
+                <div id="speakersSection">
+                    <h4>Intervenants</h4>
+                    <div class="speaker-group">
+                        <div class="form-group">
+                            <label for="speaker_nom_1">Nom</label>
+                            <input type="text" class="form-control" name="speakers[nom][]" placeholder="Nom de l'intervenant" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="speaker_prenom_1">Prénom</label>
+                            <input type="text" class="form-control" name="speakers[prenom][]" placeholder="Prénom de l'intervenant" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="speaker_description_1">Description</label>
+                            <textarea class="form-control" name="speakers[description][]" rows="2" placeholder="Description de l'intervenant" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="addSpeaker()">Ajouter un autre intervenant</button>
+            
+                <button type="submit" class="btn btn-primary">Créer l'Événement</button>
+            </form>
+            
+            <script>
+                let sponsorIndex = 1;
+                let speakerIndex = 1;
+            
+                function addSponsor() {
+                    sponsorIndex++;
+                    const sponsorHtml = `
+                        <div class="sponsor-group">
+                            <div class="form-group">
+                                <label for="sponsor_nom_${sponsorIndex}">Nom du sponsor</label>
+                                <input type="text" class="form-control" name="sponsors[nom][]" placeholder="Nom du sponsor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sponsor_description_${sponsorIndex}">Description</label>
+                                <textarea class="form-control" name="sponsors[description][]" rows="2" placeholder="Description du sponsor" required></textarea>
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById('sponsorsSection').insertAdjacentHTML('beforeend', sponsorHtml);
+                }
+            
+                function addSpeaker() {
+                    speakerIndex++;
+                    const speakerHtml = `
+                        <div class="speaker-group">
+                            <div class="form-group">
+                                <label for="speaker_nom_${speakerIndex}">Nom</label>
+                                <input type="text" class="form-control" name="speakers[nom][]" placeholder="Nom de l'intervenant" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="speaker_prenom_${speakerIndex}">Prénom</label>
+                                <input type="text" class="form-control" name="speakers[prenom][]" placeholder="Prénom de l'intervenant" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="speaker_description_${speakerIndex}">Description</label>
+                                <textarea class="form-control" name="speakers[description][]" rows="2" placeholder="Description de l'intervenant" required></textarea>
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById('speakersSection').insertAdjacentHTML('beforeend', speakerHtml);
+                }
+            </script>
+            
+
+
+            
                    <!-- Content Row -->
 
                    
