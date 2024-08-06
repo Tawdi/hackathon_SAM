@@ -26,7 +26,14 @@ router.get('/evenements', (req, res) => {
 });
 router.get('/connecter', (req, res) => {
     res.render('auth/login',{
+
         title: "Connecter"
+    });
+});
+
+router.get('/detail', (req, res) => {
+    res.render('event/details',{
+        title: "detail"
     });
 });
 module.exports = router;
