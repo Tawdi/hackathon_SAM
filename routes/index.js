@@ -6,7 +6,9 @@ router.get('/', (req, res) => {
 });
 router.get('/propos', (req, res) => {
     res.render('pages/propos',{
+
         title: "À Propos"
+
     });
 });
 router.get('/contact', (req, res) => {
@@ -21,7 +23,9 @@ router.get('/actualites', (req, res) => {
 });
 router.get('/evenements', (req, res) => {
     res.render('pages/evenements',{
-        title: "Evénements"
+
+        title: "Evénments"
+
     });
 });
 router.get('/connecter', (req, res) => {
@@ -33,7 +37,7 @@ router.get('/connecter', (req, res) => {
 
 router.get('/detail', (req, res) => {
     res.render('event/details',{
-        title: "connecter"
+        title: "Detail Evénment"
     });
 });
 module.exports = router;
