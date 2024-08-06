@@ -37,7 +37,9 @@ router.get('/connecter', (req, res) => {
 
 router.get('/detail', (req, res) => {
     res.render('event/details',{
+
         title: "Detail Evénment"
+
     });
 });
 module.exports = router;
