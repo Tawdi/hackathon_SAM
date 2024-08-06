@@ -93,6 +93,14 @@ router.get('/', eventController.getAllEvents);
 
 // GET a single event by ID
 router.get('/:id', eventController.getEventById);
+router.get('/create', eventController.showCreateEvent);
+// router.get('/create', (req, res) => {
+//     res.render('admin/',{
+
+//         title: "À Propos"
+
+//     });
+// });
 
 // POST create a new event
 router.post('/', eventController.createEvent);

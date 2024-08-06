@@ -51,7 +51,6 @@ const getAllEvents = (req, res) => {
     res.render('event/eventView', { events });
   });
 };
-
 const getEventById = (req, res) => {
   const id = parseInt(req.params.id);
   EventModel.getEventById(id, event => {

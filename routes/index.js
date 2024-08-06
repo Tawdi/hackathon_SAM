@@ -42,4 +42,9 @@ router.get('/detail', (req, res) => {
 
     });
 });
+router.get('/card', (req, res) => {
+    res.render('/card',{
+
+    });
+});
 module.exports = router;
