@@ -4,11 +4,12 @@
       <% } %> <% if (success_msg.length > 0) { %>
       <div class="alert alert-success"><%= success_msg %></div>
       <% } %>
-<div class="container">
-    <div class="forms-container">
-      <div class="signin-signup">
+<!-- <div class="container"> -->
+
+    <!-- <div class="forms-container">
+      <div class="signin-signup"> -->
         
-        <form action="/login" method="POST" class="sign-in-form">
+        <form class="frome" action="/login" method="POST" class="sign-in-form">
           <h2 class="title">Se connecter</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -19,6 +20,8 @@
             <input type="password" name="password" placeholder="Mot de passe" required />
           </div>
           <input type="submit" value="Se connecter" class="btn solid" />
+          
+          <div class="text sign-up-text">Vous n'avez pas de compte ? <label for="flip"><a href="/register" style="color: rgb(89, 85, 85);">Inscrivez-vous</a></label></div>
 
           <!-- <p class="social-text">Ou connectez-vous avec les plateformes sociales</p> -->
           <!-- <div class="social-media">
@@ -38,20 +41,20 @@
         </form>
 
 
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
 
-    <div class="panels-container">
+    <!-- <div class="panels-container">
       <div class="panel left-panel">
         <div class="content">
           <h3>Nouveau ici ?</h3>
-          <!-- <p>Cette Platfrome donner des Informations sur les olives.</p> -->
            <p>Pour vous inscrire à notre événement, veuillez vous connecter</p>
           <button class="btn transparent" id="sign-up-btn" style="color: white; text-decoration: none;"><a href="/register">  Se connecter</a></button>
         </div>
         <img src="img/logo-removebg-preview.png" class="image" alt="">
-        <!-- <img src="img/logo.png" class="image" alt=""> -->
       </div>
+    </div> -->
+
       <!-- <div class="panel right-panel">
         <div class="content">
           <h3>L’un d’entre nous ?</h3>

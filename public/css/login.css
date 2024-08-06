@@ -16,7 +16,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* background: #fff; */
   background-color: #EEF9FF;
   overflow: hidden;
   border-radius: 10px;
@@ -86,7 +85,7 @@ form.sign-in-form {
 
 .input-field i {
   text-align: center;
-  line-height: 55px;
+  line-height: 50px;
   color: #acacac;
   transition: 0.5s;
   font-size: 1.1rem;
@@ -419,6 +418,18 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+}
+
+.frome {
+  background-color: #EEF9FF;
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #EEF9FF; */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.1);
 }
 
 

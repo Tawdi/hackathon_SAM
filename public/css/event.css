@@ -117,3 +117,17 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
   }
+
+  /* Style de base pour le bouton 'S'inscrire' */
+.register-btn {
+    background-color: #6c757d; /* Couleur de fond par défaut (Bootstrap secondary color) */
+    color: white; /* Couleur du texte */
+    transition: background-color 0.3s, color 0.3s; /* Transition fluide pour les changements de couleur */
+}
+
+/* Style au survol du bouton */
+.register-btn:hover {
+    background-color: white; /* Couleur de fond au survol */
+    color: #6c757d; /* Couleur du texte au survol (correspond à la couleur de fond d'origine) */
+    border: 1px solid #6c757d; /* Bordure pour mieux délimiter le bouton */
+}
