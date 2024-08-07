@@ -50,7 +50,8 @@ router.get('/propos', (req, res) => {
 });
 router.get('/contact', (req, res) => {
     res.render('pages/contact',{
-        title: "Contact"
+        title: "Contact",
+        events,
     });
 });
 router.get('/actualites', (req, res) => {
