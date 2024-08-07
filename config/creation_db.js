@@ -57,7 +57,7 @@ async function createDatabase() {
         apercu TEXT,
         description TEXT,
         image_url TEXT NOT NULL,
-        date_debut DATE,
+        date_debut DATE, 
         date_fin DATE,
         time TIME,
         lieu VARCHAR(255),
