@@ -49,7 +49,18 @@ async function createDatabase() {
         UNIQUE INDEX email_UNIQUE (email ASC)
       )
     `);
-    
+    await promisePool.query(`
+      CREATE TABLE IF NOT EXISTS actualites (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(255) NOT NULL,
+    date_publication DATETIME NOT NULL,
+    contenu TEXT NOT NULL,
+    image_url VARCHAR(255),
+    auteur VARCHAR(100),
+    statut ENUM('publiée', 'brouillon') DEFAULT 'publiée'
+);
+
+    `);
     await promisePool.query(`
       CREATE TABLE IF NOT EXISTS Evenements (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -57,7 +68,7 @@ async function createDatabase() {
         apercu TEXT,
         description TEXT,
         image_url TEXT NOT NULL,
-        date_debut DATE,
+        date_debut DATE, 
         date_fin DATE,
         time TIME,
         lieu VARCHAR(255),
@@ -84,6 +95,7 @@ async function createDatabase() {
         nom VARCHAR(100),
         prenom VARCHAR(100),
         description TEXT,
+        image_url VARCHAR(255),
         evenement_id INT,
         FOREIGN KEY (evenement_id) REFERENCES Evenements(id)
       )
@@ -94,6 +106,7 @@ async function createDatabase() {
         id INT AUTO_INCREMENT PRIMARY KEY,
         nom VARCHAR(100),
         description TEXT,
+        image_url VARCHAR(255),
         evenement_id INT,
         FOREIGN KEY (evenement_id) REFERENCES Evenements(id)
       )

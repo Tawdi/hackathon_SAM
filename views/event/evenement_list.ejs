@@ -8,6 +8,25 @@
     <% } %>
 </header>
 <main>
+    <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.2s" id="past-events">
+        <div class="event-grid">
+            <% events.forEach(event => { %>
+            <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                <img src="https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024" alt="National Farm Machinery Show 2024">
+                <div class="event-card-content">
+                    <h3><%= event.titre %></h3>
+                    <p><strong>Date:</strong> <%= event.date_debut %></p>
+                    <p><strong>Lieu:</strong><%= event.lieu %></p>
+                    <p><%= event.apercu %></p>
+                    <div class="d-flex justify-content-start">
+                        <a href="/detail">En savoir plus</a>
+                        <a href="/register" class="btn btn-secondary register-btn" style="margin-left: 35%;">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+            <% })%>
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
@@ -22,7 +41,20 @@
         </thead>
         <tbody>
             <% events.forEach(event => { %>
-                <tr>
+                <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                    <img src="https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024" alt="National Farm Machinery Show 2024">
+                    <div class="event-card-content">
+                        <h3><%= event.titre %></h3>
+                        <p><strong>Date:</strong> <%= event.date_debut %></p>
+                        <p><strong>Lieu:</strong><%= event.lieu %></p>
+                        <p><%= event.apercu %></p>
+                        <div class="d-flex justify-content-start">
+                            <a href="/detail">En savoir plus</a>
+                            <a href="/register" class="btn btn-secondary register-btn" style="margin-left: 35%;">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <tr>
                     <td><%= event.titre %></td>
                     <td><%= event.apercu %></td>
                     <td><%= event.date_debut %></td>
@@ -36,7 +68,7 @@
                             <button type="submit">Delete</button>
                         </form>
                     </td>
-                </tr>
+                </tr> -->
             <% }) %>
         </tbody>
     </table>
