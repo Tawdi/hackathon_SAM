@@ -15,170 +15,42 @@
                <!-- Blog list Start -->
                <div class="col-lg-8">
                    <div class="row g-5">
+                    <% const events = [
+                        { img: 'img/ac.jpg', date: '01 Janv, 2024', title: 'Lancement du Nouveau Système SAM', desc: "Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines" },
+                        { img: 'img/ac 2.jpg', date: '10 octobre, 2024', title: 'Conférence SAM à Rabat', desc: 'La conférence SAM 2024 se tiendra à Rabat. Des experts partageront des insights sur l\'optimisation des systèmes d\'administration pour les entreprises marocaines' },
+                        { img: 'img/ac3.jpg', date: '28 Novembre, 2023', title: 'Atelier SAM à Marrakech', desc: 'Un atelier de formation sur les systèmes SAM est prévu à Marrakech. Les participants apprendront comment intégrer efficacement ces systèmes pour améliorer la gestion des affaires' },
+                        { img: 'img/ac4.jpg', date: '15 Jan, 2025', title: 'Webinaire SAM pour les Entreprises Marocaines', desc: 'Un webinaire sur les tendances et innovations des systèmes SAM aura lieu en ligne, visant à aider les entreprises marocaines à tirer parti des nouvelles technologies' },
+                        { img: 'img/ac5.jpg', date: '18 juin, 2023', title: 'Salon SAM à Tanger', desc: 'Le salon SAM 2024 se déroulera à Tanger, rassemblant fournisseurs de solutions SAM et professionnels pour découvrir les dernières avancées en gestion et administration' },
+                        { img: 'img/ac6.jpg', date: '02 Jan, 2024', title: 'Webinaire SAM', desc: 'Webinaire sur les innovations SAM, dédié aux entreprises marocaines, pour améliorer leur gestion' },
+                        { img: 'img/ac7.jpg', date: '01 Jan, 2045', title: 'Salon de l\'Innovation Technologique à Rabat', desc: 'Salon de l\'Innovation Technologique à Rabat, présentant les dernières innovations en matière de technologie et de digitalisation pour les entreprises' },
+                        { img: 'img/al-moutmir-.jpg', date: '21 Jan, 2025', title: 'Journée de Volontariat à Agadir', desc: 'Journée de volontariat à Agadir, où les bénévoles participeront à des activités de nettoyage et de sensibilisation pour la protection de l\'environnement' },
+                        { img: 'img/attaouia-moutmir.png', date: '22 Jan, 2025', title: 'Exposition d\'Art Contemporain à Marrakech', desc: 'Exposition d\'art contemporain à Marrakech mettant en avant les œuvres d\'artistes marocains et internationaux, avec des ateliers et des discussions sur l\'art' },
+                        { img: 'img/6476738f42360401f32f7742.jpg', date: '11 Dec, 2024', title: 'Conférence sur l\'Entrepreneuriat à Casablanca', desc: 'Conférence sur l\'entrepreneuriat à Casablanca, réunissant des start-up et des investisseurs pour discuter des opportunités et des défis dans le secteur des affaires' }
+                    ]; %>
+                    <% events.forEach((event, index) => { %>
                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
                            <div class="blog-item bg-light rounded overflow-hidden">
                                <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/ac.jpg" alt="">
+                                   <!-- <img class="img-fluid" src="img/ac.jpg" alt=""> -->
+                                   <img class="img-fluid" src="<%= event.img %>" alt="">
                                </div>
                                <div class="p-4">
                                    <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>Speaker 1</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Janv, 2024</small>
+                                       <!-- <small class="me-3"><i class="far fa-user text-primary me-2"></i>Speaker 1</small>
+                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Janv, 2024</small> -->
+                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i><%= `Speaker ${index + 1}` %></small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i><%= event.date %></small>
                                    </div>
-                                   <h4 class="mb-3">Lancement du Nouveau Système SAM </h4>
-                                   <p>Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines</p>
+                                   <!-- <h4 class="mb-3">Lancement du Nouveau Système SAM </h4>
+                                   <p>Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines</p> -->
+                                   <h4 class="mb-3"><%= event.title %></h4>
+                                <p><%= event.desc %></p>
                                    <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
                                </div>
                            </div>
                        </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/ac 2.jpg" alt="">
-                                  
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>Speaker 2</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>10 octobre, 2024</small>
-                                   </div>
-                                   <h4 class="mb-3">Conférence SAM à Rabat</h4>
-                                   <p>a conférence SAM 2024 se tiendra à Rabat. Des experts partageront des insights sur l'optimisation des systèmes d'administration pour les entreprises marocaines</p>
-                                   <a class="text-uppercase" href="">Voir plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/ac3.jpg" alt="">
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>speakers</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>28 Nouvembre, 2023</small>
-                                   </div>
-                                   <h4 class="mb-3">Atelier SAM à Marrakech</h4>
-                                   <p>Un atelier de formation sur les systèmes SAM est prévu à Marrakech. Les participants apprendront comment intégrer efficacement ces systèmes pour améliorer la gestion des affaires</p>
-                                   <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/ac4.jpg" alt="">
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>Speaker 4</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>15 Jan, 2025</small>
-                                   </div>
-                                   <h4 class="mb-3">Webinaire SAM pour les Entreprises Marocaines</h4>
-                                   <p>Un webinaire sur les tendances et innovations des systèmes SAM aura lieu en ligne, visant à aider les entreprises marocaines à tirer parti des nouvelles technologies</p>
-                                   <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/ac5.jpg" alt="">
-                                   
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>Speaker 5</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>18 juin, 2023</small>
-                                   </div>
-                                   <h4 class="mb-3">Salon SAM à Tanger</h4>
-                                   <p>Le salon SAM 2024 se déroulera à Tanger, rassemblant fournisseurs de solutions SAM et professionnels pour découvrir les dernières avancées en gestion et administration</p>
-                                   <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/ac6.jpg" alt="">
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>Speaker 6</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>02 Jan, 2024</small>
-                                   </div>
-                                   <h4 class="mb-3">Webinaire SAM</h4>
-                                   <p>Webinaire sur les innovations SAM, dédié aux entreprises marocaines, pour améliorer leur gestion</p>
-                                   <a class="text-uppercase" href="">Voir plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/ac7.jpg" alt="">
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                   </div>
-                                   <h4 class="mb-3">Salon de l'Innovation Technologique à Rabat</h4>
-                                   <p>Salon de l'Innovation Technologique à Rabat, présentant les dernières innovations en matière de technologie et de digitalisation pour les entreprises</p>
-                                   <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/al-moutmir-.jpg" alt="">
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>spaeker 8</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>21 Jan, 2025</small>
-                                   </div>
-                                   <h4 class="mb-3">ournée de Volontariat à Agadir</h4>
-                                   <p>Journée de volontariat à Agadir, où les bénévoles participeront à des activités de nettoyage et de sensibilisation pour la protection de l'environnement</p>
-                                   <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/attaouia-moutmir.png" alt="">
-                                  
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>spaeker 9</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>22 Jan, 2025</small>
-                                   </div>
-                                   <h4 class="mb-3">Exposition d'Art Contemporain à Marrakech</h4>
-                                   <p>Exposition d'art contemporain à Marrakech mettant en avant les œuvres d'artistes marocains et internationaux, avec des ateliers et des discussions sur l'art</p>
-                                   <a class="text-uppercase" href="">Voir plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                           <div class="blog-item bg-light rounded overflow-hidden">
-                               <div class="blog-img position-relative overflow-hidden">
-                                   <img class="img-fluid" src="img/6476738f42360401f32f7742.jpg" alt="">
-                                   
-                               </div>
-                               <div class="p-4">
-                                   <div class="d-flex mb-3">
-                                       <small class="me-3"><i class="far fa-user text-primary me-2"></i>spaeker 10</small>
-                                       <small><i class="far fa-calendar-alt text-primary me-2"></i>11 Dec, 2024</small>
-                                   </div>
-                                   <h4 class="mb-3">Conférence sur l'Entrepreneuriat à Casablanca</h4>
-                                   <p>Conférence sur l'entrepreneuriat à Casablanca, réunissant des start-up et des investisseurs pour discuter des opportunités et des défis dans le secteur des affaires</p>
-                                   <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
-                               </div>
-                           </div>
-                       </div>
+                       <% }); %>
+                       
                        <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
                            <nav aria-label="Page navigation">
                              <ul class="pagination pagination-lg m-0">
@@ -233,38 +105,24 @@
                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
                            <h3 class="mb-0">Dernière Actualités</h3>
                        </div>
-                       <div class="d-flex rounded overflow-hidden mb-3">
-                           <img class="img-fluid" src="img/ac 2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                           <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">"Séminaire SAM à Agadir : Optimisation des Processus Administratifs"
-                           </a>
-                       </div>
-                       <div class="d-flex rounded overflow-hidden mb-3">
-                           <img class="img-fluid" src="img/attaouia-moutmir.png" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                           <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">"Forum SAM à Casablanca : Vers une Gestion Moderne et Efficace"
-                           </a>
-                       </div>
-                       <div class="d-flex rounded overflow-hidden mb-3">
-                           <img class="img-fluid" src="img/ac6.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                           <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">"Journée d'Échange sur les Systèmes SAM à Rabat"
-                           </a>
-                       </div>
-                       <div class="d-flex rounded overflow-hidden mb-3">
-                           <img class="img-fluid" src="img/ac5.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                           <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">"Rencontre SAM à Marrakech : Innovations pour la Gestion Administrative"
-                           </a>
-                       </div>
-                       <div class="d-flex rounded overflow-hidden mb-3">
-                           <img class="img-fluid" src="img/ac7.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                           <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">"Colloque SAM à Tanger : Vers une Administration Plus Efficace"
-                           </a>
-                       </div>
-                       <div class="d-flex rounded overflow-hidden mb-3">
-                           <img class="img-fluid" src="img/6476738f42360401f32f7742.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                           <a href="" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">
-                               "Symposium SAM à Agadir : Réinventer la Gestion Administrativa"
-                           </a>
-                       </div>
-                   </div>
+                      
+                       
+                   <% const recentPosts = [
+                        { img: 'img/ac 2.jpg', title: 'Séminaire SAM à Agadir : Optimisation des Processus Administratifs' },
+                        { img: 'img/attaouia-moutmir.png', title: 'Forum SAM à Casablanca : Vers une Gestion Moderne et Efficace' },
+                        { img: 'img/ac6.jpg', title: 'Journée d\'Échange sur les Systèmes SAM à Rabat' },
+                        { img: 'img/ac5.jpg', title: 'Rencontre SAM à Marrakech : Innovations pour la Gestion Administrative' },
+                        { img: 'img/ac7.jpg', title: 'Colloque SAM à Tanger : Vers une Administration Plus Efficace' },
+                        { img: 'img/6476738f42360401f32f7742.jpg', title: 'Symposium SAM à Agadir : Réinventer la Gestion Administrativa' }
+                    ]; %>
+                    
+                    <% recentPosts.forEach(post => { %>
+                    <div class="d-flex mb-3">
+                        <img class="img-fluid rounded me-3" src="<%= post.img %>" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                        <a href="#" class="h5 mb-0"><%= post.title %></a>
+                    </div>
+                    <% }); %>
+                </div>
                    <!-- Recent Post End -->
    
                    <!-- Image Start -->

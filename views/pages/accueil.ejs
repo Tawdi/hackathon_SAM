@@ -123,7 +123,9 @@
               <!-- Blog list Start -->
               <div class="col-lg-12">
                 <div class="row g-5">
+
                   <% news.forEach(function(article) { %>
+
                   <div class="col-md-4 wow slideInUp" data-wow-delay="0.1s">
                     <div class="blog-item bg-light rounded overflow-hidden">
                       <div class="blog-img position-relative overflow-hidden">
@@ -134,12 +136,14 @@
                           <small class="me-3"><i class="far fa-user text-primary me-2"></i><%= article.speaker %></small>
                           <small><i class="far fa-calendar-alt text-primary me-2"></i><%= article.date %></small>
                         </div>
+
                         <h4 class="mb-3"><%= article.title %></h4>
                         <a class="text-uppercase" href="/actualites">Voir Plus <i class="bi bi-arrow-right"></i></a>
                       </div>
                     </div>
                   </div>
                   <% }); %>
+
                 </div>
               </div>
             </div>
