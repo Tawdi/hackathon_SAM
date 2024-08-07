@@ -240,3 +240,18 @@
 .card-text-custom {
     color: #555;
 }
+
+.max-width {
+    max-width: 100%;
+    width: 100%;
+}
+
+.max-height {
+    max-height: 100%;
+    /* object-fit: cover; */
+    height: 100%;
+}
+
+.bg-primary {
+    overflow: hidden;
+}
