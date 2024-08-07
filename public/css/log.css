@@ -1,0 +1,68 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.sign-in-form {
+    max-width: 400px; /* Ajustez la largeur maximale du formulaire si nécessaire */
+    width: 100%;
+    padding: 20px;
+    background: #fff; /* Arrière-plan blanc pour le formulaire */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #007bff; /* Bordure bleue autour du formulaire */
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.solid {
+    background-color: #007bff;
+}
+
+.btn.solid:hover {
+    background-color: #0056b3;
+}
+
+.text.sign-up-text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text.sign-up-text a {
+    color: rgb(89, 85, 85);
+    text-decoration: none;
+}

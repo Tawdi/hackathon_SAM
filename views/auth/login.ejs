@@ -1,15 +1,15 @@
-    <link href="css/login.css" rel="stylesheet">
+    <!-- <link href="css/login.css" rel="stylesheet">
     <% if (error_msg.length > 0) { %>
       <div class="alert alert-danger"><%= error_msg %></div>
       <% } %> <% if (success_msg.length > 0) { %>
       <div class="alert alert-success"><%= success_msg %></div>
-      <% } %>
+      <% } %> -->
 <!-- <div class="container"> -->
 
     <!-- <div class="forms-container">
       <div class="signin-signup"> -->
         
-        <form class="frome" action="/login" method="POST" class="sign-in-form">
+        <!-- <form class="frome" action="/login" method="POST" class="sign-in-form">
           <h2 class="title">Se connecter</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -22,8 +22,8 @@
           <input type="submit" value="Se connecter" class="btn solid" />
           
           <div class="text sign-up-text">Vous n'avez pas de compte ? <label for="flip"><a href="/register" style="color: rgb(89, 85, 85);">Inscrivez-vous</a></label></div>
-
-          <!-- <p class="social-text">Ou connectez-vous avec les plateformes sociales</p> -->
+ --------------------
+           <p class="social-text">Ou connectez-vous avec les plateformes sociales</p> -->
           <!-- <div class="social-media">
             <a href="#" class="social-icon">
               <i class="fab fa-facebook-f"></i>
@@ -37,8 +37,9 @@
             <a href="#" class="social-icon">
               <i class="fab fa-linkedin-in"></i>
             </a>
-          </div> -->
-        </form>
+          </div>
+          ----------------- commantaire
+        </form> -->
 
 
       <!-- </div> -->
@@ -66,4 +67,38 @@
       </div>
     </div>
   </div>  -->
-   <script src="js/scriptlogin.js" crossorigin="anonymous"></script>
+   <!-- <script src="js/scriptlogin.js" crossorigin="anonymous"></script> -->
+
+   <link href="css/log.css" rel="stylesheet">
+
+<% if (error_msg.length > 0) { %>
+  <div class="alert alert-danger"><%= error_msg %></div>
+<% } %>
+<% if (success_msg.length > 0) { %>
+  <div class="alert alert-success"><%= success_msg %></div>
+<% } %>
+
+<form class="sign-in-form" action="/login" method="POST">
+  <h2 class="title">Se connecter</h2>
+  
+  <div class="input-field">
+    <i class="fas fa-user"></i>
+    <input type="text" name="email" placeholder="Email" required />
+  </div>
+  
+  <div class="input-field">
+    <i class="fas fa-lock"></i>
+    <input type="password" name="password" placeholder="Mot de passe" required />
+  </div>
+  
+  <input type="submit" value="Se connecter" class="btn solid" />
+  
+  <div class="text sign-up-text">
+    Vous n'avez pas de compte ? 
+    <label for="flip">
+      <a href="/register" style="color: rgb(89, 85, 85);">Inscrivez-vous</a>
+    </label>
+  </div>
+</form>
+
+<script src="js/scriptlogin.js" crossorigin="anonymous"></script>
