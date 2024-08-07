@@ -41,7 +41,7 @@ module.exports = function (passport) {
           );
           if (rows.length) {
             return done(null, false, {
-              message: "That username or email is already taken.",
+              message: "Ce nom d'utilisateur ou cette adresse e-mail est déjà pris.",
             });
           } else {
             const hash = await bcrypt.hash(password, 10);
@@ -81,7 +81,7 @@ module.exports = function (passport) {
       async (req, email, password, done) => {
         try {
           if (!email || !password) {
-            return done(null, false, { message: "Missing credentials" });
+            return done(null, false, { message: "Informations d'identification manquantes" });
           }
 
           const [rows] = await pool.query(
@@ -90,7 +90,7 @@ module.exports = function (passport) {
           );
           if (!rows.length) {
             return done(null, false, {
-              message: "No user found with that email.",
+              message: "Aucun utilisateur trouvé avec cet email.",
             });
           }
 
@@ -98,13 +98,13 @@ module.exports = function (passport) {
 
           if (!user.isVerified) {
             return done(null, false, {
-              message: "Account not verified. Please check your email.",
+              message: "Compte non vérifié. Veuillez vérifier votre email.",
             });
           }
 
           const isMatch = await bcrypt.compare(password, user.password);
           if (!isMatch) {
-            return done(null, false, { message: "Incorrect password." });
+            return done(null, false, { message: "Mot de passe incorrect." });
           }
 
           return done(null, user);
