@@ -2,7 +2,8 @@
 .counter {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(25, 64, 154, 0.9), rgba(25, 64, 154, 1)), url(../img/fact-bg-enhanced.png);
+  /* background: linear-gradient(rgba(25, 64, 154, 0.9), rgba(25, 64, 154, 1)), url(../img/fact-bg-enhanced.png); */
+  background: linear-gradient(rgba(50, 88, 145, 0.671), rgba(6, 41, 94, 0.532)), url(../img/fact-bg-enhanced.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,6 +24,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.counter .counter-item .counter-item-icon i {
+  color: #506e7a; /* La couleur désirée pour les icônes */
 }
 /*** Counter End ***/
 
