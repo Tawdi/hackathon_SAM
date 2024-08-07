@@ -203,7 +203,7 @@ router.get('/actualites', (req, res) => {
 router.get('/evenements', (req, res) => {
     res.render('pages/evenements',{
 
-        title: "Evénments",
+        title: "Événements",
         events_future,
         events_past,
         events_present
