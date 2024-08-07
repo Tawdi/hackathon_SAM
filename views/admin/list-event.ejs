@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
  <!-- Page Wrapper -->
   
  <link rel="stylesheet" href="css/css/sb-admin-2.min.css">
@@ -172,12 +172,7 @@
 
             </nav>
             <!-- End of Topbar -->
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards Horizontal</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .card-container {
             display: flex;
@@ -188,21 +183,22 @@
             flex: 0 0 auto;
         }
     </style>
-</head>
-<body>
+
     <div class="container mt-4">
-        <div class="card-container">
+        <div class="row">
+            <% events.forEach(event => { %>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/img/6476738f42360401f32f7742.jpg" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Evenement 1</h5>
-                    <p class="card-text">Forum d'une journée avec conférences d'experts, ateliers interactifs et réseautage
+                    <h5 class="card-title"><%= event.titre %></h5>
+                    <p class="card-text"><%= event.apercu %>
                     </p>
                     <a href="#" class="btn btn-primary">Modifier</a>
                     <a href="#" class="btn btn-primary">Supprimer</a>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <% }) %>
+            <!-- <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/img/6476738f42360401f32f7742.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Evenement 2</h5>
@@ -219,15 +215,13 @@
                     <a href="#" class="btn btn-primary">Modifier</a>
                     <a href="#" class="btn btn-primary">Supprimer</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
 <!-- Bootstrap core JavaScript-->
     <!-- <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
