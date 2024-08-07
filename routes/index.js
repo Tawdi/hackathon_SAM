@@ -65,7 +65,7 @@ const events_past = [
 const events_present = [
   {
       imgSrc: "https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024",
-      title: "National ichrak Farm Machinery Show 2024",
+      title: "National Farm Machinery Show 2024",
       date: "Février 2024",
       location: "Louisville, Kentucky, USA",
       description: "Salon des équipements agricoles aux USA, mettant en avant les innovations en mécanisation durable."
@@ -235,7 +235,7 @@ router.get('/actualites', (req, res) => {
 router.get('/evenements', (req, res) => {
     res.render('pages/evenements',{
 
-        title: "Evénments",
+        title: "Événements",
         events_future,
         events_past,
         events_present
