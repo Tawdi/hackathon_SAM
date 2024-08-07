@@ -175,6 +175,38 @@ const events = [
         apercu: "Salon international des fournisseurs de l’agriculture et de l’élevage, présentant des innovations en matière de mécanisation agricole."
     }
   ];
+
+  const event = {
+    title: "Conférence sur les Innovations Technologiques",
+    description: "Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir. Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir.Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir.Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir.",
+    img: "img/Image1.jpg"
+};
+
+const newss = [
+    {
+        img: "https://via.placeholder.com/400x300.png?text=News+1",
+        name: "Technologie Avancée",
+        descp: "Dernières tendances en IA"
+    },
+    {
+        img: "https://via.placeholder.com/400x300.png?text=News+2",
+        name: "Energies Renouvelables",
+        descp: "Solutions écologiques"
+    },
+    {
+        img: "https://via.placeholder.com/400x300.png?text=News+3",
+        name: "Santé et Bien-être",
+        descp: "Innovation en soins de santé"
+    },
+    {
+        img: "https://via.placeholder.com/400x300.png?text=News+4",
+        name: "Technologies de Communication",
+        descp: "Réseaux de nouvelle génération"
+    }
+];
+
+
+
   
 router.get('/', (req, res) => {
     res.render('pages/accueil',{
@@ -203,7 +235,7 @@ router.get('/actualites', (req, res) => {
 router.get('/evenements', (req, res) => {
     res.render('pages/evenements',{
 
-        title: "Evénments",
+        title: "Événements",
         events_future,
         events_past,
         events_present
@@ -220,7 +252,9 @@ router.get('/connecter', (req, res) => {
 router.get('/detail', (req, res) => {
     res.render('event/details',{
 
-        title: "Detail Evénment"
+        title: "Detail Evénment",
+        event,
+        newss
 
     });
 });

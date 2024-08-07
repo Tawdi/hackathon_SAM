@@ -16,7 +16,7 @@ module.exports = {
       if (err) return next(err);
 
       if (!user) {
-        const errorMsg = info.message || "Login failed.";
+        const errorMsg = info.message || "La connexion a échoué.";
         req.flash("error_msg", errorMsg);
         return res.redirect("/login");
       }
@@ -44,25 +44,25 @@ module.exports = {
   signup: [
     body("username")
       .isLength({ min: 3 })
-      .withMessage("Username must be at least 3 characters long")
+      .withMessage("Le nom d'utilisateur doit comporter au moins 3 caractères")
       .trim()
       .escape(),
-    body("email").isEmail().withMessage("Enter a valid email address"),
+    body("email").isEmail().withMessage("Entrez une adresse mail valide"),
     body("nom")
       .matches(/^[a-zA-Z]+$/)
-      .withMessage("Nom can only contain letters")
+      .withMessage("Nom ne peut contenir que des lettres")
       .trim()
       .escape(),
     body("prenom")
       .matches(/^[a-zA-Z]+$/)
-      .withMessage("Prenom can only contain letters")
+      .withMessage("Le prénom ne peut contenir que des lettres")
       .trim()
       .escape(),
     body("password")
       .isLength({ min: 6 })
-      .withMessage("Password must be at least 6 characters long")
+      .withMessage("Le mot de passe doit contenir au moins 6 caractères")
       .matches(/^(?=.*[a-zA-Z])(?=.*\d)/)
-      .withMessage("Password must contain both letters and numbers"),
+      .withMessage("Le mot de passe doit contenir à la fois des lettres et des chiffres"),
 
     async (req, res, next) => {
       const errors = validationResult(req);
@@ -78,7 +78,7 @@ module.exports = {
       try {
         const existingUser = await User.findByEmail(email);
         if (existingUser) {
-          req.flash("error_msg", "Email is already registered");
+          req.flash("error_msg", "L'adresse e-mail est déjà utilisée");
           return res.redirect("/register");
         }
 
@@ -109,26 +109,26 @@ module.exports = {
         const mailOptions = {
           from: process.env.EMAIL_USER, 
           to: email,
-          subject: "Account Verification",
-          text: `Please verify your account by clicking the following link: ${verificationUrl}`,
+          subject: "Vérification de compte",
+          text: `Veuillez vérifier votre compte en cliquant sur le lien suivant: ${verificationUrl}`,
         };
 
         transporter.sendMail(mailOptions, (err, info) => {
           if (err) {
-            console.error("Error sending email:", err);
-            req.flash("error_msg", "Error sending verification email.");
+            console.error("Erreur lors de l'envoi de l'e-mail:", err);
+            req.flash("error_msg", "Erreur lors de l'envoi de l'e-mail de vérification.");
             return res.redirect("/register");
           }
 
           req.flash(
             "success_msg",
-            "You have successfully signed up! Please check your email to verify your account."
+            "Vous vous êtes inscrit avec succès ! Veuillez vérifier votre e-mail pour vérifier votre compte."
           );
           res.redirect("/login");
         });
       } catch (err) {
-        console.error("Error during signup:", err);
-        req.flash("error_msg", "Server error, please try again later.");
+        console.error("Erreur lors de l'inscription:", err);
+        req.flash("error_msg", "Erreur de serveur, veuillez réessayer plus tard.");
         res.redirect("/register");
       }
     },
@@ -140,20 +140,20 @@ module.exports = {
     try {
       const user = await User.verifyUser(token);
       if (!user) {
-        req.flash("error_msg", "Invalid verification token.");
+        req.flash("error_msg", "Jeton de vérification non valide.");
         return res.redirect("/register");
       }
 
       req.flash(
         "success_msg",
-        "Your account has been verified. You can now log in."
+        "Votre compte a été vérifié. Vous pouvez désormais vous connecter."
       );
       res.redirect("/login");
     } catch (err) {
       console.error("Error verifying account:", err);
       req.flash(
         "error_msg",
-        "An error occurred during verification. Please try again later."
+        "Une erreur s'est produite lors de la vérification. Veuillez réessayer ultérieurement."
       );
       res.redirect("/register");
     }
@@ -161,13 +161,13 @@ module.exports = {
 
   logout: (req, res) => {
     req.logout();
-    req.flash("success_msg", "You are logged out");
+    req.flash("success_msg", "Vous êtes déconnecté");
     res.redirect("/");
   },
 
   showChangePasswordPage: (req, res) => {
     if (req.user.role === "admin") {
-      res.render("change-password");
+      res.render("changer le mot de passe");
     } else {
       res.redirect("/");
     }
@@ -184,16 +184,16 @@ module.exports = {
       const user = await User.findById(req.user.id);
       const isMatch = await bcrypt.compare(currentPassword, user.password);
       if (!isMatch) {
-        req.flash("error_msg", "Current password is incorrect");
+        req.flash("error_msg", "Ce mot de passe est incorrect");
         return res.redirect("/change-password");
       }
 
       await User.updatePassword(req.user.id, newPassword);
-      req.flash("success_msg", "Password updated successfully");
+      req.flash("success_msg", "Mot de passe mis à jour avec succès");
       res.redirect("/");
     } catch (err) {
-      console.error("Error changing password:", err);
-      req.flash("error_msg", "An error occurred while changing the password");
+      console.error("Erreur lors du changement de mot de passe :", err);
+      req.flash("error_msg", "Une erreur s'est produite lors du changement du mot de passe");
       res.redirect("/change-password");
     }
   },
