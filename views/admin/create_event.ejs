@@ -46,7 +46,46 @@
  
                     <%- include('../partials/admin/form_create_event') %>
  
-                   
+                   <!-- Add Program Form -->
+<button type="button" class="btn btn-secondary mt-3" id="addProgramBtn">Ajouter un Programme</button>
+
+<div id="programFormSection" class="d-none mt-3">
+    <h4>Ajouter un Programme</h4>
+    <form id="programForm" method="POST" action="/add-program" class="needs-validation" novalidate>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="programDay">Jour</label>
+                <input type="date" name="day" class="form-control" id="programDay" required>
+                <div class="invalid-feedback">Please provide a day.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="programDescription">Description</label>
+                <textarea name="description" class="form-control" id="programDescription" rows="2" required></textarea>
+                <div class="invalid-feedback">Please provide a description.</div>
+            </div>
+        </div>
+        <input type="hidden" name="eventId" value="<%= event.id %>"> <!-- Pass the event ID here -->
+        <button type="submit" class="btn btn-primary">Ajouter Programme</button>
+    </form>
+</div>
+
+<!-- Display Programs -->
+<h4 class="mt-4">Programmes</h4>
+<ul id="programList" class="list-group">
+    <% programs.forEach(program => { %>
+        <li class="list-group-item">
+            <strong><%= program.jour %></strong>: <%= program.description %>
+        </li>
+    <% }) %>
+</ul>
+
+<script>
+    document.getElementById('addProgramBtn').addEventListener('click', function() {
+        const programFormSection = document.getElementById('programFormSection');
+        programFormSection.classList.toggle('d-none');
+    });
+</script>
+
  
                  </div>
  
