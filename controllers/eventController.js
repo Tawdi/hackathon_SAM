@@ -143,7 +143,7 @@ const getEventById = async (req, res) => {
 const createEvent = async (req, res) => {
     const eventData = req.body;
     try {
-        await EventModel.createEvent(eventData);
+        await EventModel.addEvent(eventData);
         req.flash('success', 'Event created successfully');
         res.redirect('/event');
     } catch (error) {

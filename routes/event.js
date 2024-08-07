@@ -124,7 +124,7 @@
 const express = require('express');
 const router = express.Router();
 const eventController = require('../controllers/eventController');
-
+const middleware = require('../middlewares/auth')
 
 router.get('/', eventController.getAllEvents);
 
@@ -132,10 +132,9 @@ router.get('/', eventController.getAllEvents);
 router.get('/:id', eventController.getEventById);
 
 // Route to create a new event
-router.get('/create', (req, res) => {
-    res.render('event/create'); // Render the form for creating a new event
-});
-router.post('/create', eventController.createEvent); // Handle form submission for creating an event
+// router.get('/create', (req, res) => {
+//     res.render('event/new'); // Render the form for creating a new event
+// });
 
 // Route to update an event
 router.get('/:id/edit', async (req, res) => {

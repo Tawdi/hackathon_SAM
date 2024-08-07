@@ -1,9 +1,9 @@
-<form class="needs-validation" novalidate>
+<form class="needs-validation" method="post" action="create_event" novalidate>
     <!-- Titre de l'événement -->
     <div class="form-row mb-4">
         <div class="col-md-6 mb-3">
-            <label for="validationCustom01">Titre de l'événement</label>
-            <input type="text" class="form-control" id="validationCustom01" placeholder="Titre de l'événement" required>
+            <label for="titre">Titre de l'événement</label>
+            <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre de l'événement" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -12,8 +12,8 @@
             </div>
         </div>
         <div class="col-md-6 mb-3">
-            <label for="validationCustomImage">Image de l'événement</label>
-            <input type="file" class="form-control-file" id="validationCustomImage" required>
+            <label for="image_url">Image de l'événement</label>
+            <input type="file" class="form-control-file" id="image_url" name="image_url" required>
             <div class="invalid-feedback">
                 Please upload an image.
             </div>
@@ -22,15 +22,15 @@
 
     <!-- Aperçu et Description -->
     <div class="form-group mb-4">
-        <label for="validationCustom02">Aperçu</label>
-        <textarea class="form-control" id="validationCustom02" rows="2" placeholder="Aperçu de l'événement" required></textarea>
+        <label for="apercu">Aperçu</label>
+        <textarea class="form-control" id="apercu" name="apercu" rows="2" placeholder="Aperçu de l'événement" required></textarea>
         <div class="invalid-feedback">
             Please provide an overview.
         </div>
     </div>
     <div class="form-group mb-4">
-        <label for="validationCustom03">Description</label>
-        <textarea class="form-control" id="validationCustom03" rows="3" placeholder="Description de l'événement" required></textarea>
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3" placeholder="Description de l'événement" required></textarea>
         <div class="invalid-feedback">
             Please provide a description.
         </div>
@@ -39,22 +39,22 @@
     <!-- Dates et Lieu -->
     <div class="form-row mb-4">
         <div class="col-md-4 mb-3">
-            <label for="validationCustom04">Date de début</label>
-            <input type="date" class="form-control" id="validationCustom04" required>
+            <label for="date_debut">Date de début</label>
+            <input type="date" class="form-control" id="date_debut" name="date_debut" required>
             <div class="invalid-feedback">
                 Please provide a start date.
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <label for="validationCustom05">L'heure</label>
-            <input type="time" class="form-control" id="validationCustom05" required>
+            <label for="time">L'heure</label>
+            <input type="time" class="form-control" id="time" name="time" required>
             <div class="invalid-feedback">
                 Please provide a time.
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <label for="validationCustom06">Date de fin</label>
-            <input type="date" class="form-control" id="validationCustom06" required>
+            <label for="date_fin">Date de fin</label>
+            <input type="date" class="form-control" id="date_fin" name="date_fin" required>
             <div class="invalid-feedback">
                 Please provide an end date.
             </div>
@@ -62,35 +62,41 @@
     </div>
     <div class="form-row mb-4">
         <div class="col-md-4 mb-3">
-            <label for="validationCustom07">Lieu</label>
-            <input type="text" class="form-control" id="validationCustom07" placeholder="Lieu de l'événement" required>
+            <label for="lieu">Lieu</label>
+            <input type="text" class="form-control" id="lieu" name="lieu" placeholder="Lieu de l'événement" required>
             <div class="invalid-feedback">
                 Please provide a location.
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <label for="validationCustom08">Observations</label>
-            <textarea class="form-control" id="validationCustom08" rows="1" placeholder="Observations"></textarea>
+            <label for="observations">Observations</label>
+            <textarea class="form-control" id="observations" name="observations" rows="1" placeholder="Observations"></textarea>
             <div class="invalid-feedback">
                 Please provide observations.
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <label for="validationCustom09">Participation</label>
-            <input type="text" class="form-control" id="validationCustom09" placeholder="Participation" required>
+            <label for="participation">Participation</label>
+            <input type="text" class="form-control" id="participation" name="participation" placeholder="Participation" required>
             <div class="invalid-feedback">
                 Please provide participation details.
             </div>
         </div>
     </div>
     <div class="form-group mb-4">
-        <label for="validationCustom10">Informations supplémentaires</label>
-        <textarea class="form-control" id="validationCustom10" rows="2" placeholder="Informations supplémentaires"></textarea>
+        <label for="info_add">Informations supplémentaires</label>
+        <textarea class="form-control" id="info_add" name="info_add" rows="2" placeholder="Informations supplémentaires"></textarea>
         <div class="invalid-feedback">
             Please provide additional information.
         </div>
     </div>
 
+
+   <div>
+  <button class="btn btn-primary mt-4" type="submit">Créer Un Événement</button>
+  </div>
+    
+</form>
     <!-- Buttons to toggle visibility with icons -->
     <button type="button" class="btn btn-primary me-2" id="toggleSponsors">
         <i class="fas fa-user-tie"></i> Sponsors
@@ -98,83 +104,117 @@
     <button type="button" class="btn btn-primary" id="toggleSpeakers">
         <i class="fas fa-user-tie"></i> Speakers
     </button>
+<div class="row">
+
+    <div class="col-6">
     <!-- Sponsors Section -->
-    <div id="sponsorsSection" class="d-none mt-4">
+    <div id="sponsorsSection" class="d-none mt-4 ">
         <h4>Sponsors</h4>
-        <div class="form-row mb-4">
-            <div class="col-md-6 mb-3">
-                <label for="validationCustom11">Nom du sponsor</label>
-                <input type="text" class="form-control" id="validationCustom11" placeholder="Nom du sponsor" required>
-                <div class="invalid-feedback">
-                    Please provide sponsor's name.
+        <form action="">
+            <div class="form-row mb-4">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom11">Nom du sponsor</label>
+                    <input type="text" class="form-control" id="validationCustom11" placeholder="Nom du sponsor">
+                    <div class="invalid-feedback">
+                        Please provide sponsor's name.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom12">Prénom du sponsor</label>
+                    <input type="text" class="form-control" id="validationCustom12" placeholder="Prénom du sponsor">
+                    <div class="invalid-feedback">
+                        Please provide sponsor's first name.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom13">Image du sponsor</label>
+                    <input type="file" class="form-control-file" id="validationCustom13">
+                    <div class="invalid-feedback">
+                        Please upload an image.
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="validationCustom12">Prénom du sponsor</label>
-                <input type="text" class="form-control" id="validationCustom12" placeholder="Prénom du sponsor" required>
+            <div class="form-group mb-4">
+                <label for="validationCustom14">Description du sponsor</label>
+                <textarea class="form-control" id="validationCustom14" rows="1"
+                    placeholder="Description du sponsor"></textarea>
                 <div class="invalid-feedback">
-                    Please provide sponsor's first name.
+                    Please provide sponsor's description.
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="validationCustom13">Image du sponsor</label>
-                <input type="file" class="form-control-file" id="validationCustom13" required>
-                <div class="invalid-feedback">
-                    Please upload an image.
-                </div>
-            </div>
-        </div>
-        <div class="form-group mb-4">
-            <label for="validationCustom14">Description du sponsor</label>
-            <textarea class="form-control" id="validationCustom14" rows="1" placeholder="Description du sponsor" required></textarea>
-            <div class="invalid-feedback">
-                Please provide sponsor's description.
-            </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Créer Un sponsor</button>
+            <button class="btn btn-primary" type="submit">Créer Un sponsor</button>
+        </form> 
+        
+      
     </div>
-
+   
     <!-- Speakers Section -->
-    <div id="speakersSection" class="d-none mt-4">
+    <div id="speakersSection" class="d-none mt-4 ">
         <h4>Speakers</h4>
-        <div class="form-row mb-4">
-            <div class="col-md-6 mb-3">
-                <label for="validationCustom15">Nom du speaker</label>
-                <input type="text" class="form-control" id="validationCustom15" placeholder="Nom du speaker" required>
-                <div class="invalid-feedback">
-                    Please provide speaker's last name.
+        
+        <form action="" >
+            <div class="form-row mb-4">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom15">Nom du speaker</label>
+                    <input type="text" class="form-control" id="validationCustom15" placeholder="Nom du speaker">
+                    <div class="invalid-feedback">
+                        Please provide speaker's last name.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom16">Prénom du speaker</label>
+                    <input type="text" class="form-control" id="validationCustom16" placeholder="Prénom du speaker">
+                    <div class="invalid-feedback">
+                        Please provide speaker's first name.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom17">Image du speaker</label>
+                    <input type="file" class="form-control-file" id="validationCustom17">
+                    <div class="invalid-feedback">
+                        Please upload an image.
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="validationCustom16">Prénom du speaker</label>
-                <input type="text" class="form-control" id="validationCustom16" placeholder="Prénom du speaker" required>
+            <div class="form-group mb-4">
+                <label for="validationCustom18">Description du speaker</label>
+                <textarea class="form-control" id="validationCustom18" rows="2"
+                    placeholder="Description du speaker"></textarea>
                 <div class="invalid-feedback">
-                    Please provide speaker's first name.
+                    Please provide speaker's description.
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="validationCustom17">Image du speaker</label>
-                <input type="file" class="form-control-file" id="validationCustom17" required>
-                <div class="invalid-feedback">
-                    Please upload an image.
-                </div>
-            </div>
-        </div>
-        <div class="form-group mb-4">
-            <label for="validationCustom18">Description du speaker</label>
-            <textarea class="form-control" id="validationCustom18" rows="2" placeholder="Description du speaker" required></textarea>
-            <div class="invalid-feedback">
-                Please provide speaker's description.
-            </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Créer Un speaker</button>
-    </div>
-<div>
-<button class="btn btn-primary mt-4" type="submit">Créer Un Événement</button>
-</div>
-    
-</form>
+            <button class="btn btn-primary" type="submit">Créer Un speaker</button>
+        </form>
+        
 
+    </div>
+    </div>
+   <div class="col-6">
+    <div class="mt-4 ">
+          
+        <tbody>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+
+            </tr>
+        </tbody>
+    </div>
+    <div class="mt-4 ">
+          
+        <tbody>
+            <tr>
+                <td>sp</td>
+                <td>sp</td>
+                <td>sp</td>
+
+            </tr>
+        </tbody>
+    </div>
+</div>
+</div>
 
 
 
@@ -194,118 +234,119 @@
         sponsorsSection.classList.add('d-none');
     });
 
-    // Example for form validation
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            var form = document.getElementsByClassName('needs-validation')[0];
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        }, false);
-    })();
-    document.addEventListener('DOMContentLoaded', function() {
+    // // Example for form validation
+    // (function() {
+    //     'use strict';
+    //     window.addEventListener('load', function() {
+    //         var form = document.getElementsByClassName('needs-validation')[0];
+    //         form.addEventListener('submit', function(event) {
+    //             if (form.checkValidity() === false) {
+    //                 event.preventDefault();
+    //                 event.stopPropagation();
+    //             }
+    //             form.classList.add('was-validated');
+    //         }, false);
+    //     }, false);
+    // })();
+    // document.addEventListener('DOMContentLoaded', function() {
 // Gérer la prévisualisation des sponsors
-document.getElementById('previewSponsor').addEventListener('click', function() {
-const sponsorName = document.getElementById('validationCustom11').value;
-const sponsorFirstName = document.getElementById('validationCustom12').value;
-const sponsorImage = document.getElementById('validationCustom13').files[0];
-const sponsorDescription = document.getElementById('validationCustom14').value;
+// document.getElementById('previewSponsor').addEventListener('click', function() {
+// const sponsorName = document.getElementById('validationCustom11').value;
+// const sponsorFirstName = document.getElementById('validationCustom12').value;
+// const sponsorImage = document.getElementById('validationCustom13').files[0];
+// const sponsorDescription = document.getElementById('validationCustom14').value;
 
-const sponsorsPreview = document.getElementById('sponsorsPreview');
-let sponsorImageURL = '';
-if (sponsorImage) {
-sponsorImageURL = URL.createObjectURL(sponsorImage);
-}
+// const sponsorsPreview = document.getElementById('sponsorsPreview');
+// let sponsorImageURL = '';
+// if (sponsorImage) {
+// sponsorImageURL = URL.createObjectURL(sponsorImage);
+// }
 
-sponsorsPreview.innerHTML = `
-<h4>Sponsors</h4>
-<p><strong>Nom:</strong> ${sponsorName}</p>
-<p><strong>Prénom:</strong> ${sponsorFirstName}</p>
-<img src="${sponsorImageURL}" alt="Image du sponsor" style="max-width: 200px; height: auto;">
-<p><strong>Description:</strong> ${sponsorDescription}</p>
-`;
-sponsorsPreview.classList.remove('d-none');
-});
+// sponsorsPreview.innerHTML = `
+// <h4>Sponsors</h4>
+// <p><strong>Nom:</strong> ${sponsorName}</p>
+// <p><strong>Prénom:</strong> ${sponsorFirstName}</p>
+// <img src="${sponsorImageURL}" alt="Image du sponsor" style="max-width: 200px; height: auto;">
+// <p><strong>Description:</strong> ${sponsorDescription}</p>
+// `;
+// sponsorsPreview.classList.remove('d-none');
+// });
 
 // Gérer la prévisualisation des speakers
-document.getElementById('previewSpeaker').addEventListener('click', function() {
-const speakerName = document.getElementById('validationCustom15').value;
-const speakerFirstName = document.getElementById('validationCustom16').value;
-const speakerImage = document.getElementById('validationCustom17').files[0];
-const speakerDescription = document.getElementById('validationCustom18').value;
+// document.getElementById('previewSpeaker').addEventListener('click', function() {
+// const speakerName = document.getElementById('validationCustom15').value;
+// const speakerFirstName = document.getElementById('validationCustom16').value;
+// const speakerImage = document.getElementById('validationCustom17').files[0];
+// const speakerDescription = document.getElementById('validationCustom18').value;
 
-const speakersPreview = document.getElementById('speakersPreview');
-let speakerImageURL = '';
-if (speakerImage) {
-speakerImageURL = URL.createObjectURL(speakerImage);
-}
+// const speakersPreview = document.getElementById('speakersPreview');
+// let speakerImageURL = '';
+// if (speakerImage) {
+// speakerImageURL = URL.createObjectURL(speakerImage);
+// }
+// })
 
-speakersPreview.innerHTML = `
-<h4>Speakers</h4>
-<p><strong>Nom:</strong> ${speakerName}</p>
-<p><strong>Prénom:</strong> ${speakerFirstName}</p>
-<img src="${speakerImageURL}" alt="Image du speaker" style="max-width: 200px; height: auto;">
-<p><strong>Description:</strong> ${speakerDescription}</p>
-`;
-speakersPreview.classList.remove('d-none');
-});
+// speakersPreview.innerHTML = `
+// <h4>Speakers</h4>
+// <p><strong>Nom:</strong> ${speakerName}</p>
+// <p><strong>Prénom:</strong> ${speakerFirstName}</p>
+// <img src="${speakerImageURL}" alt="Image du speaker" style="max-width: 200px; height: auto;">
+// <p><strong>Description:</strong> ${speakerDescription}</p>
+// `;
+// speakersPreview.classList.remove('d-none');
+// });
 
-// Gérer la prévisualisation globale de l'événement
-document.getElementById('eventForm').addEventListener('submit', function(event) {
-event.preventDefault(); // Empêche la soumission du formulaire
+// // Gérer la prévisualisation globale de l'événement
+// document.getElementById('eventForm').addEventListener('submit', function(event) {
+// event.preventDefault(); // Empêche la soumission du formulaire
 
-// Afficher la section de prévisualisation
-document.getElementById('previewSection').classList.remove('d-none');
+// // Afficher la section de prévisualisation
+// document.getElementById('previewSection').classList.remove('d-none');
 
-// Prévisualiser les données de l'événement
-const eventTitle = document.getElementById('validationCustom01').value;
-const eventImage = document.getElementById('validationCustomImage').files[0];
-const eventOverview = document.getElementById('validationCustom02').value;
-const eventDescription = document.getElementById('validationCustom03').value;
-const eventStartDate = document.getElementById('validationCustom04').value;
-const eventStartTime = document.getElementById('validationCustom05').value;
-const eventEndDate = document.getElementById('validationCustom06').value;
-const eventLocation = document.getElementById('validationCustom07').value;
-const eventObservations = document.getElementById('validationCustom08').value;
-const eventParticipation = document.getElementById('validationCustom09').value;
-const eventInfo = document.getElementById('validationCustom10').value;
+// // Prévisualiser les données de l'événement
+// const eventTitle = document.getElementById('validationCustom01').value;
+// const eventImage = document.getElementById('validationCustomImage').files[0];
+// const eventOverview = document.getElementById('validationCustom02').value;
+// const eventDescription = document.getElementById('validationCustom03').value;
+// const eventStartDate = document.getElementById('validationCustom04').value;
+// const eventStartTime = document.getElementById('validationCustom05').value;
+// const eventEndDate = document.getElementById('validationCustom06').value;
+// const eventLocation = document.getElementById('validationCustom07').value;
+// const eventObservations = document.getElementById('validationCustom08').value;
+// const eventParticipation = document.getElementById('validationCustom09').value;
+// const eventInfo = document.getElementById('validationCustom10').value;
 
-let eventImageURL = '';
-if (eventImage) {
-eventImageURL = URL.createObjectURL(eventImage);
-}
+// let eventImageURL = '';
+// if (eventImage) {
+// eventImageURL = URL.createObjectURL(eventImage);
+// }
 
-const eventPreview = document.getElementById('eventPreview');
-eventPreview.innerHTML = `
-<h4>Événement</h4>
-<p><strong>Titre:</strong> ${eventTitle}</p>
-<img src="${eventImageURL}" alt="Image de l'événement" style="max-width: 200px; height: auto;">
-<p><strong>Aperçu:</strong> ${eventOverview}</p>
-<p><strong>Description:</strong> ${eventDescription}</p>
-<p><strong>Date de début:</strong> ${eventStartDate} à ${eventStartTime}</p>
-<p><strong>Date de fin:</strong> ${eventEndDate}</p>
-<p><strong>Lieu:</strong> ${eventLocation}</p>
-<p><strong>Observations:</strong> ${eventObservations}</p>
-<p><strong>Participation:</strong> ${eventParticipation}</p>
-<p><strong>Informations supplémentaires:</strong> ${eventInfo}</p>
-`;
-});
+// const eventPreview = document.getElementById('eventPreview');
+// eventPreview.innerHTML = `
+// <h4>Événement</h4>
+// <p><strong>Titre:</strong> ${eventTitle}</p>
+// <img src="${eventImageURL}" alt="Image de l'événement" style="max-width: 200px; height: auto;">
+// <p><strong>Aperçu:</strong> ${eventOverview}</p>
+// <p><strong>Description:</strong> ${eventDescription}</p>
+// <p><strong>Date de début:</strong> ${eventStartDate} à ${eventStartTime}</p>
+// <p><strong>Date de fin:</strong> ${eventEndDate}</p>
+// <p><strong>Lieu:</strong> ${eventLocation}</p>
+// <p><strong>Observations:</strong> ${eventObservations}</p>
+// <p><strong>Participation:</strong> ${eventParticipation}</p>
+// <p><strong>Informations supplémentaires:</strong> ${eventInfo}</p>
+// `;
+// });
 
-// Toggle sections for sponsors and speakers
-document.getElementById('toggleSponsors').addEventListener('click', function() {
-const sponsorsSection = document.getElementById('sponsorsSection');
-sponsorsSection.classList.toggle('d-none');
-});
+// // Toggle sections for sponsors and speakers
+// document.getElementById('toggleSponsors').addEventListener('click', function() {
+// const sponsorsSection = document.getElementById('sponsorsSection');
+// sponsorsSection.classList.toggle('d-none');
+// });
 
-document.getElementById('toggleSpeakers').addEventListener('click', function() {
-const speakersSection = document.getElementById('speakersSection');
-speakersSection.classList.toggle('d-none');
-});
-});
+// document.getElementById('toggleSpeakers').addEventListener('click', function() {
+// const speakersSection = document.getElementById('speakersSection');
+// speakersSection.classList.toggle('d-none');
+// });
+// });
 
 </script>
