@@ -10,7 +10,29 @@ class Program {
       throw new Error('Error retrieving programs by event ID: ' + error.message);
     }
   }
+  static async createProgram({ day, description, eventId }) {
+    try {
+        const [result] = await pool.query(
+            `INSERT INTO Programmes (jour, description, evenement_id) VALUES (?, ?, ?)`,
+            [day, description, eventId]
+        );
+        return result;
+    } catch (error) {
+        throw error;
+    }
+}
 
+static async getProgramsByEventId(eventId) {
+    try {
+        const [rows] = await pool.query(
+            `SELECT * FROM Programmes WHERE evenement_id = ?`,
+            [eventId]
+        );
+        return rows;
+    } catch (error) {
+        throw error;
+    }
+}
   // Method to create a new program
   static async create(program) {
     try {
