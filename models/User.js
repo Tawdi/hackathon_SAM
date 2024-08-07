@@ -155,6 +155,36 @@ class User {
       userId,
     ]);
   }
+
+  static async deleteUser(userId) {
+    await pool.query("DELETE FROM users WHERE id = ?", [userId]);
+  }
+
+  static async updateUser(
+    userId,
+    { username, email, nom, prenom, telephone, adresse, organisation, profession }
+  ) {
+    const [result] = await pool.query(
+      "UPDATE users SET username = ?, email = ?, nom = ?, prenom = ?, telephone = ?, adresse = ?, organisation = ?, profession = ? WHERE id = ?",
+      [username, email, nom, prenom, telephone, adresse, organisation, profession, userId]
+    );
+    return result.affectedRows > 0;
+  }
+
+  static async listAllUsers() {
+    const [rows] = await pool.query("SELECT * FROM users");
+    return rows;
+  }
+
+  static async findUsersByRole(role) {
+    const [rows] = await pool.query("SELECT * FROM users WHERE role = ?", [role]);
+    return rows;
+  } 
+
+  static async countUsers() {
+    const [rows] = await pool.query("SELECT COUNT(*) as count FROM users");
+    return rows[0].count;
+  }
 }
 
 module.exports = User;

@@ -83,32 +83,77 @@
 // });
  
 // module.exports = router;
+
+
+
+
+
+// routes/event.js
+// const express = require('express');
+// const router = express.Router();
+// const eventController = require('../controllers/eventController');
+
+// // GET all events
+// router.get('/', eventController.getAllEvents);
+
+// // GET a single event by ID
+// router.get('/:id', eventController.getEventById);
+// // router.get('/create', eventController.showCreateEvent);
+// // router.get('/create', (req, res) => {
+// //     res.render('admin/',{
+
+// //         title: "À Propos"
+
+// //     });
+// // });
+
+// // POST create a new event
+// // router.post('/', eventController.createEvent);
+
+// // PUT update an existing event
+// router.put('/:id', eventController.updateEvent);
+
+// // DELETE an event
+// router.delete('/:id', eventController.deleteEvent);
+
+// module.exports = router;
+
+
+
 // routes/event.js
 const express = require('express');
 const router = express.Router();
 const eventController = require('../controllers/eventController');
 
-// GET all events
-// router.get('/', eventController.getAllEvents);
 
-// GET a single event by ID
+router.get('/', eventController.getAllEvents);
+
+// Route to get a specific event by ID
 router.get('/:id', eventController.getEventById);
-// router.get('/create', eventController.showCreateEvent);
-// router.get('/create', (req, res) => {
-//     res.render('admin/',{
 
-//         title: "À Propos"
+// Route to create a new event
+router.get('/create', (req, res) => {
+    res.render('event/create'); // Render the form for creating a new event
+});
+router.post('/create', eventController.createEvent); // Handle form submission for creating an event
 
-//     });
-// });
+// Route to update an event
+router.get('/:id/edit', async (req, res) => {
+    const id = parseInt(req.params.id);
+    try {
+        const event = await eventController.getEventById(req, res);
+        if (event) {
+            res.render('event/edit', { event }); // Render the form for editing the event
+        } else {
+            res.status(404).send('Event not found');
+        }
+    } catch (error) {
+        res.status(500).send('Internal Server Error');
+    }
+});
+router.put('/:id', eventController.updateEvent); // Handle form submission for updating an event
 
-// POST create a new event
-router.post('/', eventController.createEvent);
-
-// PUT update an existing event
-router.put('/:id', eventController.updateEvent);
-
-// DELETE an event
-router.delete('/:id', eventController.deleteEvent);
+// Route to delete an event
+router.delete('/:id', eventController.deleteEvent); // Handle form submission for deleting an event
 
 module.exports = router;

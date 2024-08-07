@@ -150,9 +150,10 @@
 //   });
 
 
-  // server.js
+  // server/app.js
 const express = require("express");
 const path = require("path");
+const methodOverride = require('method-override');
 const expressLayouts = require("express-ejs-layouts");
 const session = require("express-session");
 const flash = require("connect-flash");
@@ -169,7 +170,7 @@ createDatabase();
 // Set EJS as the view engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../views"));
-
+app.use(methodOverride('_method'));
 // Use express-ejs-layouts 
 app.use(expressLayouts);
 
@@ -182,7 +183,7 @@ app.use(express.urlencoded({ extended: false }));
 // Express session
 app.use(
   session({
-    secret: "secret",
+    secret: "secret_sam",
     resave: false,
     saveUninitialized: true,
   })

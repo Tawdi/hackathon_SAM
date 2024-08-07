@@ -18,14 +18,14 @@ module.exports = {
       if (!user) {
         const errorMsg = info.message || "Login failed.";
         req.flash("error_msg", errorMsg);
-        return res.redirect("/connecter");
+        return res.redirect("/login");
       }
 
       req.logIn(user, (err) => {
         if (err) return next(err);
 
         if (user.role === "admin") {
-          return res.redirect("/events");
+          return res.redirect("/admin");
         } else if (req.session.returnTo) {
           const redirectUrl = req.session.returnTo;
           delete req.session.returnTo;
@@ -124,7 +124,7 @@ module.exports = {
             "success_msg",
             "You have successfully signed up! Please check your email to verify your account."
           );
-          res.redirect("/");
+          res.redirect("/login");
         });
       } catch (err) {
         console.error("Error during signup:", err);

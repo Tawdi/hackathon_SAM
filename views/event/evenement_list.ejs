@@ -1,0 +1,44 @@
+<header>
+    <h1>Event List</h1>
+    <% if (messages.success) { %>
+        <div class="alert alert-success"><%= messages.success %></div>
+    <% } %>
+    <% if (messages.error) { %>
+        <div class="alert alert-danger"><%= messages.error %></div>
+    <% } %>
+</header>
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Preview</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Time</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% events.forEach(event => { %>
+                <tr>
+                    <td><%= event.titre %></td>
+                    <td><%= event.apercu %></td>
+                    <td><%= event.date_debut %></td>
+                    <td><%= event.date_fin %></td>
+                    <td><%= event.time %></td>
+                    <td><%= event.lieu %></td>
+                    <td>
+                        <a href="/event/<%= event.id %>">View</a> | 
+                        <a href="/event/<%= event.id %>/edit">Edit</a> | 
+                        <form action="/event/<%= event.id %>?_method=DELETE" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/event/create">Create New Event</a>
+</main>

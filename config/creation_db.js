@@ -118,7 +118,7 @@ async function createDatabase() {
       // Insert admin user
       const adminPassword = process.env.ADMIN_PASSWORD || "admin_sam"; // Use env variable or secure method
       const hashedPassword = await bcrypt.hash(adminPassword, 10);
-      const adminEmail = "admin@samalmoutmir.com";
+      const adminEmail = process.env.ADMIN_EMAIL ||"admin@samalmoutmir.com";
       const adminNom = "admin";
       const adminPrenom = "admin";
       const adminAdresse = "safi";
