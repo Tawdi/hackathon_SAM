@@ -230,7 +230,10 @@ router.get('/detail', (req, res) => {
 
 });
  });
+ const programController = require('../controllers/programController');
 
+ router.post('/add-program', programController.addProgram);
+ router.get('/programs/:eventId', programController.getProgramsByEventId);
 module.exports = router;
 
 
