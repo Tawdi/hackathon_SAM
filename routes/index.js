@@ -65,7 +65,7 @@ const events_past = [
 const events_present = [
   {
       imgSrc: "https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024",
-      title: "National ichrak Farm Machinery Show 2024",
+      title: "National Farm Machinery Show 2024",
       date: "Février 2024",
       location: "Louisville, Kentucky, USA",
       description: "Salon des équipements agricoles aux USA, mettant en avant les innovations en mécanisation durable."
