@@ -1,5 +1,5 @@
-body {
-    background-color: #f0f0f0;
+.logindiv {
+    /* background-color: #f0f0f0; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,13 +11,14 @@ body {
     max-width: 400px; /* Ajustez la largeur maximale du formulaire si nécessaire */
     width: 100%;
     padding: 20px;
+    margin: auto auto;
     background: var(--color-hack-5); /* Arrière-plan blanc pour le formulaire */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 2px solid #de6f43; /* Bordure bleue autour du formulaire */
     text-align: center;
 }
-
+ 
 .input-field {
     position: relative;
     margin-bottom: 20px;
@@ -43,7 +44,7 @@ body {
 .btn {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #de6f43;
     border: none;
     color: #fff;
     border-radius: 5px;
@@ -52,10 +53,12 @@ body {
 
 .btn.solid {
     background-color: #de6f43;
+    color:#fff !important
 }
 
 .btn.solid:hover {
     background-color: white;
+    color:#de6f43 !important
 }
 
 .text.sign-up-text {
