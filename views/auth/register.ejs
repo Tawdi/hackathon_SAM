@@ -14,8 +14,8 @@
         <%= success_msg %>
       </div>
       <% } %> -->
-        <!-- <div class="container"> -->
-        <!-- <form class="frome" action="/register" method="POST">
+<!-- <div class="container"> -->
+<!-- <form class="frome" action="/register" method="POST">
           <h2 class="title">S’enregistrer</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -65,7 +65,7 @@
           </div>
 -----------------------------------------
                 <p class="social-text">Ou inscrivez-vous sur les plateformes sociales</p> -->
-                <!-- <div class="social-media">
+<!-- <div class="social-media">
             <a href="#" class="social-icon">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -82,7 +82,7 @@
           --------------------------------
         </form>-->
 
-        <!-- <div class="panels-container">
+<!-- <div class="panels-container">
 
 
   <div class="panel right-panel">
@@ -98,60 +98,54 @@
 </div>
         </div> -->
 
-        <link href="css/login.css" rel="stylesheet">
-
-<% if (error_msg.length > 0) { %>
-  <div class="alert alert-danger"><%= error_msg %></div>
-<% } %>
-<% if (success_msg.length > 0) { %>
-  <div class="alert alert-success"><%= success_msg %></div>
-<% } %>
+<link href="css/login.css" rel="stylesheet">
 
 <form class="forme" action="/register" method="POST">
-    <h2 class="title">S’enregistrer</h2>
+  <h2 class="title">S’enregistrer</h2>
+  <div class="input-field">
+    <i class="fas fa-user"></i>
+    <input type="text" name="username" placeholder="Username" required />
+  </div>
+
+  <div class="name-container">
     <div class="input-field">
       <i class="fas fa-user"></i>
-      <input type="text" name="username" placeholder="Username" required />
+      <input type="text" name="nom" placeholder="Nom" required />
     </div>
+    <div class="input-field">
+      <i class="fas fa-user"></i>
+      <input type="text" name="prenom" placeholder="Prénom" required />
+    </div>
+  </div>
 
-    <div class="name-container">
-        <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="nom" placeholder="Nom" required />
-        </div>
-        <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" name="prenom" placeholder="Prénom" required />
-        </div>
-    </div>
+  <div class="input-field">
+    <i class="fas fa-phone"></i>
+    <input type="text" name="telephone" placeholder="Téléphone" required />
+  </div>
+  <div class="input-field">
+    <i class="fas fa-envelope"></i>
+    <input type="email" name="email" placeholder="Email" required />
+  </div>
+  <div class="input-field">
+    <i class="fas fa-map-marker-alt"></i>
+    <input type="text" name="adresse" placeholder="Adresse" required />
+  </div>
+  <div class="input-field">
+    <i class="fas fa-briefcase"></i>
+    <input type="text" name="profession" placeholder="Profession" required />
+  </div>
+  <div class="input-field">
+    <i class="fas fa-building"></i>
+    <input type="text" name="organisation" placeholder="Organisation" required />
+  </div>
+  <div class="input-field">
+    <i class="fas fa-lock"></i>
+    <input type="password" name="password" placeholder="Mot de Passe" required />
+  </div>
+  <input type="submit" value="S'inscrire" class="btn solid" />
 
-    <div class="input-field">
-        <i class="fas fa-phone"></i>
-        <input type="text" name="telephone" placeholder="Téléphone" required />
-    </div>
-    <div class="input-field">
-        <i class="fas fa-envelope"></i>
-        <input type="email" name="email" placeholder="Email" required />
-    </div>
-    <div class="input-field">
-        <i class="fas fa-map-marker-alt"></i>
-        <input type="text" name="adresse" placeholder="Adresse" required />
-    </div>
-    <div class="input-field">
-        <i class="fas fa-briefcase"></i>
-        <input type="text" name="profession" placeholder="Profession" required />
-    </div>
-    <div class="input-field">
-        <i class="fas fa-building"></i>
-        <input type="text" name="organisation" placeholder="Organisation" required />
-    </div>
-    <div class="input-field">
-        <i class="fas fa-lock"></i>
-        <input type="password" name="password" placeholder="Mot de Passe" required />
-    </div>
-    <input type="submit" value="S'inscrire" class="btn solid" />
-
-    <div class="text sign-up-text">
-        Vous avez déjà un compte? <label for="flip"><a href="/login" style="color: rgb(89, 85, 85);">Se connecter</a></label>
-    </div>
+  <div class="text sign-up-text">
+    Vous avez déjà un compte? <label for="flip"><a href="/login" style="color: rgb(89, 85, 85);">Se
+        connecter</a></label>
+  </div>
 </form>
