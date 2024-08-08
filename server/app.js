@@ -218,7 +218,7 @@ const adminRoutes = require("../routes/admin");
 app.use("/", indexRoutes);
 app.use("/", adminRoutes);
 app.use("/", authRoutes);
-app.use("/event",eventRoutes);
+app.use("/",eventRoutes);
 
 // Start the server
 app.listen(3000, () => {

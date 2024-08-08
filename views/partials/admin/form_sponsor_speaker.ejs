@@ -1,0 +1,121 @@
+
+
+<!-- Buttons to toggle visibility with icons -->
+<button type="button" class="btn btn-primary me-2" id="toggleSponsors">
+    <i class="fas fa-user-tie"></i> Sponsors
+</button>
+<button type="button" class="btn btn-primary" id="toggleSpeakers">
+    <i class="fas fa-user-tie"></i> Speakers
+</button>
+
+<div class="row">
+  <div class="col-6">
+    <!-- Sponsors Section -->
+    <div id="sponsorsSection" class="d-none mt-4">
+        <h4>Sponsors</h4>
+        <form action="/add_sponsor" method="POST" enctype="multipart/form-data">
+            <div class="form-row mb-4">
+                <div class="col-md-6 mb-3">
+                    <label for="sponsorName">Nom du sponsor</label>
+                    <input type="text" class="form-control" id="sponsorName" name="sponsor_name" placeholder="Nom du sponsor" required>
+                    <div class="invalid-feedback">
+                        Please provide sponsor's name.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="sponsorLogo">Image du sponsor</label>
+                    <input type="file" class="form-control-file" id="sponsorLogo" name="sponsor_logo_url">
+                    <div class="invalid-feedback">
+                        Please upload an image.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-4">
+                <label for="sponsorDescription">Description du sponsor</label>
+                <textarea class="form-control" id="sponsorDescription" name="sponsor_description" rows="1" placeholder="Description du sponsor"></textarea>
+                <div class="invalid-feedback">
+                    Please provide sponsor's description.
+                </div>
+            </div>
+            <input type="hidden" name="evenement_id" value="<%= event.id %>">
+            <button class="btn btn-primary" type="submit">Créer Un sponsor</button>
+        </form>
+    </div>
+
+    <!-- Speakers Section -->
+    <div id="speakersSection" class="d-none mt-4">
+        <h4>Speakers</h4>
+        <form action="/add_speaker" method="POST" enctype="multipart/form-data">
+            <div class="form-row mb-4">
+                <div class="col-md-6 mb-3">
+                    <label for="speakerName">Nom du speaker</label>
+                    <input type="text" class="form-control" id="speakerName" name="speaker_name" placeholder="Nom du speaker" required>
+                    <div class="invalid-feedback">
+                        Please provide speaker's last name.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="speakerLogo">Image du speaker</label>
+                    <input type="file" class="form-control-file" id="speakerLogo" name="speaker_logo_url">
+                    <div class="invalid-feedback">
+                        Please upload an image.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-4">
+                <label for="speakerBio">Description du speaker</label>
+                <textarea class="form-control" id="speakerBio" name="speaker_bio" rows="2" placeholder="Description du speaker"></textarea>
+                <div class="invalid-feedback">
+                    Please provide speaker's description.
+                </div>
+            </div>
+            <input type="hidden" name="evenement_id" value="<%= event.id %>">
+            <button class="btn btn-primary" type="submit">Créer Un speaker</button>
+        </form>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <!-- Placeholder for Sponsors and Speakers lists -->
+    <div class="mt-4">
+        <h4>Existing Sponsors</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4">
+        <h4>Existing Speakers</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>sp</td>
+                    <td>sp</td>
+                    <td>sp</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('toggleSponsors').addEventListener('click', function() {
+    var sponsorsSection = document.getElementById('sponsorsSection');
+    var speakersSection = document.getElementById('speakersSection');
+    sponsorsSection.classList.toggle('d-none');
+    speakersSection.classList.add('d-none');
+});
+
+document.getElementById('toggleSpeakers').addEventListener('click', function() {
+    var speakersSection = document.getElementById('speakersSection');
+    var sponsorsSection = document.getElementById('sponsorsSection');
+    speakersSection.classList.toggle('d-none');
+    sponsorsSection.classList.add('d-none');
+});
+</script>

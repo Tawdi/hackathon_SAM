@@ -1,50 +1,11 @@
 <!-- Include  navigation bar -->
 <%- include('../partials/topbar') %>
-<%- include('../partials/navbar') %>
-<link rel="stylesheet" href="css/event.css">
-<%- include('../partials/titre_header') %>
-        
-        
-    <script>
-      const events_past = [
-    {
-        imgSrc: "https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024",
-        title: "National Farm Machinery Show 2024",
-        date: "Février 2024",
-        location: "Louisville, Kentucky, USA",
-        description: "Salon des équipements agricoles aux USA, mettant en avant les innovations en mécanisation durable."
-    },
-    {
-        imgSrc: "https://via.placeholder.com/800x600?text=ICSAM+2024",
-        title: "International Conference on Sustainable Agriculture and Mechanization (ICSAM) 2024",
-        date: "Juin 2024",
-        location: "Lyon, France",
-        description: "Conférence internationale sur les innovations en agriculture durable et mécanisation. Réunit chercheurs, ingénieurs, et professionnels."
-    },
-    {
-        imgSrc: "https://via.placeholder.com/800x600?text=Agritechnica+2023",
-        title: "Agritechnica 2023",
-        date: "Novembre 2023",
-        location: "Hanovre, Allemagne",
-        description: "Le plus grand salon mondial des machines agricoles, présentant les dernières innovations en matière de technologie agricole."
-    },
-    {
-        imgSrc: "https://via.placeholder.com/800x600?text=Farm+Progress+Show+2023",
-        title: "Farm Progress Show 2023",
-        date: "Septembre 2023",
-        location: "Boone, Iowa, USA",
-        description: "Salon annuel des progrès agricoles, mettant en avant les nouvelles technologies et pratiques agricoles."
-    },
-    {
-        imgSrc: "https://via.placeholder.com/800x600?text=SIMA+2023",
-        title: "SIMA 2023",
-        date: "Octobre 2023",
-        location: "Paris, France",
-        description: "Salon international des fournisseurs de l’agriculture et de l’élevage, présentant des innovations en matière de mécanisation agricole."
-    }
-];
+    <%- include('../partials/navbar') %>
+        <link rel="stylesheet" href="css/event.css">
+        <%- include('../partials/titre_header') %>
 
 
+<<<<<<< HEAD
 const events_present = [
     {
         imgSrc: "https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024",
@@ -144,28 +105,53 @@ const events_future = [
                     <p><strong>Date:</strong> <%= event.date_debut %></p>
                     <p><strong>Lieu:</strong> <%= event.lieu %></p>
                     <p><%= event.description %></p>
+=======
+            <div class="container">
+                <!-- Passé -->
+                
+                <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.2s" id="past-events">
+                    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                        <h2 class="mb-0">Événements Anciens</h2>
+                    </div>
+                    <div class="event-grid">
+                        <% events_past.forEach(event=> { %>
+                            <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                                <img src="<%= event.imgSrc %>" alt="<%= event.title %>">
+                                <div class="event-card-content">
+                                   
+                                    <h3>
+                                        <%= event.title %>
+                                    </h3>
+                                    <p><strong>Date:</strong>
+                                        <%= event.date %>
+                                    </p>
+                                    <p><strong>Lieu:</strong>
+                                        <%= event.location %>
+                                    </p>
+                                    <p>
+                                        <%= event.description %>
+                                    </p>
+>>>>>>> 57d388ba94eaf4fa4d992138c4a2bfe88f37d672
 
 
-                    <div class="d-flex justify-content-start">
-                        <a href="/detail">En savoir plus</a>
-                        <a href="/register" class="btn btn-secondary register-btn" style="margin-left: 35%; background-color: #de6f43;">S'inscrire</a>
+                                    <div class="d-flex justify-content-start">
+                                        <a href="/detail">En savoir plus</a>
+                                        <a href="/register" class="btn btn-secondary register-btn"
+                                            style="margin-left: 35%; background-color: #de6f43;">S'inscrire</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+
                     </div>
                 </div>
-            </div>
-            <% }); %>
 
-
-            <!-- <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
-                <img src="https://via.placeholder.com/800x600?text=ICSAM+2024" alt="ICSAM 2024">
-                <div class="event-card-content">
-                    <h3>International Conference on Sustainable Agriculture and Mechanization (ICSAM) 2024</h3>
-                    <p><strong>Date:</strong> Juin 2024</p>
-                    <p><strong>Lieu:</strong> Lyon, France</p>
-                    <p>Conférence internationale sur les innovations en agriculture durable et mécanisation. Réunit chercheurs, ingénieurs, et professionnels.</p>
-                    <div class="d-flex justify-content-start">
-                        <a href="/detail">En savoir plus</a>
-                        <a href="/register" class="btn btn-secondary" style="margin-left: 35%;">S'inscrire</a>
+                <!-- Présent -->
+                <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.4s" id="current-events">
+                    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                        <h2 class="mb-0">Événements Actuels</h2>
                     </div>
+<<<<<<< HEAD
                 </div>
             </div>-->
         </div>
@@ -191,16 +177,42 @@ const events_future = [
                     <p><strong>Date:</strong> <%= event.date_debut %></p>
                     <p><strong>Lieu:</strong> <%= event.lieu %></p>
                     <p><%= event.description %></p>
+=======
+                    <div class="event-grid">
+                        <% events_present.forEach(event=> { %>
+                            <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
+                                <!-- <img src="https://via.placeholder.com/800x600?text=WCSA+2024" alt="WCSA 2024"> -->
+                                <img src="<%= event.imgSrc %>" alt="<%= event.title %>">
+                                <div class="event-card-content">
+                                    <!-- <h3>World Congress on Sustainable Agriculture (WCSA) 2024</h3>
+                    <p><strong>Date:</strong> Août 2024</p>
+                    <p><strong>Lieu:</strong> Kyoto, Japon</p>
+                    <p>Congrès sur les pratiques et technologies durables en agriculture, incluant la mécanisation.</p> -->
+>>>>>>> 57d388ba94eaf4fa4d992138c4a2bfe88f37d672
 
-                    <div class="d-flex justify-content-start">
-                        <a href="/detail">En savoir plus</a>
-                        <a href="/register" class="btn btn-secondary" style="margin-left: 35%;">S'inscrire</a>
-                    </div>
-                </div>
-            </div>
-            <% }); %>
+                                    <h3>
+                                        <%= event.title %>
+                                    </h3>
+                                    <p><strong>Date:</strong>
+                                        <%= event.date %>
+                                    </p>
+                                    <p><strong>Lieu:</strong>
+                                        <%= event.location %>
+                                    </p>
+                                    <p>
+                                        <%= event.description %>
+                                    </p>
 
-            <!-- <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1s">
+                                    <div class="d-flex justify-content-start">
+                                        <a href="/detail">En savoir plus</a>
+                                        <a href="/register" class="btn btn-secondary"
+                                            style="margin-left: 35%;">S'inscrire</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+
+                                <!-- <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1s">
                 <img src="https://via.placeholder.com/800x600?text=Sustainable+Agriculture+Summit+2024" alt="Sustainable Agriculture Summit 2024">
                 <div class="event-card-content">
                     <h3>Sustainable Agriculture Summit 2024</h3>
@@ -213,7 +225,7 @@ const events_future = [
                     </div>
                 </div>
             </div> -->
-            <!-- <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1.2s">
+                                <!-- <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1.2s">
                 <img src="https://via.placeholder.com/800x600?text=ICAE+2024" alt="ICAE 2024">
                 <div class="event-card-content">
                     <h3>International Conference on Agricultural Engineering (ICAE) 2024</h3>
@@ -226,7 +238,7 @@ const events_future = [
                     </div>
                 </div>
             </div> -->
-            <!-- <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1.4s">
+                                <!-- <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="1.4s">
                 <img src="https://via.placeholder.com/800x600?text=Farm+Progress+Show+2024" alt="Farm Progress Show 2024">
                 <div class="event-card-content">
                     <h3>Farm Progress Show 2024</h3>
@@ -239,9 +251,10 @@ const events_future = [
                     </div>
                 </div>
             </div> -->
-        </div>
-    </div>
+                    </div>
+                </div>
 
+<<<<<<< HEAD
     <!-- Futur -->
     <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.6s" id="future-events">
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
@@ -264,86 +277,46 @@ const events_future = [
                     <div class="d-flex justify-content-start">
                         <a href="/detail">En savoir plus</a>
                         <a href="#" class="btn btn-secondary" style="margin-left: 35%;">S'inscrire</a>
+=======
+                <!-- Futur -->
+                <div class="section wow animate__animated animate__fadeIn" data-wow-delay="0.6s" id="future-events">
+                    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+                        style="max-width: 600px;">
+                        <h2 class="mb-0">Événements à Venir</h2>
+                    </div>
+                    <div class="event-grid">
+                        <% events_future.forEach(event=> { %>
+                            <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
+                                <img src="<%= event.imgSrc %>" alt="<%= event.title %>">
+                                <div class="event-card-content">
+                                    <h3>
+                                        <%= event.title %>
+                                    </h3>
+                                    <p><strong>Date:</strong>
+                                        <%= event.date %>
+                                    </p>
+                                    <p><strong>Lieu:</strong>
+                                        <%= event.location %>
+                                    </p>
+                                    <p>
+                                        <%= event.description %>
+                                    </p>
+                                    <div class="d-flex justify-content-start">
+                                        <a href="/detail">En savoir plus</a>
+                                        <a href="#" class="btn btn-secondary" style="margin-left: 35%;">S'inscrire</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+>>>>>>> 57d388ba94eaf4fa4d992138c4a2bfe88f37d672
                     </div>
                 </div>
             </div>
-            <% }); %>
-        </div>
-    </div>
-</div>
 
-<script>
-    new WOW().init();
-
-    document.querySelectorAll('.event-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'scale(1.05)';
-            card.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'scale(1)';
-            card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-        });
-    });
-</script>
-
-
-   </div>
-
-
-<!-- Vendor Start -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-  <div class="container py-5 mb-5">
-    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-      <!-- <h5 class="fw-bold text-primary text-uppercase">Découvrez les dernières nouvelles et mises à jour sur SAM</h5> -->
-      <h1 class="mb-0">Commanditaires</h1>
-    </div>
-
-<!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5 mb-5"> -->
-        <div class="bg-white">
-            <div class="owl-carousel vendor-carousel organisess"
-                style=" display: flex;justify-content: center; align-items: center;">
-                <img src="img/OIP-removebg-preview.png" alt="">
-              <img src="img/OCP_Logo.png" alt="">
-              <img src="img/logo-removebg-preview.png" alt="">
-              <img src="img/OIP-removebg-preview.png" alt="">
-              <img src="img/OCP_Logo.png" alt="">
-              <img src="img/logo-removebg-preview.png" alt="">
-              <img src="img/OIP-removebg-preview.png" alt="">
-              <img src="img/OCP_Logo.png" alt="">
-              <img src="img/logo-removebg-preview.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Vendor End -->
+         
 
 
 
 
-
-
-<!-- JavaScript Libraries -->
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
-
-<!-- Template Javascript -->
-<!-- <script src="js/main.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-<!--  -->
-<!-- <script>
-    $(document).ready(function () {
-        $('#eventTabs a').on('click', function (e) {
-            e.preventDefault();
-            $(this).tab('show'); -->
-
-<!-- Include  footer -->
-<%- include('../partials/footer') %>
+            <!-- Include  footer -->
+            <%- include('../partials/footer') %>
