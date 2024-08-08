@@ -31,29 +31,52 @@ class Speaker {
   }
 
   // Method to create a new speaker
-  static async create({ nom, prenom, description, evenement_id }) {
-    try {
-      const [result] = await pool.query(
-        'INSERT INTO Speakers (nom, prenom, description, evenement_id) VALUES (?, ?, ?, ?)',
-        [nom, prenom, description, evenement_id]
-      );
-      return result.insertId;
-    } catch (error) {
-      throw new Error('Error creating speaker: ' + error.message);
-    }
+  // static async create({ nom, prenom, description, evenement_id }) {
+  //   try {
+  //     const [result] = await pool.query(
+  //       'INSERT INTO Speakers (nom, prenom, description, evenement_id) VALUES (?, ?, ?, ?)',
+  //       [nom, prenom, description, evenement_id]
+  //     );
+  //     return result.insertId;
+  //   } catch (error) {
+  //     throw new Error('Error creating speaker: ' + error.message);
+  //   }
+  // }
+// Method to create a new speaker
+static async create({ nom, prenom, description, image_url, evenement_id }) {
+  try {
+    const [result] = await pool.query(
+      'INSERT INTO Speakers (nom, prenom, description, image_url, evenement_id) VALUES (?, ?, ?, ?, ?)',
+      [nom, prenom, description, image_url || null, evenement_id]
+    );
+    return result.insertId;
+  } catch (error) {
+    throw new Error('Error creating speaker: ' + error.message);
   }
+}
 
   // Method to update a speaker by ID
-  static async update(id, { nom, prenom, description, evenement_id }) {
-    try {
-      await pool.query(
-        'UPDATE Speakers SET nom = ?, prenom = ?, description = ?, evenement_id = ? WHERE id = ?',
-        [nom, prenom, description, evenement_id, id]
-      );
-    } catch (error) {
-      throw new Error('Error updating speaker: ' + error.message);
-    }
+  // static async update(id, { nom, prenom, description, evenement_id }) {
+  //   try {
+  //     await pool.query(
+  //       'UPDATE Speakers SET nom = ?, prenom = ?, description = ?, evenement_id = ? WHERE id = ?',
+  //       [nom, prenom, description, evenement_id, id]
+  //     );
+  //   } catch (error) {
+  //     throw new Error('Error updating speaker: ' + error.message);
+  //   }
+  // }
+// Method to update a speaker by ID
+static async update(id, { nom, prenom, description, image_url, evenement_id }) {
+  try {
+    await pool.query(
+      'UPDATE Speakers SET nom = ?, prenom = ?, description = ?, image_url = ?, evenement_id = ? WHERE id = ?',
+      [nom, prenom, description, image_url || null, evenement_id, id]
+    );
+  } catch (error) {
+    throw new Error('Error updating speaker: ' + error.message);
   }
+}
 
   // Method to delete a speaker by ID
   static async delete(id) {
