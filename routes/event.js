@@ -126,7 +126,7 @@ const router = express.Router();
 const eventController = require('../controllers/eventController');
 const middleware = require('../middlewares/auth')
 
-router.get('/', eventController.getAllEvents);
+router.get('/', eventController.showEventsPage);
 
 // Route to get a specific event by ID
 router.get('/:id', eventController.getEventById);
