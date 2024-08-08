@@ -1,15 +1,17 @@
-.logindiv {
+.container {
     /* background-color: #f0f0f0; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     min-height: 100vh;
-    margin: 0;
+    width: 100%;
+    margin: auto;
 }
 
 .sign-in-form {
     max-width: 400px; /* Ajustez la largeur maximale du formulaire si nécessaire */
     width: 100%;
+   
     padding: 20px;
     margin: auto auto;
     background: var(--color-hack-5); /* Arrière-plan blanc pour le formulaire */
