@@ -16,23 +16,23 @@
                <div class="col-lg-8">
                    <div class="row g-5">
                     <% const events = [
-                        { img: 'img/ac.jpg', date: '01 Janv, 2024', title: 'Lancement du Nouveau Système SAM', desc: "Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines" },
-                        { img: 'img/ac 2.jpg', date: '10 octobre, 2024', title: 'Conférence SAM à Rabat', desc: 'La conférence SAM 2024 se tiendra à Rabat. Des experts partageront des insights sur l\'optimisation des systèmes d\'administration pour les entreprises marocaines' },
-                        { img: 'img/ac3.jpg', date: '28 Novembre, 2023', title: 'Atelier SAM à Marrakech', desc: 'Un atelier de formation sur les systèmes SAM est prévu à Marrakech. Les participants apprendront comment intégrer efficacement ces systèmes pour améliorer la gestion des affaires' },
-                        { img: 'img/ac4.jpg', date: '15 Jan, 2025', title: 'Webinaire SAM pour les Entreprises Marocaines', desc: 'Un webinaire sur les tendances et innovations des systèmes SAM aura lieu en ligne, visant à aider les entreprises marocaines à tirer parti des nouvelles technologies' },
-                        { img: 'img/ac5.jpg', date: '18 juin, 2023', title: 'Salon SAM à Tanger', desc: 'Le salon SAM 2024 se déroulera à Tanger, rassemblant fournisseurs de solutions SAM et professionnels pour découvrir les dernières avancées en gestion et administration' },
-                        { img: 'img/ac6.jpg', date: '02 Jan, 2024', title: 'Webinaire SAM', desc: 'Webinaire sur les innovations SAM, dédié aux entreprises marocaines, pour améliorer leur gestion' },
-                        { img: 'img/ac7.jpg', date: '01 Jan, 2045', title: 'Salon de l\'Innovation Technologique à Rabat', desc: 'Salon de l\'Innovation Technologique à Rabat, présentant les dernières innovations en matière de technologie et de digitalisation pour les entreprises' },
-                        { img: 'img/al-moutmir-.jpg', date: '21 Jan, 2025', title: 'Journée de Volontariat à Agadir', desc: 'Journée de volontariat à Agadir, où les bénévoles participeront à des activités de nettoyage et de sensibilisation pour la protection de l\'environnement' },
-                        { img: 'img/attaouia-moutmir.png', date: '22 Jan, 2025', title: 'Exposition d\'Art Contemporain à Marrakech', desc: 'Exposition d\'art contemporain à Marrakech mettant en avant les œuvres d\'artistes marocains et internationaux, avec des ateliers et des discussions sur l\'art' },
-                        { img: 'img/6476738f42360401f32f7742.jpg', date: '11 Dec, 2024', title: 'Conférence sur l\'Entrepreneuriat à Casablanca', desc: 'Conférence sur l\'entrepreneuriat à Casablanca, réunissant des start-up et des investisseurs pour discuter des opportunités et des défis dans le secteur des affaires' }
+                        { image_url: 'img/ac.jpg', date: '01 Janv, 2024', title: 'Lancement du Nouveau Système SAM', contenu: "Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines" },
+                        { image_url: 'img/ac 2.jpg', date: '10 octobre, 2024', title: 'Conférence SAM à Rabat', contenu: 'La conférence SAM 2024 se tiendra à Rabat. Des experts partageront des insights sur l\'optimisation des systèmes d\'administration pour les entreprises marocaines' },
+                        { image_url: 'img/ac3.jpg', date: '28 Novembre, 2023', title: 'Atelier SAM à Marrakech', contenu: 'Un atelier de formation sur les systèmes SAM est prévu à Marrakech. Les participants apprendront comment intégrer efficacement ces systèmes pour améliorer la gestion des affaires' },
+                        { image_url: 'img/ac4.jpg', date: '15 Jan, 2025', title: 'Webinaire SAM pour les Entreprises Marocaines', contenu: 'Un webinaire sur les tendances et innovations des systèmes SAM aura lieu en ligne, visant à aider les entreprises marocaines à tirer parti des nouvelles technologies' },
+                        { image_url: 'img/ac5.jpg', date: '18 juin, 2023', title: 'Salon SAM à Tanger', contenu: 'Le salon SAM 2024 se déroulera à Tanger, rassemblant fournisseurs de solutions SAM et professionnels pour découvrir les dernières avancées en gestion et administration' },
+                        { image_url: 'img/ac6.jpg', date: '02 Jan, 2024', title: 'Webinaire SAM', contenu: 'Webinaire sur les innovations SAM, dédié aux entreprises marocaines, pour améliorer leur gestion' },
+                        { image_url: 'img/ac7.jpg', date: '01 Jan, 2045', title: 'Salon de l\'Innovation Technologique à Rabat', contenu: 'Salon de l\'Innovation Technologique à Rabat, présentant les dernières innovations en matière de technologie et de digitalisation pour les entreprises' },
+                        { image_url: 'img/al-moutmir-.jpg', date: '21 Jan, 2025', title: 'Journée de Volontariat à Agadir', contenu: 'Journée de volontariat à Agadir, où les bénévoles participeront à des activités de nettoyage et de sensibilisation pour la protection de l\'environnement' },
+                        { image_url: 'img/attaouia-moutmir.png', date: '22 Jan, 2025', title: 'Exposition d\'Art Contemporain à Marrakech', contenu: 'Exposition d\'art contemporain à Marrakech mettant en avant les œuvres d\'artistes marocains et internationaux, avec des ateliers et des discussions sur l\'art' },
+                        { image_url: 'img/6476738f42360401f32f7742.jpg', date: '11 Dec, 2024', title: 'Conférence sur l\'Entrepreneuriat à Casablanca', contenu: 'Conférence sur l\'entrepreneuriat à Casablanca, réunissant des start-up et des investisseurs pour discuter des opportunités et des défis dans le secteur des affaires' }
                     ]; %>
                     <% events.forEach((event, index) => { %>
                        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
                            <div class="blog-item bg-light rounded overflow-hidden">
                                <div class="blog-img position-relative overflow-hidden">
                                    <!-- <img class="img-fluid" src="img/ac.jpg" alt=""> -->
-                                   <img class="img-fluid" src="<%= event.img %>" alt="">
+                                   <img class="img-fluid" src="<%= event.image_url %>" alt="">
                                </div>
                                <div class="p-4">
                                    <div class="d-flex mb-3">
@@ -43,8 +43,8 @@
                                    </div>
                                    <!-- <h4 class="mb-3">Lancement du Nouveau Système SAM </h4>
                                    <p>Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines</p> -->
-                                   <h4 class="mb-3"><%= event.title %></h4>
-                                <p><%= event.desc %></p>
+                                   <h4 class="mb-3"><%= event.titre %></h4>
+                                <p><%= event.contenu %></p>
                                    <a class="text-uppercase" href="">Voir Plus <i class="bi bi-arrow-right"></i></a>
                                </div>
                            </div>
@@ -108,18 +108,18 @@
                       
                        
                    <% const recentPosts = [
-                        { img: 'img/ac 2.jpg', title: 'Séminaire SAM à Agadir : Optimisation des Processus Administratifs' },
-                        { img: 'img/attaouia-moutmir.png', title: 'Forum SAM à Casablanca : Vers une Gestion Moderne et Efficace' },
-                        { img: 'img/ac6.jpg', title: 'Journée d\'Échange sur les Systèmes SAM à Rabat' },
-                        { img: 'img/ac5.jpg', title: 'Rencontre SAM à Marrakech : Innovations pour la Gestion Administrative' },
-                        { img: 'img/ac7.jpg', title: 'Colloque SAM à Tanger : Vers une Administration Plus Efficace' },
-                        { img: 'img/6476738f42360401f32f7742.jpg', title: 'Symposium SAM à Agadir : Réinventer la Gestion Administrativa' }
+                        { image_url: 'img/ac 2.jpg', titre: 'Séminaire SAM à Agadir : Optimisation des Processus Administratifs' },
+                        { image_url: 'img/attaouia-moutmir.png', titre: 'Forum SAM à Casablanca : Vers une Gestion Moderne et Efficace' },
+                        { image_url: 'img/ac6.jpg', titre: 'Journée d\'Échange sur les Systèmes SAM à Rabat' },
+                        { image_url: 'img/ac5.jpg', titre: 'Rencontre SAM à Marrakech : Innovations pour la Gestion Administrative' },
+                        { image_url: 'img/ac7.jpg', titre: 'Colloque SAM à Tanger : Vers une Administration Plus Efficace' },
+                        { image_url: 'img/6476738f42360401f32f7742.jpg', titre: 'Symposium SAM à Agadir : Réinventer la Gestion Administrativa' }
                     ]; %>
                     
                     <% recentPosts.forEach(post => { %>
                     <div class="d-flex mb-3">
-                        <img class="img-fluid rounded me-3" src="<%= post.img %>" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                        <a href="#" class="h5 mb-0"><%= post.title %></a>
+                        <img class="img-fluid rounded me-3" src="<%= post.image_url %>" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                        <a href="#" class="h5 mb-0"><%= post.titre %></a>
                     </div>
                     <% }); %>
                 </div>
