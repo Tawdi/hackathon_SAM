@@ -1,40 +1,37 @@
 const express = require('express');
 const router = express.Router();
 const Event = require("../models/eventModel");
-const { isAuthenticated, isAdmin } = require("../middlewares/auth");
 const eventController = require('../controllers/eventController');
-// const Sponsor = require('../models/sponsor');
-// const Speaker = require('../models/');
-// const upload = require('../config/multer');
+
+const { ensureRole } = require('../middlewares/roleMiddleware');
 
 
 
-router.get('/admin',(req, res) => {
-    res.render('admin/dashboard');
+router.get('/admin',ensureRole('admin'), (req, res) => {
+  res.render('admin/dashboard');
 });
 // ,isAdmin()
-router.get('/create_event',(req, res) => {
-    res.render('admin/create_event');
+router.get('/create_event',ensureRole('admin'), (req, res) => {
+  res.render('admin/create_event');
 });
 
-router.get('/list-event', eventController.showadminListEvent);
+router.get('/list-event',ensureRole('admin'), eventController.showadminListEvent);
 
 // add_sponsor_spreaker
-router.get('/add_sponsor_speaker_:eventId', async (req, res) => {
+router.get('/add_sponsor_speaker_:eventId',ensureRole('admin'), async (req, res) => {
   const eventId = req.params.eventId;
 
   res.render('admin/add_speaker_sponsor', { eventId });
 });
 // Route to get the form for editing an event
-router.get('/event_edit_:eventId',async (req, res) => {
+router.get('/event_edit_:eventId',ensureRole('admin'), async (req, res) => {
   const id = parseInt(req.params.eventId);
   const event = await Event.getEventById(id);
 
   res.render('admin/create_event', { event });
 });
-router.post('/create_event', eventController.addEvent); // Handle form submission for creating an event
-// router.post('/add_sponsor_spreaker', eventController.addSponsorSpreaker); // Handle form submission for creating an event
-router.post('/add_sponsor', eventController.addSponsor);
-router.post('/add_speaker', eventController.addSpeaker);
-// router.post('/create_event',)
+router.post('/create_event',ensureRole('admin'), eventController.addEvent); // Handle form submission for creating an event
+router.post('/add_sponsor',ensureRole('admin'), eventController.addSponsor);
+router.post('/add_speaker',ensureRole('admin'), eventController.addSpeaker);
+
 module.exports = router;

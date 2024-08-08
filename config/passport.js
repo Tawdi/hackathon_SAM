@@ -1,6 +1,6 @@
 
 
-// :::::: passport 
+// config/passport.js
 
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcrypt");
@@ -8,22 +8,31 @@ const pool = require("./database");
 
 module.exports = function (passport) {
   passport.serializeUser((user, done) => {
-    // if (!user.id) {
-    //   return done(new Error('User ID is missing'));
-    // }
+    // 
+    //
     done(null, user.id);
-    // console.log(user.id); // Consider removing or replacing with a logger
-  });
+      });
 
   passport.deserializeUser(async (id, done) => {
-    try {
-      const [rows] = await pool.query("SELECT * FROM users WHERE id = ?", [id]);
-      done(null, rows[0]);
-    } catch (err) {
-      done(err);
+  //   try {
+  //     const [rows] = await pool.query("SELECT * FROM users WHERE id = ?", [id]);
+  //     done(null, rows[0]);
+  //   } catch (err) {
+  //     done(err);
+  //   }
+  // });
+  try {
+    const [rows] = await pool.query("SELECT * FROM users WHERE id = ?", [id]);
+    const user = rows[0];
+    if (!user) {
+      return done(null, false);
     }
-  });
-
+    console.log('Deserialized User:', user);
+    done(null, user);
+  } catch (err) {
+    done(err);
+  }
+});
   passport.use(
     "local-signup",
     new LocalStrategy(
@@ -45,7 +54,7 @@ module.exports = function (passport) {
             });
           } else {
             const hash = await bcrypt.hash(password, 10);
-            const newUser = { username, email, password: hash, nom,telephone,adresse, prenom };
+            const newUser = { username, email, password: hash, nom,telephone,adresse, prenom ,organisation ,profession};
             const [result] = await pool.query(
               "INSERT INTO users (username, email, password, nom, prenom ,telephone,adresse,organisation ,profession) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)",
               [

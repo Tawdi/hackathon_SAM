@@ -11,19 +11,47 @@ module.exports = {
     res.render("auth/login");
   },
 
+  // login: (req, res, next) => {
+  //   passport.authenticate("local-login", (err, user, info) => {
+  //     if (err) return next(err);
+
+  //     if (!user) {
+  //       const errorMsg = info.message || "La connexion a échoué.";
+  //       req.flash("error_msg", errorMsg);
+  //       return res.redirect("/login");
+  //     }
+
+  //     req.logIn(user, (err) => {
+  //       if (err) return next(err);
+
+  //       if (user.role === "admin") {
+  //         return res.redirect("/admin");
+  //       } else if (req.session.returnTo) {
+  //         const redirectUrl = req.session.returnTo;
+  //         delete req.session.returnTo;
+  //         return res.redirect(redirectUrl);
+  //       } else {
+  //         return res.redirect("/");
+  //       }
+  //     });
+  //   })(req, res, next);
+  // },
   login: (req, res, next) => {
     passport.authenticate("local-login", (err, user, info) => {
       if (err) return next(err);
-
+  
       if (!user) {
         const errorMsg = info.message || "La connexion a échoué.";
         req.flash("error_msg", errorMsg);
+        console.log('Authentication failed:', errorMsg);  // Debugging log
         return res.redirect("/login");
       }
-
+  
       req.logIn(user, (err) => {
         if (err) return next(err);
-
+  
+        console.log('Login successful:', user);  // Debugging log to show user details
+  
         if (user.role === "admin") {
           return res.redirect("/admin");
         } else if (req.session.returnTo) {
@@ -36,7 +64,7 @@ module.exports = {
       });
     })(req, res, next);
   },
-
+  
   showSignupPage: (req, res) => {
     res.render("auth/register");
   },

@@ -13,7 +13,7 @@
     width: 100%;
    
     padding: 20px;
-    margin: auto auto;
+    margin: 0 auto;
     background: var(--color-hack-5); /* Arrière-plan blanc pour le formulaire */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
