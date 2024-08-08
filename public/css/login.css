@@ -38,19 +38,22 @@
 .btn {
   width: 100%;
   padding: 10px;
-  background-color: #de6f43;
+  background-color: #de6f43 !important ;
   border: none;
-  color: #fff;
+  color: #fff !important;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn.solid {
-  background-color: #de6f43;
+  background-color: #de6f43 !important ;
+  color: #fff !important;
+
 }
 
 .btn.solid:hover {
-  background-color: white;
+  background-color: white !important; 
+  color: #de6f43 !important;
 }
 
 .text.sign-up-text {
@@ -84,4 +87,8 @@
   .input-field {
       margin-bottom: 15px;
   }
+}
+.back-to-top{
+  width: 48px !important;
+  height: 48px !important;
 }

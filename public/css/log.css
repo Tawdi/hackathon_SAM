@@ -70,3 +70,8 @@
     color: rgb(89, 85, 85);
     text-decoration: none;
 }
+
+.back-to-top{
+    width: 48px !important;
+    height: 48px !important;
+}
