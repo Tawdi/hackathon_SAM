@@ -11,10 +11,11 @@ body {
     max-width: 400px; /* Ajustez la largeur maximale du formulaire si nécessaire */
     width: 100%;
     padding: 20px;
-    background: #fff; /* Arrière-plan blanc pour le formulaire */
+    background: var(--color-hack-5); /* Arrière-plan blanc pour le formulaire */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #007bff; /* Bordure bleue autour du formulaire */
+    border: 2px solid #de6f43; /* Bordure bleue autour du formulaire */
+    text-align: center;
 }
 
 .input-field {
@@ -50,11 +51,11 @@ body {
 }
 
 .btn.solid {
-    background-color: #007bff;
+    background-color: #de6f43;
 }
 
 .btn.solid:hover {
-    background-color: #0056b3;
+    background-color: white;
 }
 
 .text.sign-up-text {
