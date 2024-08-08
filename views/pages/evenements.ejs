@@ -133,16 +133,16 @@ const events_future = [
             <% events_past.forEach(event => { %>
             <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
                 <!-- <img src="https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024" alt="National Farm Machinery Show 2024"> -->
-                <img src="<%= event.imgSrc %>" alt="<%= event.title %>">
+                <img src="<%= event.image_url %>" alt="<%= event.titre %>">
                 <div class="event-card-content">
                     <!-- <h3>National Farm Machinery Show 2024</h3>
                     <p><strong>Date:</strong> Février 2024</p>
                     <p><strong>Lieu:</strong> Louisville, Kentucky, USA</p>
                     <p>Salon des équipements agricoles aux USA, mettant en avant les innovations en mécanisation durable.</p> -->
 
-                    <h3><%= event.title %></h3>
-                    <p><strong>Date:</strong> <%= event.date %></p>
-                    <p><strong>Lieu:</strong> <%= event.location %></p>
+                    <h3><%= event.titre %></h3>
+                    <p><strong>Date:</strong> <%= event.date_debut %></p>
+                    <p><strong>Lieu:</strong> <%= event.lieu %></p>
                     <p><%= event.description %></p>
 
 
@@ -180,16 +180,16 @@ const events_future = [
           <% events_present.forEach(event => { %>
             <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
                 <!-- <img src="https://via.placeholder.com/800x600?text=WCSA+2024" alt="WCSA 2024"> -->
-                <img src="<%= event.imgSrc %>" alt="<%= event.title %>">
+                <img src="<%= event.image_url %>" alt="<%= event.titre %>">
                 <div class="event-card-content">
                     <!-- <h3>World Congress on Sustainable Agriculture (WCSA) 2024</h3>
                     <p><strong>Date:</strong> Août 2024</p>
                     <p><strong>Lieu:</strong> Kyoto, Japon</p>
                     <p>Congrès sur les pratiques et technologies durables en agriculture, incluant la mécanisation.</p> -->
                     
-                    <h3><%= event.title %></h3>
-                    <p><strong>Date:</strong> <%= event.date %></p>
-                    <p><strong>Lieu:</strong> <%= event.location %></p>
+                    <h3><%= event.titre %></h3>
+                    <p><strong>Date:</strong> <%= event.date_debut %></p>
+                    <p><strong>Lieu:</strong> <%= event.lieu %></p>
                     <p><%= event.description %></p>
 
                     <div class="d-flex justify-content-start">
@@ -251,15 +251,15 @@ const events_future = [
           <% events_future.forEach(event => { %>
             <div class="event-card wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
                 <!-- <img src="https://via.placeholder.com/800x600?text=Agritechnica+2025" alt="Agritechnica 2025"> -->
-                <img src="<%= event.imgSrc %>" alt="<%= event.title %>">
+                <img src="<%= event.image_url %>" alt="<%= event.titre %>">
                 <div class="event-card-content">
                     <!-- <h3>Agritechnica 2025</h3>
                     <p><strong>Date:</strong> Novembre 2025</p>
                     <p><strong>Lieu:</strong> Hanovre, Allemagne</p>
                     <p>Salon international majeur sur la technologie agricole, avec un focus sur les solutions de mécanisation durable.</p> -->
-                    <h3><%= event.title %></h3>
-                    <p><strong>Date:</strong> <%= event.date %></p>
-                    <p><strong>Lieu:</strong> <%= event.location %></p>
+                    <h3><%= event.titre %></h3>
+                    <p><strong>Date:</strong> <%= event.date_debut %></p>
+                    <p><strong>Lieu:</strong> <%= event.lieu %></p>
                     <p><%= event.description %></p>
                     <div class="d-flex justify-content-start">
                         <a href="/detail">En savoir plus</a>

@@ -24,6 +24,7 @@ const sponsors = [
 
 
 const events_past = [
+  
   {
       imgSrc: "https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024",
       title: "National Farm Machinery Show 2024",
