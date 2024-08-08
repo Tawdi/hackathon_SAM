@@ -15,34 +15,17 @@
         <div class="row">
             <% events.forEach(event => { %>
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/img/6476738f42360401f32f7742.jpg" alt="Card image cap">
+                <img class="card-img-top" src="<%= event.image_url %>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><%= event.titre %></h5>
                     <p class="card-text"><%= event.apercu %>
                     </p>
-                    <a href="#" class="btn btn-primary">Modifier</a>
-                    <a href="#" class="btn btn-primary">Supprimer</a>
+                    <a  href="/event_edit_<%= event.id %>" class="btn btn-primary">Modifier</a>
+                    <a href="/event_delete_<%= event.id %>" class="btn btn-primary">Supprimer</a>
                 </div>
             </div>
             <% }) %>
-            <!-- <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/img/6476738f42360401f32f7742.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Evenement 2</h5>
-                    <p class="card-text">Forum d'une journée avec conférences d'experts, ateliers interactifs et réseautage</p>
-                    <a href="#" class="btn btn-primary">Modifier</a>
-                    <a href="#" class="btn btn-primary">Supprimer</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/img/6476738f42360401f32f7742.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Evenement 3</h5>
-                    <p class="card-text">Forum d'une journée avec conférences d'experts, ateliers interactifs et réseautage</p>
-                    <a href="#" class="btn btn-primary">Modifier</a>
-                    <a href="#" class="btn btn-primary">Supprimer</a>
-                </div>
-            </div> -->
+            
         </div>
     </div>
 

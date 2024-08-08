@@ -60,6 +60,19 @@ module.exports.showHomePage = async (req, res) => {
     }
   };
 
+module.exports.showadminListEvent = async (req, res) => {
+    try {
+
+      const events = await Event.getAllEvents();
+  
+     
+      res.render('admin/list-event',{ events});
+    } catch (err) {
+      console.error("Error fetching events ", err);
+      req.flash("error_msg", "Error fetching events .");
+      res.redirect("/admin");
+    }
+  };
 // Show specific event page
 module.exports.showEventPage = async (req, res) => {
   const { id } = req.params; // Use req.params for route parameters
@@ -227,133 +240,82 @@ module.exports.addEvent = [
     }
   },
 ];
-// addSponsorSpreaker
 
-// module.exports.addSponsorSpreaker = [
-//     // Validation for sponsor and speaker inputs
-//     body("sponsor_name")
-//       .isLength({ min: 3 })
-//       .withMessage("Sponsor name must be at least 3 characters long")
-//       .trim()
-//       .escape(),
-//     body("sponsor_logo_url")
-//       .isURL()
-//       .withMessage("Sponsor logo must be a valid URL")
-//       .optional()
-//       .trim()
-//       .escape(),
-//     body("speaker_name")
-//       .isLength({ min: 3 })
-//       .withMessage("Speaker name must be at least 3 characters long")
-//       .trim()
-//       .escape(),
-//     body("speaker_bio")
-//       .optional()
-//       .trim()
-//       .escape(),
-  
-//     async (req, res) => {
-//       const errors = validationResult(req);
-//       if (!errors.isEmpty()) {
-//         console.log(errors.array()); // Log the validation errors
-//         req.flash(
-//           "error_msg",
-//           errors.array().map((err) => err.msg)
-//         );
-//         return res.redirect("/add_sponsor_spreaker");
-//       }
-  
-//       const { sponsor_name, sponsor_logo_url, speaker_name, speaker_bio } = req.body;
-  
-//       try {
-//         // Assuming you have functions in your Event model to add sponsors and speakers
-//         await Event.addSponsor(sponsor_name, sponsor_logo_url);
-//         await Event.addSpeaker(speaker_name, speaker_bio);
-  
-//         req.flash("success_msg", "Sponsor and Speaker added successfully.");
-//         res.redirect("/event"); // Redirect to event page or another appropriate page
-//       } catch (err) {
-//         console.error("Error adding sponsor or speaker:", err);
-//         req.flash("error_msg", "Error adding sponsor or speaker.");
-//         res.redirect("/add_sponsor_spreaker");
-//       }
-//     },
-//   ];
   
 // Update an existing event
-module.exports.updateEvent = [
-  body("id").isInt().withMessage("Event ID must be a number"),
-  body("titre")
-    .isLength({ min: 3 })
-    .withMessage("Title must be at least 3 characters long")
-    .trim()
-    .escape(),
-  body("apercu").optional().trim().escape(),
-  body("description")
-    .isLength({ min: 10 })
-    .withMessage("Description must be at least 10 characters long")
-    .trim()
-    .escape(),
-  body("date").isISO8601().withMessage("Date must be a valid ISO date"),
-  body("time").isISO8601().withMessage("Time must be a valid ISO time"),
-  body("lieu").optional().trim().escape(),
-  body("plan")
-    .optional()
-    .isJSON()
-    .withMessage("Plan must be a valid JSON format"),
-  body("observations").optional().trim().escape(),
-  body("participation").optional().trim().escape(),
-  body("info_add").optional().trim().escape(),
+// module.exports.updateEvent = [
+//   body("id").isInt().withMessage("Event ID must be a number"),
+//   body("titre")
+//     .isLength({ min: 3 })
+//     .withMessage("Title must be at least 3 characters long")
+//     .trim()
+//     .escape(),
+//   body("apercu").optional().trim().escape(),
+//   body("description")
+//     .isLength({ min: 10 })
+//     .withMessage("Description must be at least 10 characters long")
+//     .trim()
+//     .escape(),
+//   body("date").isISO8601().withMessage("Date must be a valid ISO date"),
+//   body("time").isISO8601().withMessage("Time must be a valid ISO time"),
+//   body("lieu").optional().trim().escape(),
+//   body("plan")
+//     .optional()
+//     .isJSON()
+//     .withMessage("Plan must be a valid JSON format"),
+//   body("observations").optional().trim().escape(),
+//   body("participation").optional().trim().escape(),
+//   body("info_add").optional().trim().escape(),
 
-  async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      req.flash(
-        "error_msg",
-        errors.array().map((err) => err.msg)
-      );
-      return res.redirect("/events");
-    }
+//   async (req, res) => {
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//       req.flash(
+//         "error_msg",
+//         errors.array().map((err) => err.msg)
+//       );
+//       return res.redirect("/events");
+//     }
 
-    const {
-      id,
-      titre,
-      apercu,
-      description,
-      image_url,
-      date,
-      time,
-      lieu,
-      plan,
-      observations,
-      participation,
-      info_add,
-    } = req.body;
+//     const {
+//       id,
+//       titre,
+//       apercu,
+//       description,
+//       image_url,
+//       date,
+//       time,
+//       lieu,
+//       plan,
+//       observations,
+//       participation,
+//       info_add,
+//     } = req.body;
 
-    try {
-      await Event.updateEvent(
-        id,
-        titre,
-        apercu,
-        description,
-        image_url,
-        date,
-        time,
-        lieu,
-        plan,
-        observations,
-        participation,
-        info_add
-      );
-      req.flash("success_msg", "Event updated successfully.");
-      res.redirect("/events");
-    } catch (err) {
-      console.error("Error updating event:", err);
-      req.flash("error_msg", "Error updating event.");
-      res.redirect("/events");
-    }
-  },
-];
+//     try {
+//       await Event.updateEvent(
+//         id,
+//         titre,
+//         apercu,
+//         description,
+//         image_url,
+//         date,
+//         time,
+//         lieu,
+//         plan,
+//         observations,
+//         participation,
+//         info_add
+//       );
+//       req.flash("success_msg", "Event updated successfully.");
+//       res.redirect("/events");
+//     } catch (err) {
+//       console.error("Error updating event:", err);
+//       req.flash("error_msg", "Error updating event.");
+//       res.redirect("/events");
+//     }
+//   },
+// ];
 
 module.exports.deleteEvent = async (req, res) => {
   const { id } = req.params;
@@ -371,53 +333,201 @@ module.exports.deleteEvent = async (req, res) => {
 
   
 
+//bbbbbbbbbb
+// module.exports.updateEvent = [
+//     upload.single('image_url'),
+//       body("id").isInt().withMessage("Event ID must be a number"),
+//   body("titre")
+//     .isLength({ min: 3 })
+//     .withMessage("Title must be at least 3 characters long")
+//     .trim()
+//     .escape(),
+//   body("apercu").optional().trim().escape(),
+//   body("description")
+//     .isLength({ min: 10 })
+//     .withMessage("Description must be at least 10 characters long")
+//     .trim()
+//     .escape(),
+//   body("date").isISO8601().withMessage("Date must be a valid ISO date"),
+//   body("time").isISO8601().withMessage("Time must be a valid ISO time"),
+//   body("lieu").optional().trim().escape(),
+//   body("plan")
+//     .optional()
+//     .isJSON()
+//     .withMessage("Plan must be a valid JSON format"),
+//   body("observations").optional().trim().escape(),
+//   body("participation").optional().trim().escape(),
+//   body("info_add").optional().trim().escape(),
 
+  
+//     async (req, res) => {
+//       const errors = validationResult(req);
+//       if (!errors.isEmpty()) {
+//         req.flash('error_msg', errors.array().map(err => err.msg));
+//         return res.redirect(`/event_edit_${req.params.id}`);
+//       }
+  
+//       const {
+//         titre, apercu, description, date_debut, date_fin, time, lieu,
+//         observations, participation, info_add
+//       } = req.body;
+  
+//       const imageUrl = req.file ? `/img/${req.file.filename}` : req.body.existing_image_url;
+  
+//       try {
+//         await Event.updateEvent(req.params.id, {
+//           titre, apercu, description, imageUrl, date_debut, date_fin, time, lieu,
+//           observations, participation, info_add
+//         });
+//         req.flash('success_msg', 'Event updated successfully.');
+//         res.redirect('/list-event');
+//       } catch (err) {
+//         console.error('Error updating event:', err);
+//         req.flash('error_msg', 'Error updating event.');
+//         res.redirect(`/event_edit_${req.params.id}`);
+//       }
+//     }
+//   ];
+//bbbbbbbbb
+//qqqqqqqq
+
+
+module.exports.updateEvent = [
+  upload.single('image_url'),
+  body("titre")
+  .isLength({ min: 3 })
+  .withMessage("Title must be at least 3 characters long")
+  .trim()
+  .escape(),
+body("apercu")
+  .isLength({ min: 3 })
+  .withMessage("Apercu must be at least 3 characters long")
+  .trim()
+  .escape(),
+body("description")
+  .optional()
+  .trim()
+  .escape(),
+body("date_debut")
+  .isISO8601()
+  .withMessage("Date Debut must be a valid ISO date"),
+body("date_fin")
+  .optional()
+  .custom(value => {
+    if (value && !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+      throw new Error("Date Fin must be a valid ISO date");
+    }
+    return true;
+  }),
+body("time")
+  .optional()
+  .custom(value => {
+    if (value && !validateTime(value)) {
+    //   throw new Error("Time must be a valid time in HH:MM format");
+    return true;
+    }
+    return true;
+  }),
+body("lieu")
+  .isLength({ min: 3 })
+  .withMessage("Lieu must be at least 3 characters long")
+  .trim()
+  .escape(),
+body("observations").optional().trim().escape(),
+body("participation").optional().trim().escape(),
+body("info_add").optional().trim().escape(),
+
+
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      req.flash('error_msg', errors.array().map(err => err.msg));
+      return res.redirect(`/event_edit_${req.params.id}`);
+    }
+
+    const {
+      titre, apercu, description, date_debut, date_fin, time, lieu,
+      observations, participation, info_add
+    } = req.body;
+let imageUrl;
+    if (req.file) {
+      // New image uploaded
+      imageUrl = `/img/${req.file.filename}`;
+    } else if (req.body.existing_image_url) {
+      // No new image, use the existing image URL
+      imageUrl = req.body.existing_image_url;
+    } else {
+      // No image provided or uploaded, handle this case appropriately
+      req.flash('error_msg', 'Please provide an image.');
+      return res.redirect(`/event_edit_${req.params.id}`);
+    }
+    // Handle image update: Use uploaded file or retain existing one. const imageUrl = req.file ? `/img/${req.file.filename}` : null
+    // const imageUrl = req.file ? `/img/${req.file.filename}` : req.body.existing_image_url;
+    const event_id = parseInt(req.params.id);
+    try {
+      // Update event with the provided details
+      await Event.updateEvent(event_id, {
+        titre, apercu, description, image_url: imageUrl, date_debut, date_fin, time, lieu,
+        observations, participation, info_add
+      });
+
+      req.flash('success_msg', 'Event updated successfully.');
+      res.redirect('/list-event');
+    } catch (err) {
+      console.error('Error updating event:', err);
+      req.flash('error_msg', 'Error updating event.');
+      res.redirect(`/event_edit_${req.params.id}`);
+    }
+  }
+];
+
+// kkkkkkkkk
 // EventController.js (Controller)
 
-module.exports.updateEvent = async (req, res) => {
-  const { id } = req.params;
-  const {
-    titre,
-    apercu,
-    description,
-    date_debut,
-    date_fin,
-    time,
-    lieu,
-    observations,
-    participation,
-    info_add,
-  } = req.body;
+// module.exports.updateEvent = async (req, res) => {
+//   const { id } = req.params;
+//   const {
+//     titre,
+//     apercu,
+//     description,
+//     date_debut,
+//     date_fin,
+//     time,
+//     lieu,
+//     observations,
+//     participation,
+//     info_add,
+//   } = req.body;
 
-  // Log the request body for debugging
-  console.log("Request Body:", req.body);
+//   // Log the request body for debugging
+//   console.log("Request Body:", req.body);
   
-  // Handle image URL
-  const imageUrl = req.file ? `/img/${req.file.filename}` : req.body.existing_image;
+//   // Handle image URL
+//   const imageUrl = req.file ? `/img/${req.file.filename}` : req.body.existing_image;
   
-  try {
-    await Event.updateEvent(
-      id,
-      titre,
-      apercu,
-      description,
-      imageUrl,
-      date_debut,
-      date_fin,
-      time,
-      lieu,
-      observations,
-      participation,
-      info_add
-    );
-    req.flash("success_msg", "Event updated successfully.");
-    res.redirect("/events");
-  } catch (err) {
-    console.error("Error updating event:", err);
-    req.flash("error_msg", "Error updating event.");
-    res.redirect(`/modifyevent/${id}`);
-  }
-};
+//   try {
+//     await Event.updateEvent(
+//       id,
+//       titre,
+//       apercu,
+//       description,
+//       imageUrl,
+//       date_debut,
+//       date_fin,
+//       time,
+//       lieu,
+//       observations,
+//       participation,
+//       info_add
+//     );
+//     req.flash("success_msg", "Event updated successfully.");
+//     res.redirect("/events");
+//   } catch (err) {
+//     console.error("Error updating event:", err);
+//     req.flash("error_msg", "Error updating event.");
+//     res.redirect(`/modifyevent/${id}`);
+//   }
+// };
 
 
 

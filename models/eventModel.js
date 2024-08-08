@@ -336,7 +336,7 @@ class Event {
     info_add
   ) {
     try {
-      await pool.query(
+      const [result] = await pool.query(
         "INSERT INTO Evenements (titre, apercu, description, image_url, date_debut, date_fin, time, lieu, observations, participation, info_add) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
         [
           titre,
@@ -352,6 +352,7 @@ class Event {
           info_add,
         ]
       );
+      return result.insertId;
     } catch (err) {
       console.error("Database error:", err); // Log the actual database error
       throw new Error("An error occurred while adding the event.");

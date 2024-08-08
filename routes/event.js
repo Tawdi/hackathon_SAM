@@ -46,16 +46,16 @@ router.get('/events', eventController.showEventsPage);
 // router.get('/en', eventController.showHomePage);
 
 // Show specific event page
-router.get('/event/:id/details', eventController.showEventPage);
+router.get('/event:id/details', eventController.showEventPage);
 
 // Add new event
 router.post('/events/add', eventController.addEvent);
 
 // Update event 
-router.post('/events/update/:id', eventController.updateEvent);
+router.post('/event_update_:id', eventController.updateEvent);
 
 // Delete event
-router.delete('/events/delete/:id', eventController.deleteEvent);
+router.delete('/events_delete_:id', eventController.deleteEvent);
 
 // Add sponsor and speaker
 // router.post('/event/:id/add_sponsor_speaker', eventController.addSponsorSpreaker);

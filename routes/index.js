@@ -258,12 +258,12 @@ router.get('/detail', (req, res) => {
 
     });
 });
- router.get('/list-event', (req, res) => {
-   res.render('admin/list-event',{
-    events
+//  router.get('/list-event', (req, res) => {
+//    res.render('admin/list-event',{
+//     events
 
-});
- });
+// });
+//  });
  const programController = require('../controllers/programController');
 
 //  router.get('/candidatures', isAuthenticated, isAdmin, CandidatureController.getCandidatures);
