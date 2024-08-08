@@ -4,15 +4,15 @@ const router = express.Router();
 
 const news = [
 
-    { img: 'img/Image1.jpg', speaker: 'Alice Martin', date: '2024-08-05', title: 'Nouvelle Politique Agricole' },
-    { img: 'img/Image2.jpg', speaker: 'Bob Dupont', date: '2024-07-30', title: 'Techniques Modernes de Culture' },
-    { img: 'img/Image3.jpg', speaker: 'Clara Moreau', date: '2024-07-25', title: 'Innovation dans l’Agroalimentaire' },
+    { image_url : 'img/Image1.jpg', nom : 'Alice Martin', date: '2024-08-05', title: 'Nouvelle Politique Agricole' },
+    { image_url : 'img/Image2.jpg', nom : 'Bob Dupont', date: '2024-07-30', title: 'Techniques Modernes de Culture' },
+    { image_url : 'img/Image3.jpg', nom : 'Clara Moreau', date: '2024-07-25', title: 'Innovation dans l’Agroalimentaire' },
 ];
 
 const eventss = [
-    { img: 'img/Image1.jpg', title: 'Salon de l’Agriculture', date: '2024-09-15', location: 'Paris' },
-    { img: 'img/Image2.jpg', title: 'Journée de l’Environnement', date: '2024-10-10', location: 'Lyon' },
-    { img: 'img/Image3.jpg', title: 'Forum de l’Innovation', date: '2024-11-20', location: 'Marseille' },
+    { image_url: 'img/ac.jpg', titre: 'Lancement du Nouveau Système SAM', description: "Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines" },
+    { image_url: 'img/ac 2.jpg', titre: 'Conférence SAM à Rabat', description: 'La conférence SAM 2024 se tiendra à Rabat. Des experts partageront des insights sur l\'optimisation des systèmes d\'administration pour les entreprises marocaines' },
+    { image_url: 'img/ac3.jpg', titre: 'Atelier SAM à Marrakech', description: 'Un atelier de formation sur les systèmes SAM est prévu à Marrakech. Les participants apprendront comment intégrer efficacement ces systèmes pour améliorer la gestion des affaires' },
 ];
 
 const sponsors = [
@@ -142,7 +142,7 @@ const events = [
     {
         imgSrc: "https://via.placeholder.com/800x600?text=National+Farm+Machinery+Show+2024",
         title: "National Farm Machinery Show 2024",
-        date: "Février 2024",
+        date_debut: "Février 2024",
         location: "Louisville, Kentucky, USA",
         apercu: "Salon des équipements agricoles aux USA, mettant en avant les innovations en mécanisation durable."
     },
@@ -177,31 +177,33 @@ const events = [
   ];
 
   const event = {
-    title: "Conférence sur les Innovations Technologiques",
-    description: "Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir. Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir.Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir.Rejoignez-nous pour une discussion approfondie sur les dernières avancées en matière d'innovation technologique. Nos intervenants experts partageront leurs idées et leurs expériences sur les technologies qui façonnent l'avenir.",
-    img: "img/Image1.jpg"
+    image_url: 'img/ac.jpg', titre: 'Lancement du Nouveau Système SAM', description: "Le nouveau Système d'Administration et de Management a été lancé à Casablanca. Cet événement marque une étape importante pour améliorer la gestion administrative dans les entreprises marocaines"
 };
 
 const newss = [
     {
-        img: "https://via.placeholder.com/400x300.png?text=News+1",
-        name: "Technologie Avancée",
-        descp: "Dernières tendances en IA"
+        image_url: "img/Image1.jpg",
+        nom: "Technologie ",
+        prenom : "Avancée",
+        description: "Dernières tendances en IA"
     },
     {
-        img: "https://via.placeholder.com/400x300.png?text=News+2",
-        name: "Energies Renouvelables",
-        descp: "Solutions écologiques"
+        image_url: "img/Image1.jpg",
+        nom: "Energies Renouvelables",
+        prenom : "Renouvelable",
+        description: "Solutions écologiques"
     },
     {
-        img: "https://via.placeholder.com/400x300.png?text=News+3",
-        name: "Santé et Bien-être",
-        descp: "Innovation en soins de santé"
+        image_url: "img/Image1.jpg",
+        nom: "Santé et Bien-être",
+        prenom : "Avancée",
+        description: "Innovation en soins de santé"
     },
     {
-        img: "https://via.placeholder.com/400x300.png?text=News+4",
-        name: "Technologies de Communication",
-        descp: "Réseaux de nouvelle génération"
+        image_url: "img/Image1.jpg",
+        nom: "Technologies ",
+        prenom : " Communication",
+        description: "Réseaux de nouvelle génération"
     }
 ];
 
