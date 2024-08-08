@@ -30,6 +30,8 @@ router.get('/event_edit_:eventId',ensureRole('admin'), async (req, res) => {
 
   res.render('admin/create_event', { event });
 });
+router.post('/event_update_:eventId',ensureRole('admin'), eventController.updateEvent); // Handle form submission for creating an event
+
 router.post('/create_event',ensureRole('admin'), eventController.addEvent); // Handle form submission for creating an event
 router.post('/add_sponsor',ensureRole('admin'), eventController.addSponsor);
 router.post('/add_speaker',ensureRole('admin'), eventController.addSpeaker);
