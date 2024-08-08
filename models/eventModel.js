@@ -125,6 +125,173 @@
 // module.exports = EventModel;
 
 // *******************************************************
+// const pool = require("../config/database");
+
+// class Event {
+//   static async getAllEvents() {
+//     try {
+//       const [rows] = await pool.query("SELECT * FROM Evenements");
+//       return rows;
+//     } catch (err) {
+//       throw new Error("An error occurred while fetching events.");
+//     }
+//   }
+
+//   static async getEventById(id) {
+//     try {
+//       const [rows] = await pool.query("SELECT * FROM Evenements WHERE id = ?", [
+//         id,
+//       ]);
+//       if (rows.length > 0) {
+//         return rows[0];
+//       } else {
+//         throw new Error("Event not found.");
+//       }
+//     } catch (err) {
+//       throw new Error("An error occurred while fetching the event.");
+//     }
+//   }
+
+//   static async addEvent(
+//     titre,
+//     apercu,
+//     description,
+//     image_url,
+//     date_debut,
+//     date_fin,
+//     time,
+//     lieu,
+//     plan,
+//     observations,
+//     participation,
+//     info_add
+//   ) {
+//     try {
+//       await pool.query(
+//         "INSERT INTO Evenements (titre, apercu, description, image_url, date_debut, date_fin, time, lieu, plan, observations, participation, info_add) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+//         [
+//           titre,
+//           apercu,
+//           description,
+//           image_url,
+//           date_debut,
+//           date_fin,
+//           time,
+//           lieu,
+//           plan ? JSON.stringify(plan) : null,
+//           observations,
+//           participation,
+//           info_add,
+//         ]
+//       );
+//     } catch (err) {
+//       throw new Error("An error occurred while adding the event.");
+//     }
+//   }
+
+//   static async updateEvent(
+//     id,
+//     titre,
+//     apercu,
+//     description,
+//     image_url,
+//     date_debut,
+//     date_fin,
+//     time,
+//     lieu,
+//     plan,
+//     observations,
+//     participation,
+//     info_add
+//   ) {
+//     try {
+//       await pool.query(
+//         "UPDATE Evenements SET titre = ?, apercu = ?, description = ?, image_url = ?, date_debut = ?, date_fin = ?, time = ?, lieu = ?, plan = ?, observations = ?, participation = ?, info_add = ? WHERE id = ?",
+//         [
+//           titre,
+//           apercu,
+//           description,
+//           image_url,
+//           date_debut,
+//           date_fin,
+//           time,
+//           lieu,
+//           plan ? JSON.stringify(plan) : null,
+//           observations,
+//           participation,
+//           info_add,
+//           id,
+//         ]
+//       );
+//     } catch (err) {
+//       throw new Error("An error occurred while updating the event.");
+//     }
+//   }
+
+//   static async findEventsByDateRange(startDate, endDate) {
+//     try {
+//       const [rows] = await pool.query(
+//         "SELECT * FROM Evenements WHERE date_debut >= ? AND date_fin <= ?",
+//         [startDate, endDate]
+//       );
+//       return rows;
+//     } catch (err) {
+//       throw new Error("An error occurred while fetching events by date range.");
+//     }
+//   }
+
+//   static async findEventsByLocation(location) {
+//     try {
+//       const [rows] = await pool.query("SELECT * FROM Evenements WHERE lieu = ?", [location]);
+//       return rows;
+//     } catch (err) {
+//       throw new Error("An error occurred while fetching events by location.");
+//     }
+//   }
+
+//   static async searchEventsByKeyword(keyword) {
+//     try {
+//       const [rows] = await pool.query(
+//         "SELECT * FROM Evenements WHERE titre LIKE ? OR description LIKE ?",
+//         [`%${keyword}%`, `%${keyword}%`]
+//       );
+//       return rows;
+//     } catch (err) {
+//       throw new Error("An error occurred while searching for events.");
+//     }
+//   }
+
+//   static async countEvents() {
+//     try {
+//       const [rows] = await pool.query("SELECT COUNT(*) as count FROM Evenements");
+//       return rows[0].count;
+//     } catch (err) {
+//       throw new Error("An error occurred while counting events.");
+//     }
+//   }
+
+//   static async getUpcomingEvents() {
+//     try {
+//       const [rows] = await pool.query(
+//         "SELECT * FROM Evenements WHERE date_debut >= NOW() ORDER BY date_debut ASC"
+//       );
+//       return rows;
+//     } catch (err) {
+//       throw new Error("An error occurred while fetching upcoming events.");
+//     }
+//   }
+
+//   static async deleteEvent(id) {
+//     try {
+//       await pool.query("DELETE FROM Evenements WHERE id = ?", [id]);
+//     } catch (err) {
+//       throw new Error("An error occurred while deleting the event.");
+//     }
+//   }
+// }
+
+// module.exports = Event;
+
 const pool = require("../config/database");
 
 class Event {
@@ -152,6 +319,9 @@ class Event {
     }
   }
 
+
+  
+
   static async addEvent(
     titre,
     apercu,
@@ -161,14 +331,13 @@ class Event {
     date_fin,
     time,
     lieu,
-    plan,
     observations,
     participation,
     info_add
   ) {
     try {
       await pool.query(
-        "INSERT INTO Evenements (titre, apercu, description, image_url, date_debut, date_fin, time, lieu, plan, observations, participation, info_add) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO Evenements (titre, apercu, description, image_url, date_debut, date_fin, time, lieu, observations, participation, info_add) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
         [
           titre,
           apercu,
@@ -178,120 +347,80 @@ class Event {
           date_fin,
           time,
           lieu,
-          plan ? JSON.stringify(plan) : null,
           observations,
           participation,
           info_add,
         ]
       );
     } catch (err) {
+      console.error("Database error:", err); // Log the actual database error
       throw new Error("An error occurred while adding the event.");
     }
   }
+  
+// In Event.js (or your model file)
 
-  static async updateEvent(
-    id,
-    titre,
-    apercu,
-    description,
-    image_url,
-    date_debut,
-    date_fin,
-    time,
-    lieu,
-    plan,
-    observations,
-    participation,
-    info_add
-  ) {
-    try {
-      await pool.query(
-        "UPDATE Evenements SET titre = ?, apercu = ?, description = ?, image_url = ?, date_debut = ?, date_fin = ?, time = ?, lieu = ?, plan = ?, observations = ?, participation = ?, info_add = ? WHERE id = ?",
-        [
-          titre,
-          apercu,
-          description,
-          image_url,
-          date_debut,
-          date_fin,
-          time,
-          lieu,
-          plan ? JSON.stringify(plan) : null,
-          observations,
-          participation,
-          info_add,
-          id,
-        ]
-      );
-    } catch (err) {
-      throw new Error("An error occurred while updating the event.");
-    }
-  }
-
-  static async findEventsByDateRange(startDate, endDate) {
-    try {
-      const [rows] = await pool.query(
-        "SELECT * FROM Evenements WHERE date_debut >= ? AND date_fin <= ?",
-        [startDate, endDate]
-      );
-      return rows;
-    } catch (err) {
-      throw new Error("An error occurred while fetching events by date range.");
-    }
-  }
-
-  static async findEventsByLocation(location) {
-    try {
-      const [rows] = await pool.query("SELECT * FROM Evenements WHERE lieu = ?", [location]);
-      return rows;
-    } catch (err) {
-      throw new Error("An error occurred while fetching events by location.");
-    }
-  }
-
-  static async searchEventsByKeyword(keyword) {
-    try {
-      const [rows] = await pool.query(
-        "SELECT * FROM Evenements WHERE titre LIKE ? OR description LIKE ?",
-        [`%${keyword}%`, `%${keyword}%`]
-      );
-      return rows;
-    } catch (err) {
-      throw new Error("An error occurred while searching for events.");
-    }
-  }
-
-  static async countEvents() {
-    try {
-      const [rows] = await pool.query("SELECT COUNT(*) as count FROM Evenements");
-      return rows[0].count;
-    } catch (err) {
-      throw new Error("An error occurred while counting events.");
-    }
-  }
-
-  static async getUpcomingEvents() {
-    try {
-      const [rows] = await pool.query(
-        "SELECT * FROM Evenements WHERE date_debut >= NOW() ORDER BY date_debut ASC"
-      );
-      return rows;
-    } catch (err) {
-      throw new Error("An error occurred while fetching upcoming events.");
-    }
-  }
-
-  static async deleteEvent(id) {
-    try {
-      await pool.query("DELETE FROM Evenements WHERE id = ?", [id]);
-    } catch (err) {
-      throw new Error("An error occurred while deleting the event.");
-    }
+static async deleteEvent(id) {
+  try {
+    await pool.query('DELETE FROM Evenements WHERE id = ?', [id]);
+  } catch (err) {
+    console.error("Database error:", err);
+    throw new Error("An error occurred while deleting the event.");
   }
 }
 
-module.exports = Event;
 
+
+
+// Event.js (Model)
+
+static async updateEvent(
+  id,
+  titre,
+  apercu,
+  description,
+  image_url,
+  date_debut,
+  date_fin,
+  time,
+  lieu,
+  observations,
+  participation,
+  info_add
+) {
+  try {
+    await pool.query(
+      `UPDATE Evenements SET
+        titre = ?, apercu = ?, description = ?, image_url = ?,
+        date_debut = ?, date_fin = ?, time = ?, lieu = ?,
+        observations = ?, participation = ?, info_add = ?
+      WHERE id = ?`,
+      [
+        titre,
+        apercu,
+        description,
+        image_url,
+        date_debut,
+        date_fin,
+        time,
+        lieu,
+        observations,
+        participation,
+        info_add,
+        id,
+      ]
+    );
+  } catch (err) {
+    console.error("Database error:", err);
+    throw new Error("An error occurred while updating the event.");
+  }
+}
+
+
+
+}
+
+module.exports = Event;
 
 // const promisePool = require('../config/database'); // Adjust the path to your database configuration
 

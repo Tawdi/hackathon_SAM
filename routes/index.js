@@ -266,6 +266,12 @@ router.get('/detail', (req, res) => {
  });
  const programController = require('../controllers/programController');
 
+//  router.get('/candidatures', isAuthenticated, isAdmin, CandidatureController.getCandidatures);
+//  router.post('/candidature/:id/accept', isAuthenticated, isAdmin, CandidatureController.acceptCandidature);
+//  router.post('/candidature/:id/refuse', isAuthenticated, isAdmin, CandidatureController.refuseCandidature);
+//  router.post('/candidature/:evenement_id', isAuthenticated, CandidatureController.addCandidature);
+ 
+ 
  router.post('/add-program', programController.addProgram);
  router.get('/programs/:eventId', programController.getProgramsByEventId);
 module.exports = router;

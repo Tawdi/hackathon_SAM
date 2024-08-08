@@ -162,7 +162,11 @@ const flash = require("connect-flash");
 const passport = require("passport");
 require("../config/passport")(passport);
 const app = express();
+ 
 
+const setUserRole = require('../middlewares/role');
+
+// app.use(setUserRole);
 // Import and run the database creation script
 const createDatabase = require("../config/creation_db");
 createDatabase();
