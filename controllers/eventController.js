@@ -187,7 +187,7 @@ module.exports.addEvent = [
         info_add
       );
       req.flash("success_msg", "Event added successfully.");
-      res.redirect(`/add_sponsor_speaker/${eventId}`);
+      res.redirect(`/add_sponsor_speaker_${eventId}`);
     } catch (err) {
       console.error("Error adding event:", err);
       req.flash("error_msg", "Error adding event.");

@@ -12,7 +12,8 @@ router.get('/admin',ensureRole('admin'), (req, res) => {
 });
 // ,isAdmin()
 router.get('/create_event',ensureRole('admin'), (req, res) => {
-  res.render('admin/create_event');
+  
+  res.render('admin/create_event' );
 });
 
 router.get('/list-event',ensureRole('admin'), eventController.showadminListEvent);
@@ -28,7 +29,7 @@ router.get('/event_edit_:eventId',ensureRole('admin'), async (req, res) => {
   const id = parseInt(req.params.eventId);
   const event = await Event.getEventById(id);
 
-  res.render('admin/create_event', { event });
+  res.render('admin/update_event', { event });
 });
 router.post('/event_update_:eventId',ensureRole('admin'), eventController.updateEvent); // Handle form submission for creating an event
 

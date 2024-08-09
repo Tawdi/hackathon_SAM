@@ -1,5 +1,5 @@
 <script src="/js/formCreate.js"></script>
-<form class="needs-validation" method="post" action="<%= event ? '/event_update_' + event.id : '/create_event' %>" enctype="multipart/form-data" novalidate>
+<form class="needs-validation" method="post" action="/create_event" enctype="multipart/form-data" novalidate>
     <!-- Titre de l'événement -->
     <div class="form-row mb-4">
         <div class="col-md-6 mb-3">
@@ -10,7 +10,6 @@
                 id="titre" 
                 name="titre" 
                 placeholder="Titre de l'événement" 
-                value="<%= event ? event.titre : '' %>" 
                 required
             >
             <div class="valid-feedback">Looks good!</div>
@@ -23,14 +22,12 @@
                 class="form-control-file" 
                 id="image_url" 
                 name="image_url" 
-                <%= event ? '' : 'required' %> 
+                required
             >
             <div class="invalid-feedback">Please upload an image.</div>
         </div>
     </div>
-    <% if (event && event.image_url) { %>
-        <input type="hidden" name="existing_image_url" value="<%= event.image_url %>">
-      <% } %>
+
     <!-- Aperçu et Description -->
     <div class="form-group mb-4">
         <label for="apercu">Aperçu</label>
@@ -41,7 +38,7 @@
             rows="2" 
             placeholder="Aperçu de l'événement" 
             required
-        ><%= event ? event.apercu : '' %></textarea>
+        ></textarea>
         <div class="invalid-feedback">Please provide an overview.</div>
     </div>
     <div class="form-group mb-4">
@@ -53,7 +50,7 @@
             rows="3" 
             placeholder="Description de l'événement" 
             required
-        ><%= event ? event.description : '' %></textarea>
+        ></textarea>
         <div class="invalid-feedback">Please provide a description.</div>
     </div>
 
@@ -66,7 +63,6 @@
                 class="form-control" 
                 id="date_debut" 
                 name="date_debut" 
-                value="<%= event ? event.date_debut.toISOString().split('T')[0] : '' %>" 
                 required
             >
             <div class="invalid-feedback">Please provide a start date.</div>
@@ -78,7 +74,6 @@
                 class="form-control" 
                 id="time" 
                 name="time" 
-                value="<%= event ? event.time : '' %>" 
                 required
             >
             <div class="invalid-feedback">Please provide a time.</div>
@@ -89,8 +84,7 @@
                 type="date" 
                 class="form-control" 
                 id="date_fin" 
-                name="date_fin" 
-                value="<%= event ? event.date_fin ? event.date_fin.toISOString().split('T')[0] : '' : '' %>" 
+                name="date_fin"
             >
             <div class="invalid-feedback">Please provide an end date.</div>
         </div>
@@ -105,7 +99,6 @@
                 id="lieu" 
                 name="lieu" 
                 placeholder="Lieu de l'événement" 
-                value="<%= event ? event.lieu : '' %>" 
                 required
             >
             <div class="invalid-feedback">Please provide a location.</div>
@@ -118,7 +111,7 @@
                 name="observations" 
                 rows="1" 
                 placeholder="Observations"
-            ><%= event ? event.observations : '' %></textarea>
+            ></textarea>
             <div class="invalid-feedback">Please provide observations.</div>
         </div>
         <div class="col-md-4 mb-3">
@@ -128,8 +121,7 @@
                 class="form-control" 
                 id="participation" 
                 name="participation" 
-                placeholder="Participation" 
-                value="<%= event ? event.participation : '' %>"
+                placeholder="Participation"
             >
             <div class="invalid-feedback">Please provide participation details.</div>
         </div>
@@ -143,13 +135,11 @@
             name="info_add" 
             rows="2" 
             placeholder="Informations supplémentaires"
-        ><%= event ? event.info_add : '' %></textarea>
+        ></textarea>
         <div class="invalid-feedback">Please provide additional information.</div>
     </div>
 
     <div>
-        <button class="btn btn-primary mt-4" type="submit">
-            <%= event ? 'Modifier Un Événement' : 'Créer Un Événement' %>
-        </button>
+        <button class="btn btn-primary mt-4" type="submit">Créer Un Événement</button>
     </div>
 </form>
