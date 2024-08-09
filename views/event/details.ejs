@@ -60,9 +60,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <!-- <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <img class="img-fluid max-width max-height rounded" src="<%= event.image_url %>" alt="">
+                        <img class="img-fluid max-width max-height rounded" src="<%//= event.image_url %>" alt="">
+                    </div>
+                </div> -->
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="<%= event.image_url %>" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
