@@ -235,16 +235,7 @@ router.get('/actualites', (req, res) => {
         title: "Actualités"
     });
 });
-// router.get('/evenements', (req, res) => {
-//     res.render('pages/evenements',{
 
-//         title: "Événements",
-//         events_future,
-//         events_past,
-//         events_present
-
-//     });
-// });
 router.get('/connecter', (req, res) => {
     res.render('auth/login',{
 
